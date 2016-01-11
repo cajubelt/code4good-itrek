@@ -23,6 +23,34 @@
 	
 	<section id="cd-timeline" class="cd-container">
 		
+		<script>
+			function showTest() {
+				var divsToToggle = document.getElementsByClassName("testing");
+
+    			for(var i = 0; i < divsToToggle.length; i++) {
+    				if (document.getElementById("checkboxFundraising").checked) {
+    					divsToToggle[i].style.visibility="visible";
+
+    				}
+    				else{
+    					divsToToggle[i].style.visibility="hidden";
+    				}
+    			}
+			}
+		</script>
+		
+		<form id="filters">
+			Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="showTest()" />
+			<!--Trek Planning:<input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="changePlanningVisibitility()" />
+			Trekker Actions:<input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="enableDisableEmail(this.checked, 'emailAddr', 'emailConfirm');enableDisableSection1(this.checked, 'fullName');" />
+			-->
+		</form>
+		
+		<div class = "testing">
+			<p>
+				Testing visibility
+			</p>
+		</div>
 		
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
