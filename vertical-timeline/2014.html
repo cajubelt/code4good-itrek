@@ -23,24 +23,30 @@
 	
 	<section id="cd-timeline" class="cd-container">
 		
-		<script>
-			function showTest() {
-				var divsToToggle = document.getElementsByClassName("testing");
+		<script>;
+			var divsToToggle = document.getElementsByClassName("testing"); 
+			var hiddenElems = [];
 
-    			for(var i = 0; i < divsToToggle.length; i++) {
+			function toggleFundraisingView() {
+				var numFundraisingElements = Math.max(divsToToggle.length, hiddenElems.length);
+				console.log("length" + numFundraisingElements);
+				
+    			for(var i = numFundraisingElements - 1; i >= 0; i--) {
     				if (document.getElementById("checkboxFundraising").checked) {
-    					divsToToggle[i].style.visibility="visible";
+    					hiddenElems[i].parentNode.appendChild(hiddenElems[i]);
 
     				}
-    				else{
-    					divsToToggle[i].style.visibility="hidden";
+    				else{ //checkbox is unchecked
+    					hiddenElems[hiddenElems.length] = divsToToggle[i];
+    					console.log("adding to index " + i + "of hiddenElems");
+    					divsToToggle[i].parentNode.removeChild(divsToToggle[i]);
     				}
     			}
 			}
 		</script>
 		
 		<form id="filters">
-			Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="showTest()" />
+			Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleFundraisingView()" checked>
 			<!--Trek Planning:<input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="changePlanningVisibitility()" />
 			Trekker Actions:<input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="enableDisableEmail(this.checked, 'emailAddr', 'emailConfirm');enableDisableSection1(this.checked, 'fullName');" />
 			-->
@@ -52,6 +58,7 @@
 			</p>
 		</div>
 		
+		<div class="testing">
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
 				<img src="img/cd-icon-location.svg" alt="Location">
@@ -75,7 +82,9 @@
 				<span class="cd-date">June 13, 2014</span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
+		</div>
 		
+		<div class="testing">
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
 				<img src="img/cd-icon-location.svg" alt="Location">
@@ -90,6 +99,7 @@
 				<span class="cd-date">June 12, 2014</span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
+		</div>
 		
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">

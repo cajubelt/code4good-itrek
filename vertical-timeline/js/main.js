@@ -9,7 +9,9 @@ jQuery(document).ready(function($){
 	$(window).on('scroll', function(){
 		(!window.requestAnimationFrame) 
 			? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100)
-			: window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
+			: window.requestAnimationFrame(function(){ 
+				showBlocks(timelineBlocks, offset);
+			});
 	});
 
 	function hideBlocks(blocks, offset) {
@@ -20,7 +22,12 @@ jQuery(document).ready(function($){
 
 	function showBlocks(blocks, offset) {
 		blocks.each(function(){
-			( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+			if ( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset) { //in the screen
+				if ($(this).find('.cd-timeline-img').hasClass('is-hidden')) { //has never been revealed before, so now bounce in
+					$(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+
+				}
+			}
 		});
 	}
 });
