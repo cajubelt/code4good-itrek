@@ -128,7 +128,7 @@ header h1 {
 @media only screen and (min-width: 1170px) {
   .cd-timeline-block {
     /*margin: 4em 0; this caused bug where space was left at top when stories filtered out*/
-    margin: 0 0;
+    margin: 1em 0;
   }
   .cd-timeline-block:first-child {
     margin-top: 0;
