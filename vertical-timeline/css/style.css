@@ -532,3 +532,12 @@ header h1 {
     transform: translateX(0);
   }
 }
+
+#video {
+	display: block;
+	margin: 0 auto;
+}
+
+#TrekkersLabel {
+	font-weight:bold;
+}
