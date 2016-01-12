@@ -24,152 +24,150 @@
 	<section id="cd-timeline" class="cd-container">
 		
 		<script>;
-			var divsToToggle = document.getElementsByClassName("testing"); 
-			var hiddenElems = [];
-
-			function toggleFundraisingView() {
-				var numFundraisingElements = Math.max(divsToToggle.length, hiddenElems.length);
-				console.log("length" + numFundraisingElements);
-				
-    			for(var i = numFundraisingElements - 1; i >= 0; i--) {
-    				if (document.getElementById("checkboxFundraising").checked) {
-    					hiddenElems[i].parentNode.appendChild(hiddenElems[i]);
-
-    				}
-    				else{ //checkbox is unchecked
-    					hiddenElems[hiddenElems.length] = divsToToggle[i];
-    					console.log("adding to index " + i + "of hiddenElems");
-    					divsToToggle[i].parentNode.removeChild(divsToToggle[i]);
-    				}
-    			}
+			function toggleFundraisingVisibility() {
+				var disp = $(".test").css("display");
+				if (disp == "none") {
+					$(".test").attr("style","display:block")
+				} else {
+					$(".test").attr("style","display:none")
+				}
 			}
 		</script>
 		
+		
+		
 		<form id="filters">
-			Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleFundraisingView()" checked>
+			Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleFundraisingVisibility()" checked>
 			<!--Trek Planning:<input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="changePlanningVisibitility()" />
 			Trekker Actions:<input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="enableDisableEmail(this.checked, 'emailAddr', 'emailConfirm');enableDisableSection1(this.checked, 'fullName');" />
 			-->
 		</form>
 		
-		<div class = "testing">
+		<div class = "test">
 			<p>
 				Testing visibility
 			</p>
 		</div>
 		
-		<div class="testing">
 		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-location">
-				<img src="img/cd-icon-location.svg" alt="Location">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2>Presentation Session</h2>
-				<p>
-					The last career development session was a judged presentation session. Each Trekker prepared 
-					a presentation that will be given at a minimum of two high schools. Their presentations were 
-					judged by STEM and non-STEM professionals. After being given feedback, the program ended 
-					with a Cuban dinner in Miami which was attended by Warren Marcus, a local MIT alumni bio 
-					research professional. This final networking opportunity officially ended the Trek.
-				</p>
-				<p>
-					Overall, the program proved to be full of learning opportunities. Each Trekker was able to 
-					gain new skills and improve on others. They left the program understanding how they can take 
-					initiative to find and create opportunities that will help them progress toward their research 
-					and professional goals.
-				</p>
-				<span class="cd-date">June 13, 2014</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-		</div>
-		
-		<div class="testing">
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-location">
-				<img src="img/cd-icon-location.svg" alt="Location">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2>Presentation Preparation</h2>
-				<p>
-					Trekkers were able to spend the day preparing a final research report and presentation that 
-					will be given the following day.
-				</p>
-				<span class="cd-date">June 12, 2014</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-		</div>
-		
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-location">
-				<img src="img/cd-icon-location.svg" alt="Location">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2>Testing and Aquarius Presentation</h2>
-				<p>
-					Samples collected the previous day were evaluated at MarineLab in order to affirm their 
-					predictions. The evening was another networking activity, a visit to Florida International 
-					University to attend a MIT alumni event. This event was a presentation of Aquarius, the 
-					only underwater research center in the world currently in operation. Researchers in Aquarius 
-					Skyped in to give a tour of the facility and describe life underwater. A recent MIT graduate, 
-					who would be living in the facility, also presented on the research she would be conducting. 
-					The event culminated with the Trekkers being able to network with professionals and entrepreneurs.
-				</p>
-				<span class="cd-date">June 11, 2014</span>
-			</div> <!-- cd-timeline-content -->
+			<div class="test">
+				<div class="cd-timeline-img cd-location">
+					<img src="img/cd-icon-location.svg" alt="Location">
+				</div> <!-- cd-timeline-img -->
+	
+				<div class="cd-timeline-content">
+					<h2>Presentation Session</h2>
+					<p>
+						The last career development session was a judged presentation session. Each Trekker prepared 
+						a presentation that will be given at a minimum of two high schools. Their presentations were 
+						judged by STEM and non-STEM professionals. After being given feedback, the program ended 
+						with a Cuban dinner in Miami which was attended by Warren Marcus, a local MIT alumni bio 
+						research professional. This final networking opportunity officially ended the Trek.
+					</p>
+					<p>
+						Overall, the program proved to be full of learning opportunities. Each Trekker was able to 
+						gain new skills and improve on others. They left the program understanding how they can take 
+						initiative to find and create opportunities that will help them progress toward their research 
+						and professional goals.
+					</p>
+					<span class="cd-date">June 13, 2014</span>
+				</div> <!-- cd-timeline-content -->
+			</div> <!--test -->
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-location">
-				<img src="img/cd-icon-location.svg" alt="Location">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2>Final Testing</h2>
-				<p>
-					The day was spent doing final tests at two different coral reef locations collecting 
-					research samples using some newly designed equipment.  This showed promising results and 
-					helped define the questions and procedures that should be presented to users.
-				</p>
-				<span class="cd-date">June 10, 2014</span>
-			</div> <!-- cd-timeline-content -->
+			<div class="test">
+				<div class="cd-timeline-img cd-location">
+					<img src="img/cd-icon-location.svg" alt="Location">
+				</div> <!-- cd-timeline-img -->
+	
+				<div class="cd-timeline-content">
+					<h2>Presentation Preparation</h2>
+					<p>
+						Trekkers were able to spend the day preparing a final research report and presentation that 
+						will be given the following day.
+					</p>
+					<span class="cd-date">June 12, 2014</span>
+				</div> <!-- cd-timeline-content -->
+			</div> <!--test -->
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-location">
-				<img src="img/cd-icon-location.svg" alt="Location">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2>Professionalism Course Conclusion</h2>
-				<p>
-					Monday was spent finishing the professionalism course that was started on June 2nd. 
-					This part of the course focused on presentation skills, research skills, social media, 
-					and time management. The course involved creating effective presentations and other 
-					activities such as writing an abstract, preparing an e-calendar and developing career-friendly 
-					social media profiles. Some of these skills would prove useful to the Trekkers during their 
-					final presentations and when drafting the final research document.
-				</p>
-				<span class="cd-date">June 9, 2014</span>
-			</div> <!-- cd-timeline-content -->
+			<div class="test">
+				<div class="cd-timeline-img cd-location">
+					<img src="img/cd-icon-location.svg" alt="Location">
+				</div> <!-- cd-timeline-img -->
+	
+				<div class="cd-timeline-content">
+					<h2>Testing and Aquarius Presentation</h2>
+					<p>
+						Samples collected the previous day were evaluated at MarineLab in order to affirm their 
+						predictions. The evening was another networking activity, a visit to Florida International 
+						University to attend a MIT alumni event. This event was a presentation of Aquarius, the 
+						only underwater research center in the world currently in operation. Researchers in Aquarius 
+						Skyped in to give a tour of the facility and describe life underwater. A recent MIT graduate, 
+						who would be living in the facility, also presented on the research she would be conducting. 
+						The event culminated with the Trekkers being able to network with professionals and entrepreneurs.
+					</p>
+					<span class="cd-date">June 11, 2014</span>
+				</div> <!-- cd-timeline-content -->
+			</div> <!-- test -->
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-location">
-				<img src="img/cd-icon-location.svg" alt="Location">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2>Activity Day!</h2>
-				<p>
-					After a full week of activities, the Trekkers were allowed a day to explore Miami on their 
-					own. Each Trekker did a different activity ranging from zoo visits to go kart racing.
-				</p>
-				<span class="cd-date">June 8, 2014</span>
-			</div> <!-- cd-timeline-content -->
+			<div class="test">
+				<div class="cd-timeline-img cd-location">
+					<img src="img/cd-icon-location.svg" alt="Location">
+				</div> <!-- cd-timeline-img -->
+	
+				<div class="cd-timeline-content">
+					<h2>Final Testing</h2>
+					<p>
+						The day was spent doing final tests at two different coral reef locations collecting 
+						research samples using some newly designed equipment.  This showed promising results and 
+						helped define the questions and procedures that should be presented to users.
+					</p>
+					<span class="cd-date">June 10, 2014</span>
+				</div> <!-- cd-timeline-content -->
+			</div> <!--test -->
+		</div> <!-- cd-timeline-block -->
 		
+		<div class="cd-timeline-block">
+			<div class="test">
+				<div class="cd-timeline-img cd-location">
+					<img src="img/cd-icon-location.svg" alt="Location">
+				</div> <!-- cd-timeline-img -->
+	
+				<div class="cd-timeline-content">
+					<h2>Professionalism Course Conclusion</h2>
+					<p>
+						Monday was spent finishing the professionalism course that was started on June 2nd. 
+						This part of the course focused on presentation skills, research skills, social media, 
+						and time management. The course involved creating effective presentations and other 
+						activities such as writing an abstract, preparing an e-calendar and developing career-friendly 
+						social media profiles. Some of these skills would prove useful to the Trekkers during their 
+						final presentations and when drafting the final research document.
+					</p>
+					<span class="cd-date">June 9, 2014</span>
+				</div> <!-- cd-timeline-content -->
+			</div> <!--test -->
+		</div> <!-- cd-timeline-block -->
+		
+		<div class="cd-timeline-block">
+			<div class="test">
+				<div class="cd-timeline-img cd-location">
+					<img src="img/cd-icon-location.svg" alt="Location">
+				</div> <!-- cd-timeline-img -->
+	
+				<div class="cd-timeline-content">
+					<h2>Activity Day!</h2>
+					<p>
+						After a full week of activities, the Trekkers were allowed a day to explore Miami on their 
+						own. Each Trekker did a different activity ranging from zoo visits to go kart racing.
+					</p>
+					<span class="cd-date">June 8, 2014</span>
+				</div> <!-- cd-timeline-content -->
+			</div> <!--test -->
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
