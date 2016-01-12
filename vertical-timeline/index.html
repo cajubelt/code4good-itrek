@@ -13,643 +13,104 @@
   	
 	<title>i-Trek Updates</title>
 </head>
+
 <body>
 	<header style="background:#000000;height:300px">
 		<img src="logo.png" style="width:720px;height:300px;">
 	</header>
-	<p style="background:#000000;padding:15px;text-align:center" align="center'">
-		Follow our 2015 Trekkers throughout their research project experience.
-	</p>
+		<div class="tab" style="background:#000000">
+			<div style="display:inline-block;background:#000000;padding-top:15px;padding-bottom:15px;padding-left:15px;padding-right:15px;margin-right:-4px;height:50px">
+				Follow our 2015 Trekkers throughout their research project experience.
+			</div>
+
+			<div class="dropdown" style="display:inline-block;position:absolute;right:1em;padding-bottom:15px" align="right">
+			  <button class="dropbtn">Previous Years</button>
+			  <div class="dropdown-content">
+			    <a href="index.html">2015</a>
+			    <a href="2014.html">2014</a>
+			  </div>
+			</div>
+		</div>
 	
 	<section id="cd-timeline" class="cd-container">
-		
-		<!-- toggleVisibility takes in the name of a class as a string. When called, 
-			toggles the disp attribute of all elements with that class. 
-			Requires that input exactly matches the name of a class. -->
-		<script>;
-			function toggleVisibility(category) {
-				var cssClass = ".".concat(category);
-				var disp = $(cssClass).css("display");
-				if (disp == "none") {
-					$(cssClass).attr("style","display:block")
-				} else {
-					$(cssClass).attr("style","display:none")
-				}
-			}
-		</script>
-		
-		
-		<form id="filters">
-			Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleVisibility('fundraising')" checked>
-			Trek Planning: <input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="toggleVisibility('planning')" checked>
-			Trekker Actions: <input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="toggleVisibility('actions')" checked>
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
 
-		</form>
-		
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Initiate Kickstarter Fundraising Program</h2>
-					<p>
-						Description of Fundraising Program here.
-					</p>
-					<span class="cd-date">December, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!--fundraising -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Set Initial Trekker Budget & Create Funding Plan</h2>
-					<span class="cd-date">December, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!--actions -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Begin Trekker Fundraising</h2>
-					<span class="cd-date">December, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Trekker Commitment Deadline</h2>
-					<span class="cd-date">December, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!--planning -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Research and Document Bloggers for Kickstarter Program</h2>
-					<span class="cd-date">November, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!--fundraising -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Create Video for Kickstarter Program</h2>
-					<span class="cd-date">November, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!--fundraising -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Submit Trekker Literature Review</h2>
-					<span class="cd-date">November, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Submit Trekker Abstract</h2>
-					<span class="cd-date">November, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions --> 
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Review & Provide Feedback on Trekker Submissions</h2>
-					<span class="cd-date">November, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Discuss and Draft Schedule for Kickstarter Program</h2>
-					<span class="cd-date">October, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- fundraising --> 
-		</div> <!-- cd-timeline-block -->
-				
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Trekker Team Assignments</h2>
-					<span class="cd-date">October, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions --> 
+			<div class="cd-timeline-content">
+				<h2 style="padding-bottom:15px;">Trekkers visit MIT</h2>
+				<img src="group.png" style="padding:5px;width:500px;height:350px">
+				<p>From August 2nd – 8th, 2015, i-Trek brought 15 students, from a variety of schools and backgrounds, to MIT for a week-long STEM experience. The students networked with MIT graduates, students and alumni; toured MIT, Harvard and UMass Amherst; and learned about water and energy related research from graduate student research presentations and visits to the New England Aquarium and Deer Island. At the end of the program, the students worked together to brainstorm a research project that they will complete during their full Trek experience planned for the summer of 2016.</p>
+				<span class="cd-date">August 2nd, 2015</span>
+			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Initial Trekker Conference Call</h2>
-					<span class="cd-date">September, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
+			<div class="cd-timeline-img cd-location">
+				<img src="img/cd-icon-location.svg" alt="Location">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Title of section 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+				<a href="#0" class="cd-read-more">Read more</a>
+				<span class="cd-date">Jan 18</span>
+			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Trekker Orientation (Boston)</h2>
-					<span class="cd-date">August, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Title of section 3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+				<a href="#0" class="cd-read-more">Read more</a>
+				<span class="cd-date">Jan 24</span>
+			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Selection of Research Project</h2>
-					<span class="cd-date">August, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions --> 
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Trekker Travel Reimbursement</h2>
-					<span class="cd-date">August, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->				
-						
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Select Trekker Orientation Theme</h2>
-					<span class="cd-date">July, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->		
 
 		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Book Trekker Housing</h2>
-					<span class="cd-date">July, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Secure Lab Tours, Presenters and Mentors for Trekker Orientation</h2>
-					<span class="cd-date">July, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Finalize Orientation Schedule and Volunteers</h2>
-					<span class="cd-date">July, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Submit all Required Forms for Trek Orientation</h2>
-					<span class="cd-date">July, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Wine Tasting Fundraisers (multiple)</h2>
-					<span class="cd-date">July, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- fundraising --> 
+			<div class="cd-timeline-img cd-location">
+				<img src="img/cd-icon-location.svg" alt="Location">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Title of section 4</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+				<a href="#0" class="cd-read-more">Read more</a>
+				<span class="cd-date">Feb 14</span>
+			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Trekker Data Collection and Documentation (Trip)</h2>
-					<span class="cd-date">June, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions --> 
-		</div> <!-- cd-timeline-block -->	
 
 		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Reimburse Trekkers for Data Collection Trip</h2>
-					<span class="cd-date">June, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Fund-a-Student Campaign (Trekker Orientation)</h2>
-					<span class="cd-date">June, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- fundraising --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Benefit Dinner</h2>
-					<span class="cd-date">May, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- fundraising --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Establish Trek Orientation Budget</h2>
-					<span class="cd-date">May, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Determine Maximum Number of Trekkers for Orientation</h2>
-					<span class="cd-date">May, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Notify Trekkers of Orientation Acceptance</h2>
-					<span class="cd-date">May, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Document Detailed Trek Research Plan and Agenda</h2>
-					<span class="cd-date">May, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions --> 
+			<div class="cd-timeline-img cd-location">
+				<img src="img/cd-icon-location.svg" alt="Location">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Title of section 5</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
+				<a href="#0" class="cd-read-more">Read more</a>
+				<span class="cd-date">Feb 18</span>
+			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Application Period – Trekker Orientation</h2>
-					<span class="cd-date">April, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Research Housing Options & Costs for Trek Orientation</h2>
-					<span class="cd-date">April, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->		
-																													
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Review & Discuss Trekker Applications</h2>
-					<span class="cd-date">April, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->	
-										
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Advertise Benefit Dinner</h2>
-					<span class="cd-date">April, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- fundraising --> 
-		</div> <!-- cd-timeline-block -->		
-		
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Secure Entertainment & Food for Benefit Dinner</h2>
-					<span class="cd-date">April, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- fundraising --> 
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Send Benefit Dinner Reminders to Past Participants</h2>
-					<span class="cd-date">April, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- fundraising --> 
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Re-evaluate Trekker Budget</h2>
-					<span class="cd-date">April, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions --> 
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Purchase Travel for (June) Trek</h2>
-					<span class="cd-date">March, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions --> 
-		</div> <!-- cd-timeline-block -->	
-				
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Determine Exact Dates for Trek Orientation</h2>
-					<span class="cd-date">March, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Create Fact Sheet and Application Paperwork for Trek Orientation</h2>
-					<span class="cd-date">March, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Advertise Trek Orientation</h2>
-					<span class="cd-date">March, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->	
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Communicate with Feeder Schools</h2>
-					<span class="cd-date">March, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->	
 
 		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Review Grant Opportunities (ongoing)</h2>
-					<span class="cd-date">February, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- fundraising --> 
-		</div> <!-- cd-timeline-block -->	
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
 
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Dry Run of Trekker Experiments</h2>
-					<span class="cd-date">February, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions --> 
-		</div> <!-- cd-timeline-block -->	
-
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Select Trek Research Location</h2>
-					<span class="cd-date">February, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions --> 
+			<div class="cd-timeline-content">
+				<h2>Final Section</h2>
+				<p>This is the content of the last section</p>
+				<span class="cd-date">Feb 26</span>
+			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Select Venue for Annual Benefit Dinner</h2>
-					<span class="cd-date">January, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- fundraising --> 
-		</div> <!-- cd-timeline-block -->										
-
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Complete Remaining Actions for Kickstarter Program</h2>
-					<span class="cd-date">January, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- fundraising --> 
-		</div> <!-- cd-timeline-block -->	
-																											
 	</section> <!-- cd-timeline -->
-          
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
