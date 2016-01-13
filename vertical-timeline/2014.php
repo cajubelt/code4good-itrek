@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	<script src="js/post_adt.js"></script> <!-- Post ADT -->
   	
 	<title>i-Trek Updates</title>
 </head>
@@ -39,16 +40,6 @@
 			  </div>
 			</div>
 		</div>
-	
-	<!--php below communicates with index.php (testing post submission) -->
-	<?php
-	if(isset($_POST['submit-title']))
-	{
-		$title = $_POST['submit-title'];
-		echo "<span class='success'>Form Submitted By <b>POST METHOD</b></span><br/>";
-		echo "Title: ".$title;
-	}
-	?>
 	
 	<section id="2014intro" class="cd-container">
 		<h1 style="font-size:40px;padding:1em" align="middle">
@@ -403,5 +394,30 @@
           
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+
+
+<!--php below communicates with index.php (testing post submission) -->
+
+<?php
+if(isset($_POST['submit-title']))
+{
+	$title = $_POST['submit-title'];
+	echo "<span class='success'>Form Submitted By <b>POST METHOD</b></span><br/>";
+	echo "Title: ".$title;
+}
+?>
+
+
+<script>
+	var title = 'title';
+	var author = 'author';
+	var category = 'fundraising';
+	var year = 2015;
+	var content = 'content';
+	
+	var newPost = new post(title, content, author, year, category);
+	newPost.toHTML();
+</script>
+
 </body>
 </html>
