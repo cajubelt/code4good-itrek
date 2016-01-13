@@ -3,7 +3,7 @@
  * @author Charlie Andrews-Jubelt
  */
 
-	
+
 //method to produce html element for a post (in progress)
 function toHTML(){
 		with (this){

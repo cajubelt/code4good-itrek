@@ -401,23 +401,25 @@
 <?php
 if(isset($_POST['submit-title']))
 {
+	//get info sent from login page
 	$title = $_POST['submit-title'];
-	echo "<span class='success'>Form Submitted By <b>POST METHOD</b></span><br/>";
-	echo "Title: ".$title;
+	$content = $_POST['submit-content'];
+	$image = $_POST['files'];
+	
+	echo '<script>';
+	echo 'var title = ' . json_encode($title) . ';';
+	echo 'var content = ' . json_encode($content) . ';';
+	echo 'var image = ' . json_encode($image) . ';';
+	
+	echo 'var author = "not yet defined"' . ';';
+	echo 'var year = "not yet defined"' . ';';
+	echo 'var category = "action";';
+	
+	echo 'var newPost = new post(title, content, author, year, category);';
+	echo 'newPost.toHTML();';
+	echo '</script>';
 }
 ?>
-
-
-<script>
-	var title = 'title';
-	var author = 'author';
-	var category = 'fundraising';
-	var year = 2015;
-	var content = 'content';
-	
-	var newPost = new post(title, content, author, year, category);
-	newPost.toHTML();
-</script>
 
 </body>
 </html>
