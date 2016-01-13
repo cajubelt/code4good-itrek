@@ -19,3 +19,30 @@ Image/Video <INPUT type="file" name="files"><BR> <br>
 </FORM>
 <?php include "2014.php";?>
 <a href="logout.php">Click here</a> to Logout.
+
+<script type='text/javascript'>
+	
+	//method to produce html element for a post (in progress)
+	function toHTML(){
+			var node = document.createElement("p");
+			with (this){
+				var para = document.createTextNode(this.title);
+			}
+			node.appendChild(para);
+			var div1 = document.getElementById('div1');
+			div1.appendChild(node);
+		}
+		
+	//object representing a post on the timeline
+	function post(title, content, author, year, category){
+		this.title = title;
+		this.content = content;
+		this.author = author;
+		this.year = year;
+		this.category = category;
+		this.toHTML = toHTML;
+	}
+	//var helloObjectWorld = new post('title','content','author','year','category');
+	//helloObjectWorld.toHTML();
+	
+</script>
