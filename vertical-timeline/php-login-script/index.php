@@ -6,7 +6,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 }
 ?>
 <!-- put link to what page it goes to after submit pressed here (action=...)--> 
-<FORM action="http://server.com/cgi/handle" 
+<FORM action="http://localhost:8888/vertical-timeline/2014.html" 
        enctype="multipart/form-data"
        method="post">
 <P>
@@ -16,4 +16,4 @@ Image/Video <INPUT type="file" name="files"><BR>
 <INPUT type="submit" value="Send"> <INPUT type="reset">
 </FORM>
 
-Congratulations! You have logged into password protected page. <a href="logout.php">Click here</a> to Logout.
+<a href="logout.php">Click here</a> to Logout.
