@@ -30,8 +30,8 @@
 </head>
 <body>
 <div id="Frame0">
-  <h1>PHP Login Script Without Using Database Demo.</h1>
-  <p>More tutorials <a href="http://www.w3schools.in/">www.w3schools.in</a></p>
+  <h1 align="center">i-Trek </h1>
+  <h2 align="center">Login with admin or trekker credentials to submit a new timeline post.</h2>
 </div>
 <br>
 <form action="" method="post" name="Login_Form">

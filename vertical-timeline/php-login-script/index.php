@@ -10,9 +10,11 @@ if(!isset($_SESSION['UserData']['Username'])){
        enctype="multipart/form-data"
        method="post">
 <P>
-Title <INPUT type="text" name="submit-title"><BR>
-Content <INPUT type="text" name="submit-content"><BR>
-Image/Video <INPUT type="file" name="files"><BR>
+Title <br> <textarea name="submit-title" cols="40" rows="1"></textarea> <br>
+<!-- Title <INPUT type="text" name="submit-title" style="width:100%"><BR> -->
+Content <br> <textarea name="submit-content" cols="40" rows="5" ></textarea> <br>
+<!-- Content <INPUT type="text" name="submit-content" style="width:100%;height:300px"><BR> -->
+Image/Video <INPUT type="file" name="files"><BR> <br>
 <INPUT type="submit" value="Send"> <INPUT type="reset">
 </FORM>
 <?php include "2014.php";?>
