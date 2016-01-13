@@ -40,12 +40,6 @@
 			</div>
 		</div>
 	
-	
-	<!--<?php
-		echo $_POST["submit-title"];
-	?>
-	-->
-	
 	<section id="2014intro" class="cd-container">
 		<h1 style="font-size:40px;padding:1em" align="middle">
 			2014 Pilot Trek
@@ -87,7 +81,6 @@
 		</div> <!-- video -->	
 	</section> <!--2014intro -->
 	
-
 	
 	<section id="cd-timeline" class="cd-container">
 		
@@ -394,8 +387,43 @@
 				</div> <!-- cd-timeline-content -->
 			</div> <!-- actions -->
 		</div> <!-- cd-timeline-block -->
-		
+	
 	</section> <!-- cd-timeline -->
+	
+	<script>
+		//Information inputted by the user
+		var newPostHeader = document.createElement("h2");
+		newPostHeader.textContent = "Sample Header";
+		
+		var newPostContent = document.createElement("p");
+		newPostContent.textContent = "Sample content for timeline goes here";
+		
+		var icon = document.createElement("img");
+		icon.src = "img/cd-icon-picture.svg";
+		
+		var iconDiv = document.createElement("div");
+		iconDiv.className = "cd-timeline-img";
+		iconDiv.className += " cd-picture";
+		iconDiv.appendChild(icon);
+		
+		var content = document.createElement("div");
+		content.className = "cd-timeline-content";				
+		content.appendChild(newPostHeader);
+		content.appendChild(newPostContent);
+		
+		var action = document.createElement("div");
+		action.className = "actions";
+		action.appendChild(content);
+		action.appendChild(iconDiv);
+		
+		var blockk = document.createElement("div");
+		blockk.className = "cd-timeline-block";
+		blockk.appendChild(action);
+		
+		document.getElementById("cd-timeline").appendChild(blockk); //Note this doens't work if use block instead
+		
+	</script>
+	
           
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
