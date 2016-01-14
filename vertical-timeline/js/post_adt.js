@@ -37,7 +37,7 @@ function toHTML(){
 			blockk.appendChild(category);
 			
 			document.getElementById("cd-timeline").appendChild(blockk); //Note this doens't work if use block instead
-		
+				
 		}
 		
 	}
