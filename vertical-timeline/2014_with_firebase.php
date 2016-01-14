@@ -413,21 +413,25 @@
 if(isset($_POST['submit-title']))
 { //this retrieves info submitted by user and puts it into the database
 	
+//get info sent from login page
+$title = $_POST['submit-title'];
+$content = $_POST['submit-content'];
+$image = $_POST['files'];
+
+//send info to database using javascript
 echo '
 	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
-	
 	<script>
-	
 	var myFirebaseRef = new Firebase("https://torrid-torch-4218.firebaseio.com/-K80XUZiPvdoUy5TXW7X");
 	myFirebaseRef.push({';
 	
-	echo 'title : ' . json_encode($title) . ',';
-	echo 'content : ' . json_encode($content) . ',';
-	echo 'image : ' . json_encode($image) . ',';
-	
-	echo 'author : "not yet defined"' . ',';
-	echo 'year : "not yet defined"' . ',';
-	echo 'category : "action",';
+echo 'title : ' . json_encode($title) . ',';
+echo 'content : ' . json_encode($content) . ',';
+echo 'image : ' . json_encode($image) . ',';
+
+echo 'author : "not yet defined"' . ',';
+echo 'year : "not yet defined"' . ',';
+echo 'category : "action",';
 
 echo '});
 	</script>';
@@ -440,7 +444,6 @@ echo '});
 	var myFirebaseRef = new Firebase("https://torrid-torch-4218.firebaseio.com/-K80XUZiPvdoUy5TXW7X");
 	
 	myFirebaseRef.on("child_added", function(snapshot, prevChildKey) {
-		//alert(prevChildKey);
 		var newPost = snapshot.val();
 		var newPostObject = new post(newPost.title, newPost.content, newPost.author, newPost.year, newPost.category);
 		newPostObject.toHTML();
