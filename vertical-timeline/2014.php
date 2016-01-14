@@ -56,7 +56,7 @@
 		</p>
 		<br>
 		<p>
-			The 2014 Trekkers chose to pursue a research project that attempted to define a 
+			The 2014 <a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekkers</a> chose to pursue a research project that attempted to define a 
 			coral reef health scale, entitled “The i-Trek Global Coral Health Survey”, that 
 			can be used by anyone to evaluate and log the health of coral reefs. While other 
 			scales require highly qualified users and equipment, only easily obtainable materials 
@@ -137,14 +137,16 @@
 				<div class="cd-timeline-content">
 					<h2>Presentation Session</h2>
 					<p>
-						The last career development session was a judged presentation session. Each Trekker prepared 
+						The last career development session was a judged presentation session. Each 
+						<a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekker</a> prepared 
 						a presentation that will be given at a minimum of two high schools. Their presentations were 
 						judged by STEM and non-STEM professionals. After being given feedback, the program ended 
 						with a Cuban dinner in Miami which was attended by Warren Marcus, a local MIT alumni bio 
 						research professional. This final networking opportunity officially ended the Trek.
 					</p>
 					<p>
-						Overall, the program proved to be full of learning opportunities. Each Trekker was able to 
+						Overall, the program proved to be full of learning opportunities. Each
+						<a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekker</a> was able to 
 						gain new skills and improve on others. They left the program understanding how they can take 
 						initiative to find and create opportunities that will help them progress toward their research 
 						and professional goals.
@@ -180,7 +182,8 @@
 				<div class="cd-timeline-content">
 					<h2>Testing and Aquarius Presentation</h2>
 					<p>
-						Samples collected the previous day were evaluated at MarineLab in order to affirm their 
+						Samples collected the previous day were evaluated at 
+						<a href="http://www.marinelab.org/index.html" class="orange">MarineLab</a> in order to affirm their 
 						predictions. The evening was another networking activity, a visit to Florida International 
 						University to attend a MIT alumni event. This event was a presentation of Aquarius, the 
 						only underwater research center in the world currently in operation. Researchers in Aquarius 
@@ -263,7 +266,8 @@
 						butterfly on Adam’s island which is part of Biscayne National Park.  This activity was 
 						organized by Mark Walters, the local Sierra Club Outings Chair of the Miami Group, in 
 						conjunction with the National Park Service.  On the way home from this very hot day of 
-						physical labor, Mark led them to the famous Robert is Here Fruit Stand where they had 
+						physical labor, Mark led them to the famous 
+						<a href="https://robertishere.com/" class="orange">Robert is Here Fruit Stand</a> where they had 
 						smoothies and milkshakes and he introduced them to fruits they had never even heard of before.  All agreed that the visit to this place was worth the hard work earlier.
 					</p>
 					<span class="cd-date">June 7, 2014</span>
@@ -280,10 +284,14 @@
 				<div class="cd-timeline-content">
 					<h2>Collected Samples Evaluated</h2>
 					<p>
-						Samples collected the previous day were evaluated at MarineLab in Key Largo, Florida and 
+						Samples collected the previous day were evaluated at 
+						<a href="http://www.marinelab.org/index.html" class="orange">MarineLab</a> in Key Largo, Florida and 
 						adjustments were made to the equipment and plan. For the evening career development session, 
-						each student was instructed to prepare an elevator pitch. Each Trekker had to deliver their 
-						pitch and was feedback was provided by the i-Trek volunteers.
+						each student was instructed to prepare an elevator pitch. Each
+						<a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekker</a> had to deliver their 
+						pitch and was feedback was provided by the i-Trek
+						<a href="http://www.i-trek.org/become-volunteer/" class="orange">volunteers</a>. 
+
 					</p>
 					<span class="cd-date">June 6, 2014</span>
 				</div> <!-- cd-timeline-content -->
@@ -299,7 +307,8 @@
 				<div class="cd-timeline-content">
 					<h2>Preliminiary Dive</h2>
 					<p>
-						As another Trekker earned his PADI certification, the Trekker’s research plan and equipment 
+						As another Trekker earned his PADI certification, the <a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekker's</a> 
+						research plan and equipment 
 						were tested with a preliminary dive at two different coral locations. The evening involved 
 						dinner with Winston Walters, a neurological researcher at the University of Miami School of 
 						Medicine who also manages the lab. This event was very insightful because he shared 
@@ -320,7 +329,8 @@
 					<h2>Data Collection Planning</h2>
 					<p>
 						Two of the four participants passed the scuba certification course and were awarded PADI 
-						certifications. After the Trekkers were certified, they started fine tuning their data 
+						certifications. After the <a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekkers</a> 
+						were certified, they started fine tuning their data 
 						collection plan and equipment. This included roles for each Trekker, building a plankton 
 						net to be use to collect samples on the surface and constructing a rig to hold an underwater 
 						camera.
@@ -345,13 +355,15 @@
 					<h2>Interview and Calling Skills</h2>
 					<p>
 						The majority of the day consisted of continued scuba certification training.
-						The next career developing session, held in the evening, involved the Trekkers 
+						The next career developing session, held in the evening, involved the
+						<a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekkers</a> 
 						participating in the first part of a professionalism course. The first part of 
 						this course focused on interview skills and conference call etiquette. After receiving 
 						a brief explanation of do’s and don’ts for interviews, each Trekker played the role of
 						interviewer and interviewee in a round of mock interviews and graded each other on 
 						their etiquette, responses and body language. Afterwards, the Trekkers and 1 i-Trek 
-						volunteer went to different parts of the house and participated in a conference call to
+						<a href="http://www.i-trek.org/become-volunteer/" class="orange">volunteer</a> 
+						went to different parts of the house and participated in a conference call to
 						define research roles. Three of the them played the role of a different disruptive 
 						person while the leader of the call, who was one of the Trekkers,  had to manage
 						each person on the call while having a successful conference call.
@@ -372,7 +384,8 @@
 					<h2 style="padding-bottom:15px;">Scuba Certification and Career Development</h2>
 					<p>
 						In order to adequately define the scale and test its effectiveness, 
-						the Trekkers needed to collect data on several coral reefs. 
+						the<a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekkers</a> 
+						needed to collect data on several coral reefs. 
 						This is easiest done while diving. Therefore, each Trekker participated 
 						in scuba certification classes that would take three to four days.
 					</p>
