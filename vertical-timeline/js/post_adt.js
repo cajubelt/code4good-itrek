@@ -51,5 +51,3 @@ function post(title, content, author, year, category){
 	this.category = category;
 	this.toHTML = toHTML;
 }
-//var helloObjectWorld = new post('title','content','author','year','category');
-//helloObjectWorld.toHTML();
