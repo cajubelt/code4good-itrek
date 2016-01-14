@@ -546,3 +546,9 @@ header h1 {
 #TrekkersLabel {
 	font-weight:bold;
 }
+
+.orange {
+	color: rgb(192, 107, 58);
+	font-family: "Droid Serif", serif;
+
+}
