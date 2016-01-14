@@ -37,19 +37,7 @@ function toHTML(){
 			blockk.appendChild(category);
 			
 			document.getElementById("cd-timeline").appendChild(blockk); //Note this doens't work if use block instead
-			
-			$.getScript("https://cdn.firebase.com/js/client/2.3.2/firebase.js", function(){
-   				
-   				var myFirebaseRef = new Firebase("https://amber-fire-9380.firebaseio.com/"
-				);			
-				myFirebaseRef.push({title: title});
 				
-				alert("Script executed");
-
-			});
-			
-
-		
 		}
 		
 	}
