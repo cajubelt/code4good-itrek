@@ -15,9 +15,9 @@ Title <br> <textarea name="submit-title" cols="40" rows="1"></textarea> <br>
 <!-- Title <INPUT type="text" name="submit-title" style="width:100%"><BR> -->
 Category
 <select name="category">
-  <option value="Fundraising">Fundraising</option>
-  <option value="Trek Planning">Trek Planning</option>
-  <option value="Trekker Actions">Trekker Actions</option>
+  <option value="fundraising">Fundraising</option>
+  <option value="planning">Trek Planning</option>
+  <option value="actions">Trekker Actions</option>
 </select> <br> <br>
 Date <input type="date" name="date"> <br> <br>
 Content <br> <textarea name="submit-content" cols="40" rows="5" ></textarea> <br>

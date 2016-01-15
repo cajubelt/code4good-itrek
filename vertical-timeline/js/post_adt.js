@@ -18,11 +18,11 @@ function toHTML(){
 			var iconDiv = document.createElement("div");
 			iconDiv.className = "cd-timeline-img";
 						
-			if (this.category == "Fundraising") {
+			if (this.category == "fundraising") {
 				icon.src = "dollar.png";
 				iconDiv.className += " cd-dollar";
 			}
-			else if (this.category == "Trek Planning") {
+			else if (this.category == "planning") {
 				icon.src = "gear.png"
 				iconDiv.className += " cd-gear";
 			}
@@ -44,22 +44,25 @@ function toHTML(){
 			newPostDate.textContent = month + " " + day + ", " + year;
 			newPostDate.className = "cd-date";
 			
-			var content = document.createElement("div");
-			content.className = "cd-timeline-content";				
-			content.appendChild(newPostTitle);
-			content.appendChild(newPostContent);
-			content.appendChild(newPostDate);
+			var newCDTimelineContentBlock = document.createElement("div");
+			newCDTimelineContentBlock.className = "cd-timeline-content";				
+			newCDTimelineContentBlock.appendChild(newPostTitle);
+			newCDTimelineContentBlock.appendChild(newPostContent);
+			newCDTimelineContentBlock.appendChild(newPostDate);
 			
-			var category = document.createElement("div");
-			category.className = this.category;
-			category.appendChild(content);
-			category.appendChild(iconDiv);
+			console.log(this.category);
+			var newPostCategory = document.createElement("div");
+			newPostCategory.className = this.category;
+			console.log("hello");
+			console.log(this.category);
+			newPostCategory.appendChild(newCDTimelineContentBlock);
+			newPostCategory.appendChild(iconDiv);
 			
-			var blockk = document.createElement("div");
-			blockk.className = "cd-timeline-block";
-			blockk.appendChild(category);
+			var newPostBlock = document.createElement("div");
+			newPostBlock.className = "cd-timeline-block";
+			newPostBlock.appendChild(newPostCategory);
 			
-			document.getElementById("cd-timeline").appendChild(blockk); //Note this doens't work if use block instead
+			document.getElementById("cd-timeline").appendChild(newPostBlock); //Note this doens't work if use block instead
 				
 		}
 		
