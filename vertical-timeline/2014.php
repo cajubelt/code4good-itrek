@@ -131,7 +131,7 @@
 		<div class="cd-timeline-block">
 			<div class="fundraising">
 				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -159,7 +159,7 @@
 		<div class="cd-timeline-block">
 			<div class="fundraising">
 				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -176,7 +176,7 @@
 		<div class="cd-timeline-block">
 			<div class="fundraising">
 				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -199,7 +199,7 @@
 		<div class="cd-timeline-block">
 			<div class="fundraising">
 				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -217,7 +217,7 @@
 		<div class="cd-timeline-block">
 			<div class="fundraising">
 				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -237,8 +237,8 @@
 		
 		<div class="cd-timeline-block">
 			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+				<div class="cd-timeline-img cd-picture">
+					<img src="footprint.png" alt="Picture">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -254,8 +254,8 @@
 		
 		<div class="cd-timeline-block">
 			<div class="fundraising">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
+				<div class="cd-timeline-img cd-location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -278,7 +278,7 @@
 		<div class="cd-timeline-block">
 			<div class = "fundraising">
 				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -300,8 +300,8 @@
 
 		<div class="cd-timeline-block">
 			<div class = "actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+				<div class="cd-timeline-img cd-picture">
+					<img src="footprint.png" alt="Picture">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -321,8 +321,8 @@
 		
 		<div class="cd-timeline-block">
 			<div class = "planning">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
+				<div class="cd-timeline-img cd-movie">
+					<img src="gear.png" alt="Movie">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -347,8 +347,8 @@
 		
 		<div class="cd-timeline-block">
 			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+				<div class="cd-timeline-img cd-movie">
+					<img src="gear.png" alt="Movie">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -377,7 +377,7 @@
 		<div class="cd-timeline-block">
 			<div class="actions">
 				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
+					<img src="footprint.png" alt="Picture">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">

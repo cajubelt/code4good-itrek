@@ -208,13 +208,14 @@ header h1 {
   margin-top: -12px;
 }
 .cd-timeline-img.cd-picture {
-  background: #75ce66;
+  background: #d9b38c;
 }
 .cd-timeline-img.cd-movie {
-  background: #c03b44;
+  background: #99c2ff;
 }
 .cd-timeline-img.cd-location {
-  background: #f0ca45;
+  background: #adebad;
+  
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
