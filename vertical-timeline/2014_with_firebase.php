@@ -102,36 +102,33 @@
 		</script>
 		
 		
-		<form id="filters">
-			Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleVisibility('fundraising')" checked>
-			Trek Planning: <input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="toggleVisibility('planning')" checked>
-			Trekker Actions: <input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="toggleVisibility('actions')" checked>
+<form id="filters" align="left" style="padding:2em;text-size:200%">
+				<div style="text-decoration:underline">
+					Filter by category
+				</div>
+				<br>
+				<div style="display:inline-block;padding-right:2em">
+					Fundraising:
+					<input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleVisibility('fundraising')" checked>
+				</div>
+				<div style="display:inline-block;padding-right:2em">
+					Trek Planning:
+					<input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="toggleVisibility('planning')" checked>
 
-		</form>
+				</div>
+				<div style="display:inline-block;padding-right:2em">
+					Trekker Actions:
+					<input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="toggleVisibility('actions')" checked>
+
+				</div>
+
+			</form>
 		
-<!--
-		<div class = "fundraising">
-			<p>
-				Testing fundraising filter
-			</p>
-		</div> 
-		
-		<div class = "actions">
-			<p>
-				Testing actions filter
-			</p>
-		</div> 
-		<div class = "planning">
-			<p>
-				Testing planning filter
-			</p>
-		</div>-->
- 
 		
 		<div class="cd-timeline-block">
 			<div class="fundraising">
 				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -159,7 +156,7 @@
 		<div class="cd-timeline-block">
 			<div class="fundraising">
 				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -176,7 +173,7 @@
 		<div class="cd-timeline-block">
 			<div class="fundraising">
 				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -199,7 +196,7 @@
 		<div class="cd-timeline-block">
 			<div class="fundraising">
 				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -217,7 +214,7 @@
 		<div class="cd-timeline-block">
 			<div class="fundraising">
 				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -237,8 +234,8 @@
 		
 		<div class="cd-timeline-block">
 			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+				<div class="cd-timeline-img cd-picture">
+					<img src="footprint.png" alt="Picture">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -254,8 +251,8 @@
 		
 		<div class="cd-timeline-block">
 			<div class="fundraising">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
+				<div class="cd-timeline-img cd-location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -278,7 +275,7 @@
 		<div class="cd-timeline-block">
 			<div class = "fundraising">
 				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+					<img src="dollar.png" alt="Location">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -300,8 +297,8 @@
 
 		<div class="cd-timeline-block">
 			<div class = "actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+				<div class="cd-timeline-img cd-picture">
+					<img src="footprint.png" alt="Picture">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -321,8 +318,8 @@
 		
 		<div class="cd-timeline-block">
 			<div class = "planning">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
+				<div class="cd-timeline-img cd-movie">
+					<img src="gear.png" alt="Movie">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -347,8 +344,8 @@
 		
 		<div class="cd-timeline-block">
 			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+				<div class="cd-timeline-img cd-movie">
+					<img src="gear.png" alt="Movie">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -377,7 +374,7 @@
 		<div class="cd-timeline-block">
 			<div class="actions">
 				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
+					<img src="footprint.png" alt="Picture">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -417,6 +414,9 @@ if(isset($_POST['submit-title']))
 $title = $_POST['submit-title'];
 $content = $_POST['submit-content'];
 $image = $_POST['files'];
+$date = $_POST['date'];
+$category = $_POST['category'];
+$video_link = $_POST['video'];
 
 //send info to database using javascript
 echo '
@@ -428,10 +428,8 @@ echo '
 echo 'title : ' . json_encode($title) . ',';
 echo 'content : ' . json_encode($content) . ',';
 echo 'image : ' . json_encode($image) . ',';
-
-echo 'author : "not yet defined"' . ',';
-echo 'year : "not yet defined"' . ',';
-echo 'category : "action",';
+echo 'category : ' . json_encode($category) . ',';
+echo 'date : ' . json_encode($date) . ',';
 
 echo '});
 	</script>';
@@ -445,7 +443,7 @@ echo '});
 	
 	myFirebaseRef.on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
-		var newPostObject = new post(newPost.title, newPost.content, newPost.author, newPost.year, newPost.category);
+		var newPostObject = new post(newPost.title, newPost.content, newPost.date, newPost.category);
 		newPostObject.toHTML();
 	}, function (errorObject) { //in case database read fails
   		alert("The read failed: " + errorObject.code);

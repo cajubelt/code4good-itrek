@@ -207,6 +207,8 @@ header h1 {
   margin-left: -12px;
   margin-top: -12px;
 }
+
+/* This section should be deleted once we remove hard-coded elements */
 .cd-timeline-img.cd-picture {
   background: #d9b38c;
 }
@@ -217,6 +219,18 @@ header h1 {
   background: #adebad;
   
 }
+
+.cd-timeline-img.cd-footprint {
+  background: #d9b38c;
+}
+.cd-timeline-img.cd-gear {
+  background: #99c2ff;
+}
+.cd-timeline-img.cd-dollar {
+  background: #adebad;
+  
+}
+
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
     width: 60px;
