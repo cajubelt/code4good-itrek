@@ -35,12 +35,12 @@ function toHTML(){
 			
 			var newPostDate = document.createElement("span");
 			var dateObject = new Date(this.date);
-			var year = dateObject.getFullYear();
+			var year = dateObject.getUTCFullYear();
 			var monthDict = {0:"January", 1:"February", 2:"March", 3:"April",
 							4:"May", 5:"June", 6:"July", 7:"August", 8: "September",
 							9:"October", 10:"November", 11:"December"};
-			var month = monthDict[dateObject.getMonth()];
-			var day = dateObject.getDate();
+			var month = monthDict[dateObject.getUTCMonth()];
+			var day = dateObject.getUTCDate();
 			newPostDate.textContent = month + " " + day + ", " + year;
 			newPostDate.className = "cd-date";
 			
@@ -50,11 +50,8 @@ function toHTML(){
 			newCDTimelineContentBlock.appendChild(newPostContent);
 			newCDTimelineContentBlock.appendChild(newPostDate);
 			
-			console.log(this.category);
 			var newPostCategory = document.createElement("div");
 			newPostCategory.className = this.category;
-			console.log("hello");
-			console.log(this.category);
 			newPostCategory.appendChild(newCDTimelineContentBlock);
 			newPostCategory.appendChild(iconDiv);
 			
@@ -62,7 +59,19 @@ function toHTML(){
 			newPostBlock.className = "cd-timeline-block";
 			newPostBlock.appendChild(newPostCategory);
 			
-			document.getElementById("cd-timeline").appendChild(newPostBlock); //Note this doens't work if use block instead
+			var timeline = document.getElementById("cd-timeline");
+			var timelineBlocks = document.getElementsByClassName("cd-timeline-block");
+			var timelineDateSpans = document.getElementsByClassName("cd-date");
+			for (var i=0; i<timelineDateSpans.length - 1; i++) { //why -1 here? Otherwise NaN
+				var postDate = new Date(timelineDateSpans[i].textContent)
+				if (postDate.getTime() < dateObject.getTime()) {
+					timeline.insertBefore(newPostBlock, timelineBlocks[i]); //Note this doens't work if use block instead
+					break;
+				}
+				else {
+					timeline.appendChild(newPostBlock);
+				}
+			}
 				
 		}
 		

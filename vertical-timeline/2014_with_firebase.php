@@ -395,7 +395,7 @@
 						Graduate Education to educate underrepresented students on how to increase 
 						their chances of being admitted to top tier graduate programs.
 					</p>
-					<span class="cd-date">June 2nd, 2014</span>
+					<span class="cd-date">June 2, 2014</span>
 				</div> <!-- cd-timeline-content -->
 			</div> <!-- actions -->
 		</div> <!-- cd-timeline-block -->
@@ -422,7 +422,7 @@ $video_link = $_POST['video'];
 echo '
 	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
 	<script>
-	var myFirebaseRef = new Firebase("https://torrid-torch-4218.firebaseio.com/-K80XUZiPvdoUy5TXW7X");
+	var myFirebaseRef = new Firebase("https://amber-fire-9380.firebaseio.com/");
 	myFirebaseRef.push({';
 	
 echo 'title : ' . json_encode($title) . ',';
@@ -439,9 +439,10 @@ echo '});
 
 <script> //this puts posts from the database onto the timeline
 	
-	var myFirebaseRef = new Firebase("https://torrid-torch-4218.firebaseio.com/-K80XUZiPvdoUy5TXW7X");
+	//var myFirebaseRef = new Firebase("https://torrid-torch-4218.firebaseio.com/-K80XUZiPvdoUy5TXW7X");
+	var myFirebaseRef = new Firebase("https://amber-fire-9380.firebaseio.com/");
 	
-	myFirebaseRef.on("child_added", function(snapshot, prevChildKey) {
+	myFirebaseRef.orderByChild("title").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
 		var newPostObject = new post(newPost.title, newPost.content, newPost.date, newPost.category);
 		newPostObject.toHTML();
