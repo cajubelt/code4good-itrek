@@ -413,7 +413,7 @@ if(isset($_POST['submit-title']))
 //get info sent from login page
 $title = $_POST['submit-title'];
 $content = $_POST['submit-content'];
-$image = $_POST['files'];
+$image = $_FILES['files'];
 $date = $_POST['date'];
 $category = $_POST['category'];
 $video_link = $_POST['video'];
@@ -422,12 +422,26 @@ $video_link = $_POST['video'];
 echo '
 	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
 	<script>
-	var myFirebaseRef = new Firebase("https://amber-fire-9380.firebaseio.com/");
-	myFirebaseRef.push({';
+	var myFirebaseRef = new Firebase("https://amber-fire-9380.firebaseio.com/");';
+
+echo 'var imageVar = ' . json_encode($image) . ';';	
+$imdata = base64_encode(file_get_contents("gear.png")); //HARD CODED GEAR PIC
+echo 'var base64image = ' . json_encode($imdata) . ';';	
+
+
+echo '
+	console.log("HERE");
+';
+
+	
+echo 'myFirebaseRef.push({';
 	
 echo 'title : ' . json_encode($title) . ',';
 echo 'content : ' . json_encode($content) . ',';
 echo 'image : ' . json_encode($image) . ',';
+
+echo 'base64image : ' . json_encode($imdata) . ',';
+
 echo 'category : ' . json_encode($category) . ',';
 echo 'date : ' . json_encode($date) . ',';
 
@@ -444,7 +458,7 @@ echo '});
 	
 	myFirebaseRef.orderByChild("title").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
-		var newPostObject = new post(newPost.title, newPost.content, newPost.date, newPost.category);
+		var newPostObject = new post(newPost.title, newPost.content, newPost.date, newPost.category, newPost.image, newPost.base64image);
 		newPostObject.toHTML();
 	}, function (errorObject) { //in case database read fails
   		alert("The read failed: " + errorObject.code);

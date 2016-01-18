@@ -14,6 +14,10 @@ function toHTML(){
 			var newPostContent = document.createElement("p");
 			newPostContent.textContent = this.content;
 			
+			var newPostImage = document.createElement("img");
+			newPostImage.src = "data:image/png;base64," + this.base64image;
+			console.log(this.image);
+			
 			var icon = document.createElement("img");
 			var iconDiv = document.createElement("div");
 			iconDiv.className = "cd-timeline-img";
@@ -47,6 +51,7 @@ function toHTML(){
 			var newCDTimelineContentBlock = document.createElement("div");
 			newCDTimelineContentBlock.className = "cd-timeline-content";				
 			newCDTimelineContentBlock.appendChild(newPostTitle);
+			newCDTimelineContentBlock.appendChild(newPostImage);
 			newCDTimelineContentBlock.appendChild(newPostContent);
 			newCDTimelineContentBlock.appendChild(newPostDate);
 			
@@ -81,10 +86,12 @@ function toHTML(){
 	}
 	
 //object representing a post on the timeline
-function post(title, content, date, category){
+function post(title, content, date, category, image, base64image){
 	this.title = title;
 	this.content = content;
 	this.date = date;
 	this.category = category;
+	this.image = image;
+	this.base64image = base64image;
 	this.toHTML = toHTML;
 }
