@@ -64,6 +64,9 @@ function toHTML(){
 			var timelineDateSpans = document.getElementsByClassName("cd-date");
 			for (var i=0; i<timelineDateSpans.length - 1; i++) { //why -1 here? Otherwise NaN
 				var postDate = new Date(timelineDateSpans[i].textContent)
+				//get the time in Milliseconds, and if the time of the new post is
+				//greater than the time of the given post (iterating backwards through time),
+				//we insert the new post before the given post
 				if (postDate.getTime() < dateObject.getTime()) {
 					timeline.insertBefore(newPostBlock, timelineBlocks[i]); //Note this doens't work if use block instead
 					break;
