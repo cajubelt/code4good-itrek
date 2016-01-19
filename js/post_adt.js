@@ -1,9 +1,3 @@
-/**
- * 
- * @author Charlie Andrews-Jubelt
- */
-
-
 //method to produce html element for a post (in progress)
 function toHTML(){
 		with (this){
@@ -15,23 +9,25 @@ function toHTML(){
 			newPostContent.textContent = this.content;
 			
 			var newPostImage = document.createElement("img");
-			newPostImage.src = "data:image/png;base64," + this.base64image;
-			console.log(this.image);
-			
+			if (this.base64image != "") {
+				newPostImage.src = "data:image/png;base64," + this.base64image;
+				newPostImage.className = "content-image";
+			}
+
 			var icon = document.createElement("img");
 			var iconDiv = document.createElement("div");
 			iconDiv.className = "cd-timeline-img";
 						
 			if (this.category == "fundraising") {
-				icon.src = "dollar.png";
+				icon.src = "img/dollar.png";
 				iconDiv.className += " cd-dollar";
 			}
 			else if (this.category == "planning") {
-				icon.src = "gear.png"
+				icon.src = "img/gear.png"
 				iconDiv.className += " cd-gear";
 			}
 			else { //Trekker Actions
-				icon.src = "footprint.png";
+				icon.src = "img/footprint.png";
 				iconDiv.className += " cd-footprint";
 			}
 			
@@ -86,12 +82,11 @@ function toHTML(){
 	}
 	
 //object representing a post on the timeline
-function post(title, content, date, category, image, base64image){
+function post(title, content, date, category, base64image){
 	this.title = title;
 	this.content = content;
 	this.date = date;
 	this.category = category;
-	this.image = image;
 	this.base64image = base64image;
 	this.toHTML = toHTML;
 }

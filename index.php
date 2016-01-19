@@ -10,20 +10,17 @@
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-  	
+  	<script src="js/post_adt.js"></script> <!-- Post ADT -->
+  	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
 	<title>i-Trek Updates</title>
 </head>
 
 <body>
 	<div style="background:#000000">
 	<a href="php-login-script/index.php" class="button" style="font-size:80%;background:#e34c00">Personnel Login</a>
-
-<!-- 	<div style="position:absolute;right:1em;padding-bottom:15px;top:1em;">
-		<button class="login" style="color:#FFFFFF;background:#e34c00;border:none;padding:.5em">Personnel Login</button>
-	</div> -->
 	</div>
 	<header style="background:#000000;height:300px">
-		<img src="logo.png" style="width:720px;height:300px;">
+		<img src="img/logo.png" style="width:720px;height:300px;">
 	</header>
 		<div class="tab" style="background:#000000">
 			<div style="display:inline-block;background:#000000;padding-top:15px;padding-bottom:15px;padding-left:15px;padding-right:15px;margin-right:-4px;height:50px">
@@ -33,17 +30,27 @@
 			<div class="dropdown" style="display:inline-block;position:absolute;right:1em;padding-bottom:15px" align="right">
 			  <button class="dropbtn">Previous Years</button>
 			  <div class="dropdown-content">
-			    <a href="index.html">2015</a>
-			    <a href="2014.html">2014</a>
+			    <a href="index.php">2015</a>
+			    <a href="2014.php">2014</a>
 			  </div>
 			</div>
 		</div>
 
 		<form id="filters" align="left" style="padding:2em;text-size:200%">
-			Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleVisibility('fundraising')" checked> 
-			Trek Planning: <input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="toggleVisibility('planning')" checked>
-			Trekker Actions: <input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="toggleVisibility('actions')" checked>
+			<div style="text-decoration:underline">
+				Filter by category
+			</div> <br>
+			<div style="display:inline-block;padding-right:2em"> 			Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleVisibility('fundraising')" checked>
+			</div> 
+			<div style="display:inline-block;padding-right:2em"> Trek Planning: <input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="toggleVisibility('planning')" checked>
+			
+			</div>
+			<div style="display:inline-block;padding-right:2em">
+				Trekker Actions: <input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="toggleVisibility('actions')" checked>
 
+			</div>
+ 
+			
 		</form>
 	
 <section id="cd-timeline" class="cd-container">
@@ -65,24 +72,21 @@
 		
 		<div class="cd-timeline-block">
 			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+				<div class="cd-timeline-img cd-dollar">
+					<img src="img/dollar.png" alt="Fundraising">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
 					<h2>Initiate Kickstarter Fundraising Program</h2>
-					<p>
-						Description of Fundraising Program here.
-					</p>
 					<span class="cd-date">December, 2015</span>
 				</div> <!-- cd-timeline-content -->
 			</div> <!--fundraising -->
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="planning">
+				<div class="cd-timeline-img cd-gear">
+					<img src="img/gear.png" alt="Planning">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -93,9 +97,9 @@
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="fundraising">
+				<div class="cd-timeline-img cd-dollar">
+					<img src="img/dollar.png" alt="Fundraising">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -107,8 +111,8 @@
 		
 		<div class="cd-timeline-block">
 			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+				<div class="cd-timeline-img cd-gear">
+					<img src="img/gear.png" alt="Planning">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -119,9 +123,9 @@
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="planning">
+				<div class="cd-timeline-img cd-gear">
+					<img src="img/gear.png" alt="Planning">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -132,9 +136,9 @@
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="actions">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -146,8 +150,8 @@
 		
 		<div class="cd-timeline-block">
 			<div class="actions">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -159,8 +163,8 @@
 		
 		<div class="cd-timeline-block">
 			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -171,9 +175,9 @@
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="actions">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -185,8 +189,8 @@
 		
 		<div class="cd-timeline-block">
 			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+				<div class="cd-timeline-img cd-dollar">
+					<img src="img/dollar.png" alt="Fundraising">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -197,9 +201,9 @@
 		</div> <!-- cd-timeline-block -->
 				
 		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="planning">
+				<div class="cd-timeline-img cd-gear">
+					<img src="img/gear.png" alt="Planning">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -210,9 +214,9 @@
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="actions">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -223,9 +227,9 @@
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="actions">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -235,6 +239,8 @@
 			</div> <!-- planning --> 
 		</div> <!-- cd-timeline-block -->
 		
+		<!-- CHANGE IMG AND TAGS AND STUFF -->
+
 		<div class="cd-timeline-block">
 			<div class="actions">
 				<div class="cd-timeline-img cd-location">
@@ -669,5 +675,23 @@
           
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+
+<script> //this puts posts from the database onto the timeline
+	
+	//var myFirebaseRef = new Firebase("https://torrid-torch-4218.firebaseio.com/-K80XUZiPvdoUy5TXW7X");
+	// var myFirebaseRef = new Firebase("https://amber-fire-9380.firebaseio.com/");
+	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+	
+	myFirebaseRef.orderByChild("title").on("child_added", function(snapshot, prevChildKey) {
+		var newPost = snapshot.val();
+		var newPostObject = new post(newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image);
+		newPostObject.toHTML();
+	}, function (errorObject) { //in case database read fails
+  		alert("The read failed: " + errorObject.code);
+	});
+
+</script>
+
+
 </body>
 </html>

@@ -10,20 +10,15 @@
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-  	
 	<title>i-Trek Updates</title>
 </head>
 <body>
 	<div style="background:#000000">
 	<a href="php-login-script/index.php" class="button" style="font-size:80%;background:#e34c00">Personnel Login</a>
-
-<!-- 	<div style="position:absolute;right:1em;padding-bottom:15px;top:1em;">
-		<button class="login" style="color:#FFFFFF;background:#e34c00;border:none;padding:.5em">Personnel Login</button>
-	</div> -->
 	</div>
 	<header style="background:#000000;height:300px">
 
-		<img src="logo.png" style="width:720px;height:300px;">
+		<img src="img/logo.png" style="width:720px;height:300px;">
 	
 	</header>
 		<div class="tab" style="background:#000000">
@@ -34,8 +29,8 @@
 			<div class="dropdown" style="display:inline-block;position:absolute;right:1em;padding-bottom:15px" align="right">
 			  <button class="dropbtn">Previous Years</button>
 			  <div class="dropdown-content">
-			    <a href="index.html">2015</a>
-			    <a href="2014.html">2014</a>
+			    <a href="index.php">2015</a>
+			    <a href="2014.php">2014</a>
 			  </div>
 			</div>
 		</div>
@@ -55,7 +50,7 @@
 		</p>
 		<br>
 		<p>
-			The 2014 Trekkers chose to pursue a research project that attempted to define a 
+			The 2014 <a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekkers</a> chose to pursue a research project that attempted to define a 
 			coral reef health scale, entitled “The i-Trek Global Coral Health Survey”, that 
 			can be used by anyone to evaluate and log the health of coral reefs. While other 
 			scales require highly qualified users and equipment, only easily obtainable materials 
@@ -81,6 +76,7 @@
 		</div> <!-- video -->	
 	</section> <!--2014intro -->
 	
+
 	
 	<section id="cd-timeline" class="cd-container">
 		
@@ -100,49 +96,48 @@
 		</script>
 		
 		
-		<form id="filters">
-			Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleVisibility('fundraising')" checked>
-			Trek Planning: <input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="toggleVisibility('planning')" checked>
-			Trekker Actions: <input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="toggleVisibility('actions')" checked>
+<form id="filters" align="left" style="padding:2em;text-size:200%">
+				<div style="text-decoration:underline">
+					Filter by category
+				</div>
+				<br>
+				<div style="display:inline-block;padding-right:2em">
+					Fundraising:
+					<input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleVisibility('fundraising')" checked>
+				</div>
+				<div style="display:inline-block;padding-right:2em">
+					Trek Planning:
+					<input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="toggleVisibility('planning')" checked>
 
-		</form>
+				</div>
+				<div style="display:inline-block;padding-right:2em">
+					Trekker Actions:
+					<input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="toggleVisibility('actions')" checked>
+
+				</div>
+
+			</form>
 		
-<!--
-		<div class = "fundraising">
-			<p>
-				Testing fundraising filter
-			</p>
-		</div> 
-		
-		<div class = "actions">
-			<p>
-				Testing actions filter
-			</p>
-		</div> 
-		<div class = "planning">
-			<p>
-				Testing planning filter
-			</p>
-		</div>-->
- 
 		
 		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="actions">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
 					<h2>Presentation Session</h2>
 					<p>
-						The last career development session was a judged presentation session. Each Trekker prepared 
+						The last career development session was a judged presentation session. Each 
+						<a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekker</a> prepared 
 						a presentation that will be given at a minimum of two high schools. Their presentations were 
 						judged by STEM and non-STEM professionals. After being given feedback, the program ended 
 						with a Cuban dinner in Miami which was attended by Warren Marcus, a local MIT alumni bio 
 						research professional. This final networking opportunity officially ended the Trek.
 					</p>
 					<p>
-						Overall, the program proved to be full of learning opportunities. Each Trekker was able to 
+						Overall, the program proved to be full of learning opportunities. Each
+						<a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekker</a> was able to 
 						gain new skills and improve on others. They left the program understanding how they can take 
 						initiative to find and create opportunities that will help them progress toward their research 
 						and professional goals.
@@ -153,9 +148,9 @@
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="planning">
+				<div class="cd-timeline-img cd-gear">
+					<img src="img/gear.png" alt="Planning">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -170,15 +165,16 @@
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="planning">
+				<div class="cd-timeline-img cd-gear">
+					<img src="img/gear.png" alt="Planning">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
 					<h2>Testing and Aquarius Presentation</h2>
 					<p>
-						Samples collected the previous day were evaluated at MarineLab in order to affirm their 
+						Samples collected the previous day were evaluated at 
+						<a href="http://www.marinelab.org/index.html" class="orange">MarineLab</a> in order to affirm their 
 						predictions. The evening was another networking activity, a visit to Florida International 
 						University to attend a MIT alumni event. This event was a presentation of Aquarius, the 
 						only underwater research center in the world currently in operation. Researchers in Aquarius 
@@ -192,9 +188,9 @@
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="actions">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -210,9 +206,9 @@
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="actions">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -232,8 +228,8 @@
 		
 		<div class="cd-timeline-block">
 			<div class="actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -248,9 +244,9 @@
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
+			<div class="actions">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
@@ -261,7 +257,8 @@
 						butterfly on Adam’s island which is part of Biscayne National Park.  This activity was 
 						organized by Mark Walters, the local Sierra Club Outings Chair of the Miami Group, in 
 						conjunction with the National Park Service.  On the way home from this very hot day of 
-						physical labor, Mark led them to the famous Robert is Here Fruit Stand where they had 
+						physical labor, Mark led them to the famous 
+						<a href="https://robertishere.com/" class="orange">Robert is Here Fruit Stand</a> where they had 
 						smoothies and milkshakes and he introduced them to fruits they had never even heard of before.  All agreed that the visit to this place was worth the hard work earlier.
 					</p>
 					<span class="cd-date">June 7, 2014</span>
@@ -270,18 +267,22 @@
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class = "fundraising">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+			<div class = "actions">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
 					<h2>Collected Samples Evaluated</h2>
 					<p>
-						Samples collected the previous day were evaluated at MarineLab in Key Largo, Florida and 
+						Samples collected the previous day were evaluated at 
+						<a href="http://www.marinelab.org/index.html" class="orange">MarineLab</a> in Key Largo, Florida and 
 						adjustments were made to the equipment and plan. For the evening career development session, 
-						each student was instructed to prepare an elevator pitch. Each Trekker had to deliver their 
-						pitch and was feedback was provided by the i-Trek volunteers.
+						each student was instructed to prepare an elevator pitch. Each
+						<a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekker</a> had to deliver their 
+						pitch and feedback was provided by the i-Trek
+						<a href="http://www.i-trek.org/become-volunteer/" class="orange">volunteers</a>. 
+
 					</p>
 					<span class="cd-date">June 6, 2014</span>
 				</div> <!-- cd-timeline-content -->
@@ -290,14 +291,15 @@
 
 		<div class="cd-timeline-block">
 			<div class = "actions">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
 					<h2>Preliminiary Dive</h2>
 					<p>
-						As another Trekker earned his PADI certification, the Trekker’s research plan and equipment 
+						As another Trekker earned his PADI certification, the <a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekker's</a> 
+						research plan and equipment 
 						were tested with a preliminary dive at two different coral locations. The evening involved 
 						dinner with Winston Walters, a neurological researcher at the University of Miami School of 
 						Medicine who also manages the lab. This event was very insightful because he shared 
@@ -310,15 +312,16 @@
 		
 		<div class="cd-timeline-block">
 			<div class = "planning">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
+				<div class="cd-timeline-img cd-gear">
+					<img src="img/gear.png" alt="Planning">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
 					<h2>Data Collection Planning</h2>
 					<p>
 						Two of the four participants passed the scuba certification course and were awarded PADI 
-						certifications. After the Trekkers were certified, they started fine tuning their data 
+						certifications. After the <a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekkers</a> 
+						were certified, they started fine tuning their data 
 						collection plan and equipment. This included roles for each Trekker, building a plankton 
 						net to be use to collect samples on the surface and constructing a rig to hold an underwater 
 						camera.
@@ -335,21 +338,23 @@
 		
 		<div class="cd-timeline-block">
 			<div class="planning">
-				<div class="cd-timeline-img cd-location">
-					<img src="img/cd-icon-location.svg" alt="Location">
+				<div class="cd-timeline-img cd-gear">
+					<img src="img/gear.png" alt="Planning">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
 					<h2>Interview and Calling Skills</h2>
 					<p>
 						The majority of the day consisted of continued scuba certification training.
-						The next career developing session, held in the evening, involved the Trekkers 
+						The next career developing session, held in the evening, involved the
+						<a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekkers</a> 
 						participating in the first part of a professionalism course. The first part of 
 						this course focused on interview skills and conference call etiquette. After receiving 
 						a brief explanation of do’s and don’ts for interviews, each Trekker played the role of
 						interviewer and interviewee in a round of mock interviews and graded each other on 
 						their etiquette, responses and body language. Afterwards, the Trekkers and 1 i-Trek 
-						volunteer went to different parts of the house and participated in a conference call to
+						<a href="http://www.i-trek.org/become-volunteer/" class="orange">volunteer</a> 
+						went to different parts of the house and participated in a conference call to
 						define research roles. Three of the them played the role of a different disruptive 
 						person while the leader of the call, who was one of the Trekkers,  had to manage
 						each person on the call while having a successful conference call.
@@ -362,15 +367,16 @@
 		
 		<div class="cd-timeline-block">
 			<div class="actions">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
+				<div class="cd-timeline-img cd-footprint">
+					<img src="img/footprint.png" alt="Action">
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
 					<h2 style="padding-bottom:15px;">Scuba Certification and Career Development</h2>
 					<p>
 						In order to adequately define the scale and test its effectiveness, 
-						the Trekkers needed to collect data on several coral reefs. 
+						the<a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekkers</a> 
+						needed to collect data on several coral reefs. 
 						This is easiest done while diving. Therefore, each Trekker participated 
 						in scuba certification classes that would take three to four days.
 					</p>
@@ -383,49 +389,15 @@
 						Graduate Education to educate underrepresented students on how to increase 
 						their chances of being admitted to top tier graduate programs.
 					</p>
-					<span class="cd-date">June 2nd, 2014</span>
+					<span class="cd-date">June 2, 2014</span>
 				</div> <!-- cd-timeline-content -->
 			</div> <!-- actions -->
 		</div> <!-- cd-timeline-block -->
-	
+		
 	</section> <!-- cd-timeline -->
-	
-	<script>
-		//Information inputted by the user
-		var newPostHeader = document.createElement("h2");
-		newPostHeader.textContent = "Sample Header";
-		
-		var newPostContent = document.createElement("p");
-		newPostContent.textContent = "Sample content for timeline goes here";
-		
-		var icon = document.createElement("img");
-		icon.src = "img/cd-icon-picture.svg";
-		
-		var iconDiv = document.createElement("div");
-		iconDiv.className = "cd-timeline-img";
-		iconDiv.className += " cd-picture";
-		iconDiv.appendChild(icon);
-		
-		var content = document.createElement("div");
-		content.className = "cd-timeline-content";				
-		content.appendChild(newPostHeader);
-		content.appendChild(newPostContent);
-		
-		var action = document.createElement("div");
-		action.className = "actions";
-		action.appendChild(content);
-		action.appendChild(iconDiv);
-		
-		var blockk = document.createElement("div");
-		blockk.className = "cd-timeline-block";
-		blockk.appendChild(action);
-		
-		document.getElementById("cd-timeline").appendChild(blockk); //Note this doens't work if use block instead
-		
-	</script>
-	
           
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+
 </body>
 </html>

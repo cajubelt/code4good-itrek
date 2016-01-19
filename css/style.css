@@ -1,3 +1,7 @@
+.content-image {
+  padding:25px;width:500px;height:350px
+}
+
 a.button {
     position:absolute;right:1em;padding-bottom:15px;top:1em;
     color:#FFFFFF;border:none;padding:.5em
@@ -206,18 +210,6 @@ header h1 {
   top: 50%;
   margin-left: -12px;
   margin-top: -12px;
-}
-
-/* This section should be deleted once we remove hard-coded elements */
-.cd-timeline-img.cd-picture {
-  background: #d9b38c;
-}
-.cd-timeline-img.cd-movie {
-  background: #99c2ff;
-}
-.cd-timeline-img.cd-location {
-  background: #adebad;
-  
 }
 
 .cd-timeline-img.cd-footprint {
