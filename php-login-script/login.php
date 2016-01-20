@@ -31,7 +31,7 @@
 <body>
 <div id="Frame0">
   <h1 align="center">i-Trek </h1>
-  <h2 align="center">Login with admin or trekker credentials to submit a new timeline post.</h2>
+  <h3 align="center">Login with admin or trekker credentials to submit a new timeline post.</h3>
 </div>
 <br>
 <form action="" method="post" name="Login_Form">
