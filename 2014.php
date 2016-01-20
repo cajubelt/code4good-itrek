@@ -21,12 +21,12 @@
 		<img src="img/logo.png" style="width:720px;height:300px;">
 	
 	</header>
-		<div class="tab" style="background:#000000">
-			<div style="display:inline-block;background:#000000;padding-top:15px;padding-bottom:15px;padding-left:15px;padding-right:15px;margin-right:-4px;height:50px">
+		<div class="tab">
+			<div class="subtitle">
 				Follow our 2014 Trekkers throughout their research project experience.
 			</div>
 
-			<div class="dropdown" style="display:inline-block;position:absolute;right:1em;padding-bottom:15px" align="right">
+			<div class="dropdown">
 			  <button class="dropbtn">Previous Years</button>
 			  <div class="dropdown-content">
 			    <a href="2015.php">2015</a>

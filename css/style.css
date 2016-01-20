@@ -11,7 +11,7 @@ a.button {
 .dropbtn {
     background-color: #e34c00;
     color: white;
-    padding: 16px;
+    padding: 14px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -113,6 +113,28 @@ Modules - reusable parts of our design
 Main components 
 
 -------------------------------- */
+.tab {
+	display: block; 
+	background:#000000;
+	text-align: center;
+}
+
+.subtitle { /*This is for the subtitle "Follow our 201x Trekker through their research project experience" */
+	display:inline-block;
+	background:#000000;
+	color:#086B96;
+	padding-top:15px;
+	padding-bottom:15px;
+	height:50px";
+}
+
+.dropdown {
+	display:inline-block;
+	position: absolute;
+	right: 1em;
+	padding-bottom:20px;
+}
+
 header {
   height: 200px;
   line-height: 200px;
