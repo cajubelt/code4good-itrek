@@ -2,8 +2,13 @@ Thank you for submitting a post to i-Trek's timeline. <br>
 Click <a href="index.php"> here </a> to return to the site. <br>
 (Please do not hit the refresh button).
 <?php
+
+//CHANGE THIS TO REFLECT location of timeline page
+$timeline_address = 'http://cajubelt.scripts.mit.edu/code4good-itrek/';
+
 function nextPage() {
-    header('Location: index.php');
+	//CHANGE THIS IF HOSTED ELSEWHERE
+    header('Location: ' . timeline_address . 'index.php');
 }
 if(isset($_POST['submit-title']))
 { //this retrieves info submitted by user and puts it into the database
