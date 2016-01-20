@@ -3,12 +3,13 @@ Click <a href="index.php"> here </a> to return to the site. <br>
 (Please do not hit the refresh button).
 <?php
 
-//CHANGE THIS TO REFLECT location of timeline page
-$timeline_address = 'http://cajubelt.scripts.mit.edu/code4good-itrek/';
+//change this to location of timeline page
+//note that this will only work on remotely hosted site OR locally hosted, not both at once. 
+//$timeline_address = 'http://cajubelt.scripts.mit.edu/code4good-itrek/';
 
 function nextPage() {
 	//CHANGE THIS IF HOSTED ELSEWHERE
-    header('Location: ' . timeline_address . 'index.php');
+    header('Location: index.php');//. timeline_address . 'index.php');
 }
 if(isset($_POST['submit-title']))
 { //this retrieves info submitted by user and puts it into the database
