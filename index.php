@@ -678,9 +678,9 @@
 
 <script> //this puts posts from the database onto the timeline
 	
-	//var myFirebaseRef = new Firebase("https://torrid-torch-4218.firebaseio.com/-K80XUZiPvdoUy5TXW7X");
+	var myFirebaseRef = new Firebase("https://torrid-torch-4218.firebaseio.com/-K80XUZiPvdoUy5TXW7X");
 	// var myFirebaseRef = new Firebase("https://amber-fire-9380.firebaseio.com/");
-	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+	//var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
 	
 	myFirebaseRef.orderByChild("title").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
