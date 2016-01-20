@@ -14,16 +14,19 @@ if(!isset($_SESSION['UserData']['Username'])){
 <head>
 	<link href="./css/style.css" rel="stylesheet">
 </head>
+	
 <FORM action="http://localhost:8888/redirecting.php" 
        enctype="multipart/form-data"
-       method="post" style="margin-left:2em">
+       method="post" style="padding-left:36%">
 <P>
 <br>
 <h2>New Timeline Submission</h2>
-<label for="submit-title">Title</label><br> 
+
+<br>
+<label for="submit-title">Title</label><br>
 <textarea id="submit-title" name="submit-title" cols="40" rows="1" onkeydown="disableSubmitButton()"></textarea>
 <span id="title-error" style="color:red">*</span>
-<br>
+<br><br>
 <label for="category">Category</label>
 <select id="category" name="category">
   <option value="fundraising">Fundraising</option>
@@ -43,14 +46,23 @@ if(!isset($_SESSION['UserData']['Username'])){
 <br>
 <label for="image">Image</label>
 <input type="file" name="files"><br> or video (copy and paste youtube link) <br> <textarea id="video" name="video" cols="40" rows="1" ></textarea> <br> <br>
+ 
+<div style="display: inline-block">      
+<input style="position:absolute" id="submit-button" type="submit" value="Submit" disabled="disabled">
+<input style="position:absolute" type="button" id="save-button" value="  Done  "><br>
+</div>
 
-Please save before submitting: <input type="button" id="save-button" value="Save"><br>      
-<INPUT id="submit-button" type="submit" value="Send" disabled="disabled"> <INPUT type="reset">
+<br>
+<p id="submission-message" style="color:red;visibility:hidden">Please press submit to send post to admin for approval.</p>
+
+
+<br>
+<a href="logout.php">Click here</a> to Logout.
 </FORM>
+</html>
+
 <?php
 echo '<script src="submission_page_errors.js"></script>';
 ?>
-<a href="logout.php" style="margin-left:2em">Click here</a> to Logout.
-</html>
-</html>
+
 
