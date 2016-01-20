@@ -39,6 +39,8 @@ function processEntries() {
 	//Enable submit button once required fields are filled out
 	if (hasTitle && hasContent && hasDate) {
 		document.getElementById("submit-button").disabled = false;
+		document.getElementById("save-button").style.visibility = "hidden";
+		document.getElementById("submission-message").style.visibility = "visible";
 	}
 	else {
 		document.getElementById("submit-button").disabled = true;
@@ -49,11 +51,16 @@ function processEntries() {
 //used whenever text is changed before saving for the title and content fields
 function disableSubmitButton() {
 	document.getElementById("submit-button").disabled = true;
+	document.getElementById("save-button").style.visibility = "visible";
+	document.getElementById("submission-message").style.visibility = "hidden";
+
 }
 
 //ensures that the date and category are not changed between save and submit
 document.getElementById("date").addEventListener("click", disableSubmitButton);
 document.getElementById("category").addEventListener("click", disableSubmitButton);
+document.getElementById("save-button").style.visibility = "visible";
+document.getElementById("submission-message").style.visibility = "hidden";
 
 
 
