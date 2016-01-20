@@ -1,5 +1,5 @@
 Thank you for submitting a post to i-Trek's timeline. <br>
-Click <a href="index.php"> here </a> to return to the site. <br>
+Click <a href="2015.php"> here </a> to return to the site. <br>
 (Please do not hit the refresh button).
 <?php
 
