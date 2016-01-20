@@ -9,16 +9,19 @@ function toHTML(){
 				var newPostContent = document.createElement("p");
 				newPostContent.textContent = this.content;
 				
+				var isImage = false;
 				var newPostImage = document.createElement("img");
 				if (this.base64image != "") {
 					newPostImage.src = "data:image/png;base64," + this.base64image;
 					newPostImage.className = "content-image";
+					isImage = true;
 				}
 				
+				var isVideo = false;
 				var newPostVideo = document.createElement("iframe");
 				if (this.videolink != "") {
-					console.log("No video link");
 					newPostVideo.src = this.videolink;
+					isVideo = true;
 				}
 				
 	
@@ -55,8 +58,12 @@ function toHTML(){
 				var newCDTimelineContentBlock = document.createElement("div");
 				newCDTimelineContentBlock.className = "cd-timeline-content";				
 				newCDTimelineContentBlock.appendChild(newPostTitle);
-				newCDTimelineContentBlock.appendChild(newPostImage);
-				newCDTimelineContentBlock.appendChild(newPostVideo);
+				if (isImage) {
+					newCDTimelineContentBlock.appendChild(newPostImage);
+				}
+				if (isVideo) {
+					newCDTimelineContentBlock.appendChild(newPostVideo);
+				}
 				newCDTimelineContentBlock.appendChild(newPostContent);
 				newCDTimelineContentBlock.appendChild(newPostDate);
 				

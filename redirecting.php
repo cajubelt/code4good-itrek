@@ -43,4 +43,12 @@ echo '});
 	</script>';
 }
 
+$admin_email = "fierro.samantha@gmail.com";
+$email = 'i-Trek';
+$subject = 'New i-Trek timeline submission pending approval.';
+$comment = 'Please log on to firebase account to approve the new post.';
+
+//send email
+mail($admin_email, "$subject", $comment, "From:" . $email);
+
 ?>
