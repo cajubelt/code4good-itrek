@@ -1,6 +1,12 @@
-Thank you for submitting a post to i-Trek's timeline. <br>
-Click <a href="2015.php"> here </a> to return to the site. <br>
-(Please do not hit the refresh button).
+<link rel="stylesheet" href="php-login-script/css/style.css">
+<div align="middle">
+<div style="background:#e6e6e6;padding:3em;width:35em;text-align:center" >
+<h3 align="top">Thank you for submitting a post to i-Trek's timeline. </h3><br>
+<p>Click <a href="2015.php"> here </a> to return to the site. <br> <br>
+(Please do not hit the refresh button). </p>
+</div>
+</div>
+
 <?php
 
 //change this to location of timeline page
