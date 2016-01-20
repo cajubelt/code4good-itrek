@@ -25,8 +25,7 @@ $imdata = base64_encode(file_get_contents($_FILES['files']['tmp_name']));
 echo '
 	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
 	<script>
-	var myFirebaseRef = new Firebase("https://torrid-torch-4218.firebaseio.com/");';
-	//var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");';
+	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");';
 
 echo 'var base64image = ' . json_encode($imdata) . ';';	
 	
@@ -37,6 +36,8 @@ echo 'content : ' . json_encode($content) . ',';
 echo 'base64image : ' . json_encode($imdata) . ',';
 echo 'category : ' . json_encode($category) . ',';
 echo 'date : ' . json_encode($date) . ',';
+echo 'videolink : ' . json_encode($video_link) . ',';
+
 
 echo '});
 	</script>';

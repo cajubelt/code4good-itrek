@@ -34,7 +34,7 @@ Content <br>
 <textarea id="submit-content" name="submit-content" cols="40" rows="5" onkeydown="disableSubmitButton()"></textarea>
 <span id="content-error" style="color:red">*</span>
 <br>
-<br>Image <input type="file" name="files"><br> or video (copy and paste youtube link) <br> <textarea name="video" cols="40" rows="1" ></textarea> <br> <br>
+<br>Image <input type="file" name="files"><br> or video (copy and paste youtube link) <br> <textarea id="video" name="video" cols="40" rows="1" ></textarea> <br> <br>
 
 Please save before submitting: <input type="button" id="save-button" value="Save"><br>      
 <INPUT id="submit-button" type="submit" value="Send" disabled="disabled"> <INPUT type="reset">

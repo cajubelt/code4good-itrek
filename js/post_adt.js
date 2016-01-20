@@ -13,6 +13,13 @@ function toHTML(){
 				newPostImage.src = "data:image/png;base64," + this.base64image;
 				newPostImage.className = "content-image";
 			}
+			
+			var newPostVideo = document.createElement("iframe");
+			if (this.videolink != "") {
+				console.log("No video link");
+				newPostVideo.src = this.videolink;
+			}
+			
 
 			var icon = document.createElement("img");
 			var iconDiv = document.createElement("div");
@@ -48,6 +55,7 @@ function toHTML(){
 			newCDTimelineContentBlock.className = "cd-timeline-content";				
 			newCDTimelineContentBlock.appendChild(newPostTitle);
 			newCDTimelineContentBlock.appendChild(newPostImage);
+			newCDTimelineContentBlock.appendChild(newPostVideo);
 			newCDTimelineContentBlock.appendChild(newPostContent);
 			newCDTimelineContentBlock.appendChild(newPostDate);
 			
@@ -82,11 +90,12 @@ function toHTML(){
 	}
 	
 //object representing a post on the timeline
-function post(title, content, date, category, base64image){
+function post(title, content, date, category, base64image, videolink){
 	this.title = title;
 	this.content = content;
 	this.date = date;
 	this.category = category;
 	this.base64image = base64image;
+	this.videolink = videolink;
 	this.toHTML = toHTML;
 }
