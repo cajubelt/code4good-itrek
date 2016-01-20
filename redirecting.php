@@ -3,10 +3,6 @@ Click <a href="index.php"> here </a> to return to the site. <br>
 (Please do not hit the refresh button).
 <?php
 
-//change this to location of timeline page
-//note that this will only work on remotely hosted site OR locally hosted, not both at once. 
-//$timeline_address = 'http://cajubelt.scripts.mit.edu/code4good-itrek/';
-
 if(isset($_POST['submit-title']))
 { //this retrieves info submitted by user and puts it into the database
 	

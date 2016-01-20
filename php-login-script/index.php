@@ -7,9 +7,9 @@ if(!isset($_SESSION['UserData']['Username'])){
 
 ?>
 <!-- put link to what page it goes to after submit pressed here (action=...)--> 
-<!-- <FORM action= "http://cajubelt.scripts.mit.edu/code4good-itrek/redirecting.php" -->
 <!--USE THIS TO HOST LOCALLY -->
-<FORM action="http://localhost:8888/redirecting.php" 
+<!-- <FORM action="http://localhost:8888/redirecting.php" -->
+<FORM action= "http://cajubelt.scripts.mit.edu/code4good-itrek/redirecting.php"
        enctype="multipart/form-data"
        method="post" style="margin-left:2em">
 <P>
