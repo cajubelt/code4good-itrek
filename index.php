@@ -684,7 +684,7 @@
 	
 	myFirebaseRef.orderByChild("title").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
-		var newPostObject = new post(newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink);
+		var newPostObject = new post(newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
 		newPostObject.toHTML();
 	}, function (errorObject) { //in case database read fails
   		alert("The read failed: " + errorObject.code);

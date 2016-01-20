@@ -40,7 +40,6 @@ Please save before submitting: <input type="button" id="save-button" value="Save
 <INPUT id="submit-button" type="submit" value="Send" disabled="disabled"> <INPUT type="reset">
 </FORM>
 <?php
-include "i-trek/index.php";
 echo '<script src="submission_page_errors.js"></script>';
 ?>
 <a href="logout.php" style="margin-left:2em">Click here</a> to Logout.

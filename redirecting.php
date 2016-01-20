@@ -7,9 +7,6 @@ Click <a href="index.php"> here </a> to return to the site. <br>
 //note that this will only work on remotely hosted site OR locally hosted, not both at once. 
 //$timeline_address = 'http://cajubelt.scripts.mit.edu/code4good-itrek/';
 
-function nextPage() {
-    header('Location: index.php');
-}
 if(isset($_POST['submit-title']))
 { //this retrieves info submitted by user and puts it into the database
 	
@@ -20,6 +17,7 @@ $date = $_POST['date'];
 $category = $_POST['category'];
 $video_link = $_POST['video'];
 $imdata = base64_encode(file_get_contents($_FILES['files']['tmp_name']));
+$approved = False;
 
 //send info to database using javascript
 echo '
@@ -37,10 +35,12 @@ echo 'base64image : ' . json_encode($imdata) . ',';
 echo 'category : ' . json_encode($category) . ',';
 echo 'date : ' . json_encode($date) . ',';
 echo 'videolink : ' . json_encode($video_link) . ',';
+echo 'approved : ' . json_encode($approved) . ',';
+
 
 
 echo '});
 	</script>';
 }
-nextPage();
+
 ?>
