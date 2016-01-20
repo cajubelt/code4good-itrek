@@ -24,7 +24,7 @@
 	</header>
 		<div class="tab">
 			<div class="subtitle">
-				Follow our 2015 Trekkers throughout their research project experience.
+				<h2>Follow our 2015 Trekkers throughout their research project experience.</h2>
 			</div>
 
 			<div class="dropdown">
@@ -37,15 +37,16 @@
 		</div>
 
 		<form id="filters" align="left" style="padding:2em;text-size:200%">
-			<div style="text-decoration:underline">
-				Filter by category
+			<div class="filterheading">
+				<h1>Filter by category</h1>
 			</div> <br>
-			<div style="display:inline-block;padding-right:2em"> 			Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleVisibility('fundraising')" checked>
+			<div class="filterchoices"> 
+				Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleVisibility('fundraising')" checked>
 			</div> 
-			<div style="display:inline-block;padding-right:2em"> Trek Planning: <input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="toggleVisibility('planning')" checked>
-			
+			<div class="filterchoices"> 
+				Trek Planning: <input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="toggleVisibility('planning')" checked>
 			</div>
-			<div style="display:inline-block;padding-right:2em">
+			<div class="filterchoices">
 				Trekker Actions: <input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="toggleVisibility('actions')" checked>
 			</div>
 			

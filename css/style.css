@@ -120,6 +120,7 @@ Main components
 }
 
 .subtitle { /*This is for the subtitle "Follow our 201x Trekker through their research project experience" */
+
 	display:inline-block;
 	background:#000000;
 	color:#086B96;
@@ -133,6 +134,13 @@ Main components
 	position: absolute;
 	right: 1em;
 	padding-bottom:20px;
+}
+
+.filterchoices {
+	display:inline-block;
+	padding-right:2em;
+	 font-family: "Open Sans", sans-serif;
+
 }
 
 header {
