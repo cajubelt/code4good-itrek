@@ -252,8 +252,8 @@
 	myFirebaseRef.orderByChild("title").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
 		if (newPost.approved){ //TODO: add condition to check date!
-			var newPostObject = new post(newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
-			newPostObject.toHTML();
+			var newPostObject = new post(snapshot.key(), newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
+			newPostObject.toHTML(false);
 		}
 	}, function (errorObject) { //in case database read fails
   		alert("The read failed: " + errorObject.code);

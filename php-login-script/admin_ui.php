@@ -51,24 +51,27 @@ if(!isset($_SESSION['UserData']['Username'])){
 
 <script>
 	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
-	var unapprovedPostIDs = [];
+	//var unapprovedPostIDs = [];
 
-	myFirebaseRef.orderByChild("title").on("child_added", function(snapshot, prevChildKey) {
-		// var ID = snapshot.key();
-		// console.log(ID);
-		// var newPost = snapshot.val();
-		// if (newPost.approved){
-			// console.log('changed approval of post');
-		// }
+
+		//unapprovedPosts.push(newPost)
+		//}
+	
+	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
+		var newPost = snapshot.val();
+		var ID = snapshot.key();
+		console.log(ID);
+		var timelinePostRef = myFirebaseRef.child(ID);
+		console.log(newPost.approved);
 		
-		if (!newPost.approved){ //TODO: add condition to check date!
-			//console.log("found unapproved post");
-			var newPostObject = new post(newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
-			//console.log(newPost.title);
+		
+		//timelinePostRef.update({approved:"true"});
+				
 
-			newPostObject.toHTML();
-			unapprovedPosts.push(newPost)
-		}
+		//if (newPost.approved){ //TODO: add condition to check date!
+		//console.log("found unapproved post");
+		var newPostObject = new post(ID, newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
+		var checkbox = newPostObject.toHTML(true);		
 		
 		//TODO: add "no new unapproved posts" message
 		

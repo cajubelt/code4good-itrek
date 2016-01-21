@@ -1,6 +1,7 @@
 //method to produce html element for a post (in progress)
-function toHTML(){
+function toHTML(isAdmin){
 		with (this){
+						
 			//Information inputted by the user
 			var newPostTitle = document.createElement("h2");
 			newPostTitle.textContent = this.title;
@@ -55,7 +56,21 @@ function toHTML(){
 			newPostDate.className = "cd-date";
 			
 			var newCDTimelineContentBlock = document.createElement("div");
-			newCDTimelineContentBlock.className = "cd-timeline-content";				
+			newCDTimelineContentBlock.className = "cd-timeline-content";
+			
+			if (isAdmin) {
+				var checkboxHeader = document.createElement('h1');
+				checkboxHeader.textContent = "Approve";
+				checkboxHeader.style.display = "inline-block";
+				newCDTimelineContentBlock.appendChild(checkboxHeader);
+				
+				var checkbox = this.createCheckbox();
+				checkbox.style.display = "inline-block";
+				newCDTimelineContentBlock.appendChild(checkbox)			
+			} else {
+				var checkbox = null;
+			}		
+			
 			newCDTimelineContentBlock.appendChild(newPostTitle);
 			if (isImage) {
 				newCDTimelineContentBlock.appendChild(newPostImage);
@@ -92,11 +107,42 @@ function toHTML(){
 				}
 			}
 		}
-		
+	return checkbox;
 	}
 	
+//method to produce a checkbox to toggle post approval
+function createCheckbox() {
+	var checkbox = document.createElement('input');
+	checkbox.type = "checkbox";
+	checkbox.name = "name";
+	checkbox.value = "value";
+	checkbox.id = this.database_id;
+	checkbox.onclick = toggleApproval(checkbox.id);
+	return checkbox;
+}
+
+function toggleApproval(id) {
+	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+	
+	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
+		var newPost = snapshot.val();
+		var ID = snapshot.key();
+		console.log(ID);
+		var timelinePostRef = myFirebaseRef.child(ID);
+		console.log(newPost.approved);
+		
+		
+		timelinePostRef.update({approved:!newPost.approved});
+		
+		
+		}, function (errorObject) { //in case database read fails
+	  		alert("The read failed: " + errorObject.code);
+	});
+}
+	
 //object representing a post on the timeline
-function post(title, content, date, category, base64image, videolink, approved){
+function post(database_id, title, content, date, category, base64image, videolink, approved){
+	this.database_id = database_id; //TODO: make this the only parameter
 	this.title = title;
 	this.content = content;
 	this.date = date;
@@ -105,4 +151,5 @@ function post(title, content, date, category, base64image, videolink, approved){
 	this.videolink = videolink;
 	this.approved = approved;
 	this.toHTML = toHTML;
+	this.createCheckbox = createCheckbox;
 }
