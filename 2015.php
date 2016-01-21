@@ -17,7 +17,7 @@
 
 <body>
 	<div style="background:#000000">
-	<a href="php-login-script/index.php" class="button" style="font-size:80%;background:#e34c00">Personnel Login</a>
+	<a href="php-login-script/admin_ui.php" class="button" style="font-size:80%;background:#e34c00">Personnel Login</a>
 	</div>
 	<header style="background:#000000;height:300px">
 		<img src="img/logo.png" style="width:720px;height:300px;">
@@ -251,7 +251,7 @@
 	
 	myFirebaseRef.orderByChild("title").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
-		if (newPost.approved) {
+		if (newPost.approved){ //TODO: add condition to check date!
 			var newPostObject = new post(newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
 			newPostObject.toHTML();
 		}
