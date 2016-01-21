@@ -54,21 +54,31 @@ if(!isset($_SESSION['UserData']['Username'])){
 	var unapprovedPostIDs = [];
 
 	myFirebaseRef.orderByChild("title").on("child_added", function(snapshot, prevChildKey) {
-		var newPost = snapshot.val();
+		// var ID = snapshot.key();
+		// console.log(ID);
+		// var newPost = snapshot.val();
+		// if (newPost.approved){
+			// console.log('changed approval of post');
+		// }
+		
 		if (!newPost.approved){ //TODO: add condition to check date!
-			console.log("found unapproved post");
+			//console.log("found unapproved post");
 			var newPostObject = new post(newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
-			console.log(newPost.title);
+			//console.log(newPost.title);
 
 			newPostObject.toHTML();
-			//unapprovedPostIDs.push(newPost)
+			unapprovedPosts.push(newPost)
 		}
 		
-		//TODO: add "no new unapproved posts" button
+		//TODO: add "no new unapproved posts" message
 		
 		}, function (errorObject) { //in case database read fails
 	  		alert("The read failed: " + errorObject.code);
 		});
+	
+	// for (i=0; i < unapprovedPosts.length; i++){
+		// unapprovedPosts[i].approved = true;
+	// }
 
 
 
