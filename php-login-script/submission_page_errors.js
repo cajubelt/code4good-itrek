@@ -39,6 +39,7 @@ function processEntries() {
 	//Enable submit button once required fields are filled out
 	if (hasTitle && hasContent && hasDate) {
 		document.getElementById("submit-button").disabled = false;
+		document.getElementById("preview-button").disabled = false;
 		document.getElementById("save-button").style.visibility = "hidden";
 		document.getElementById("submission-message").style.visibility = "visible";
 	}
@@ -56,9 +57,14 @@ function disableSubmitButton() {
 
 }
 
+function previewButton() {
+	window.location = "preview.php"
+}
+
 //ensures that the date and category are not changed between save and submit
 document.getElementById("date").addEventListener("click", disableSubmitButton);
 document.getElementById("category").addEventListener("click", disableSubmitButton);
+document.getElementById("preview-button").addEventListener("click",previewButton);
 document.getElementById("save-button").style.visibility = "visible";
 document.getElementById("submission-message").style.visibility = "hidden";
 

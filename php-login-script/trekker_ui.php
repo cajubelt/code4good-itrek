@@ -48,12 +48,17 @@ if(!isset($_SESSION['UserData']['Username'])){
 <input type="file" name="files"><br> or video (copy and paste youtube link) <br> <textarea id="video" name="video" cols="40" rows="1" ></textarea> <br> <br>
  
 <div style="display: inline-block">      
-<input style="position:absolute" id="submit-button" type="submit" value="Submit" disabled="disabled">
-<input style="position:absolute" type="button" id="save-button" value="  Done  "><br>
+<input id="submit-button" type="submit" name="submit-button" value="Submit" disabled="disabled">
+<input syle="padding-right:5em;"type="button" id="save-button" value="  Done  "><br>
+</div>
+<div style="display: inline-block; padding-left:8em">
+<input type="submit" disabled="disabled" name="preview-button" id="preview-button" value="Preview">
 </div>
 
 <br>
-<p id="submission-message" style="color:red;visibility:hidden">Please press submit to send post to admin for approval.</p>
+<p id="submission-message" style="color:red;visibility:hidden">Please press submit to send post to admin for
+	<br>  approval or press preview to preview timeline post.</p>
+
 
 
 <br>
