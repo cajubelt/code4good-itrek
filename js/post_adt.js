@@ -78,7 +78,7 @@ function toHTML(){
 			var timeline = document.getElementById("cd-timeline");
 			var timelineBlocks = document.getElementsByClassName("cd-timeline-block");
 			var timelineDateSpans = document.getElementsByClassName("cd-date");
-			for (var i=0; i<timelineDateSpans.length - 1; i++) { //why -1 here? Otherwise NaN
+			for (var i=0; i< Math.max(timelineDateSpans.length - 1,1); i++) { //why -1 here? Otherwise NaN
 				var postDate = new Date(timelineDateSpans[i].textContent)
 				//get the time in Milliseconds, and if the time of the new post is
 				//greater than the time of the given post (iterating backwards through time),
