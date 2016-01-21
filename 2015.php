@@ -249,7 +249,7 @@
 	// var myFirebaseRef = new Firebase("https://amber-fire-9380.firebaseio.com/");
 	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
 	
-	myFirebaseRef.orderByChild("title").on("child_added", function(snapshot, prevChildKey) {
+	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
 		if (newPost.approved){ //TODO: add condition to check date!
 			var newPostObject = new post(snapshot.key(), newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);

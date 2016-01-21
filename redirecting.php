@@ -123,9 +123,9 @@ if(isset($_POST['preview-button']))
     	document.getElementById('cd-timeline').style.display = 'block';
     	document.getElementById('back').style.display = 'block';
 
-    	var newPostObject = new post(title,content,date,category,imdata,video_link,'true');
+    	var newPostObject = new post("dummy_id", title,content,date,category,imdata,video_link,'true');
 
-		newPostObject.toHTML();
+		newPostObject.toHTML(false);
     } else {
     	console.log("HUHOHOHO");
     	document.getElementById("red").style.display = 'block';
