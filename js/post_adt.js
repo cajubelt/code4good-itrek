@@ -107,7 +107,7 @@ function toHTML(isAdmin){
 				}
 			}
 		}
-	return checkbox;
+
 	}
 	
 //method to produce a checkbox to toggle post approval
@@ -117,28 +117,26 @@ function createCheckbox() {
 	checkbox.name = "name";
 	checkbox.value = "value";
 	checkbox.id = this.database_id;
-	checkbox.onclick = toggleApproval(checkbox.id);
+	checkbox.approved = this.approved;
+	checkbox.checked = this.approved;
+	
+	function toggleApproval() {
+		console.log("running toggleApproval")
+		var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+		var ID = checkbox.id;
+		console.log(ID);
+		var timelinePostRef = myFirebaseRef.child(ID);	
+		checkbox.approved = !checkbox.approved
+		timelinePostRef.update({approved:checkbox.approved});
+		console.log(checkbox.approved);
+
+			
+	}
+	checkbox.onclick = toggleApproval;
 	return checkbox;
 }
 
-function toggleApproval(id) {
-	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
-	
-	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
-		var newPost = snapshot.val();
-		var ID = snapshot.key();
-		console.log(ID);
-		var timelinePostRef = myFirebaseRef.child(ID);
-		console.log(newPost.approved);
-		
-		
-		timelinePostRef.update({approved:!newPost.approved});
-		
-		
-		}, function (errorObject) { //in case database read fails
-	  		alert("The read failed: " + errorObject.code);
-	});
-}
+
 	
 //object representing a post on the timeline
 function post(database_id, title, content, date, category, base64image, videolink, approved){

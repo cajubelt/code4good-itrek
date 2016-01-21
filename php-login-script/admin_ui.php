@@ -32,7 +32,7 @@ if(!isset($_SESSION['UserData']['Username'])){
        method="post" style="padding-left:36%">
 <P>
 <br>
-<h2>Unapproved Timeline Submissions</h2>
+<h2>All Timeline Submission</h2>
 
 <br>
 <section id="cd-timeline" class="cd-container">
@@ -53,9 +53,6 @@ if(!isset($_SESSION['UserData']['Username'])){
 	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
 	//var unapprovedPostIDs = [];
 
-
-		//unapprovedPosts.push(newPost)
-		//}
 	
 	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
@@ -64,27 +61,14 @@ if(!isset($_SESSION['UserData']['Username'])){
 		var timelinePostRef = myFirebaseRef.child(ID);
 		console.log(newPost.approved);
 		
-		
-		//timelinePostRef.update({approved:"true"});
-				
-
-		//if (newPost.approved){ //TODO: add condition to check date!
-		//console.log("found unapproved post");
 		var newPostObject = new post(ID, newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
-		var checkbox = newPostObject.toHTML(true);		
+		newPostObject.toHTML(true);		
 		
 		//TODO: add "no new unapproved posts" message
 		
 		}, function (errorObject) { //in case database read fails
 	  		alert("The read failed: " + errorObject.code);
 		});
-	
-	// for (i=0; i < unapprovedPosts.length; i++){
-		// unapprovedPosts[i].approved = true;
-	// }
-
-
-
 
 </script>
 
