@@ -3,18 +3,25 @@
 	/* Check Login form submitted */	
 	if(isset($_POST['Submit'])){
 		/* Define username and associated password array */
-		$logins = array('Alex' => '123456','username1' => 'password1','username2' => 'password2');
+		$admin_logins = array('Alex' => '123456','admin1' => 'admin1','admin2' => 'admin2');
+		$trekker_logins = array('trekker1' => 'trekker1','trekker2' => 'trekker2');
+				
 		
 		/* Check and assign submitted Username and Password to new variable */
 		$Username = isset($_POST['Username']) ? $_POST['Username'] : '';
 		$Password = isset($_POST['Password']) ? $_POST['Password'] : '';
 		
 		/* Check Username and Password existence in defined array */		
-		if (isset($logins[$Username]) && $logins[$Username] == $Password){
-			/* Success: Set session variables and redirect to Protected page  */
-			$_SESSION['UserData']['Username']=$logins[$Username];
-			header("location:index.php");
+		if (isset($admin_logins[$Username]) && $admin_logins[$Username] == $Password){
+			/* Success for admin: Set session variables and redirect to Protected page  */
+			$_SESSION['UserData']['Username']=$admin_logins[$Username];
+			header("location:admin_ui.php");
 			exit;
+		} else if (isset($trekker_logins[$Username]) && $trekker_logins[$Username] == $Password) {
+			/* Success for trekkers: Set session variables and redirect to Protected page  */
+			$_SESSION['UserData']['Username']=$trekker_logins[$Username];
+			header("location:trekker_ui.php");
+			exit;		
 		} else {
 			/*Unsuccessful attempt: Set error message */
 			$msg="<span style='color:red'>Invalid Login Details</span>";
