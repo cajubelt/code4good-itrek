@@ -25,7 +25,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 
 	
 </head>
-
+<button style="float: right;margin:1em" onClick="window.location.href='change_password.php';">Change Trekker Password</button>
 <!-- put link to what page it goes to after submit pressed here (action=...)--> 
 <!-- <FORM action= "http://cajubelt.scripts.mit.edu/code4good-itrek/redirecting.php" -->
 <!--USE THIS TO HOST LOCALLY -->
@@ -37,6 +37,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 <h2>Timeline Submissions</h2>
 <br>
 
+
 <form id="filters" align="left" style="padding:2em;text-size:200%">
 	<div class="filterheading">
 		<h1>Show posts which are:</h1>
@@ -44,7 +45,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 	<div class="filterchoices"> 
 		Approved: <input type="checkbox" name="checkboxApproved" id="checkboxApproved" onclick="toggleVisibility('approved')" checked>
 	</div> 
-	<div class="filterchoices"> 
+	<div class="filterchoices"> v
 		Unapproved: <input type="checkbox" name="checkboxUnapproved" id="checkboxUnapproved" onclick="toggleVisibility('unapproved')" checked>
 	</div>
 
