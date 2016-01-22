@@ -29,7 +29,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 <!--USE THIS TO HOST LOCALLY -->
 <FORM action="http://localhost:8888/redirecting.php" 
        enctype="multipart/form-data"
-       method="post" style="padding-left:36%">
+       method="post" style="margin:1em">
 <P>
 <br>
 <h2>All Timeline Submission</h2>
