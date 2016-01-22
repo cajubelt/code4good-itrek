@@ -44,7 +44,7 @@ echo '});
 $admin_email = "fierro.samantha@gmail.com";
 $email = 'i-Trek';
 $subject = 'New i-Trek timeline submission pending approval.';
-$comment = 'Please log on to firebase account to approve the new post.';
+$comment = 'Please log in with admin credentials to approve new post. http://localhost:8888/php-login-script/login.php';
 
 //send email
 mail($admin_email, "$subject", $comment, "From:" . $email);
@@ -127,9 +127,7 @@ if(isset($_POST['preview-button']))
 
 		newPostObject.toHTML(false);
     } else {
-    	console.log("HUHOHOHO");
     	document.getElementById("red").style.display = 'block';
-
     }
 
 
