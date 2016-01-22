@@ -1,3 +1,11 @@
+<?php
+
+if(isset($_POST['edit_post']))
+{
+	//TODO: code allowing edits to timeline posts 
+}
+?>
+
 <!doctype html>
 <html lang="en" class="no-js">
 <head>

@@ -76,8 +76,11 @@ function toHTML(isAdmin){
 				editButtonForm.style.top = "10px";
 				editButtonForm.action = "admin_edit_post.php";
 				
-				var editButton = document.createElement("button");
-				editButton.textContent = "Edit Post";
+				var editButton = document.createElement("input");
+				editButton.type="submit";
+				editButton.value="Edit Post";
+				editButton.name = "edit_post";
+				editButtonid = "edit_post";
 
 				editButtonForm.appendChild(editButton);
 				
