@@ -2,10 +2,10 @@
 	
 	/* Check Login form submitted */	
 	if(isset($_POST['Submit'])){
+		$pass = $_POST['pass'];
 		/* Define username and associated password array */
 		$admin_logins = array('Alex' => '123456','admin1' => 'admin1','admin2' => 'admin2');
-		$trekker_logins = array('trekker1' => 'trekker1','trekker2' => 'trekker2');
-				
+		$trekker_logins = array('trekker1' => $pass);
 		
 		/* Check and assign submitted Username and Password to new variable */
 		$Username = isset($_POST['Username']) ? $_POST['Username'] : '';
@@ -63,7 +63,22 @@
       <td>&nbsp;</td>
       <td><input name="Submit" type="submit" value="Login" class="Button3"></td>
     </tr>
+    <input name="pass" type="hidden" id="hid">
   </table>
 </form>
 </body>
 </html>
+<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
+<script>
+var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+
+myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
+		var newPost = snapshot.val();
+		if (newPost.password != null){ //TODO: add condition to check date!
+			document.getElementById('hid').value = newPost.password;
+		}
+	}, function (errorObject) { //in case database read fails
+  		alert("The read failed: " + errorObject.code);
+	});
+
+</script>
