@@ -59,14 +59,33 @@ function toHTML(isAdmin){
 			newCDTimelineContentBlock.className = "cd-timeline-content";
 			
 			if (isAdmin) {
+				var newPostApproval = document.createElement("div");
+				
 				var checkboxHeader = document.createElement('h1');
 				checkboxHeader.textContent = "Approve";
 				checkboxHeader.style.display = "inline-block";
-				newCDTimelineContentBlock.appendChild(checkboxHeader);
+				newPostApproval.appendChild(checkboxHeader);
 				
 				var checkbox = this.createCheckbox();
 				checkbox.style.display = "inline-block";
-				newCDTimelineContentBlock.appendChild(checkbox)			
+				newPostApproval.appendChild(checkbox)
+				
+				var editButtonForm = document.createElement("form");	
+				editButtonForm.style.position = "absolute";	
+				editButtonForm.style.right = "10px";
+				editButtonForm.style.top = "10px";
+				editButtonForm.action = "admin_edit_post.php";
+				
+				var editButton = document.createElement("button");
+				editButton.textContent = "Edit Post";
+
+				editButtonForm.appendChild(editButton);
+				
+				
+				newPostApproval.appendChild(editButtonForm);			
+				
+				newCDTimelineContentBlock.appendChild(newPostApproval);							
+							
 			} else {
 				var checkbox = null;
 			}		
@@ -86,9 +105,20 @@ function toHTML(isAdmin){
 			newPostCategory.appendChild(newCDTimelineContentBlock);
 			newPostCategory.appendChild(iconDiv);
 			
+			var newPostApprovalOuterDiv = document.createElement("div");
+			newPostApprovalOuterDiv.appendChild(newPostCategory);
+			if (isAdmin) {
+				newPostApprovalOuterDiv.id = checkbox.id;
+				if (checkbox.approved) {
+					newPostApprovalOuterDiv.className = "approved";
+				} else {
+					newPostApprovalOuterDiv.className = "unapproved";
+				}
+			}
+			
 			var newPostBlock = document.createElement("div");
 			newPostBlock.className = "cd-timeline-block";
-			newPostBlock.appendChild(newPostCategory);
+			newPostBlock.appendChild(newPostApprovalOuterDiv);
 			
 			var timeline = document.getElementById("cd-timeline");
 			var timelineBlocks = document.getElementsByClassName("cd-timeline-block");
@@ -129,7 +159,14 @@ function createCheckbox() {
 		checkbox.approved = !checkbox.approved
 		timelinePostRef.update({approved:checkbox.approved});
 		console.log(checkbox.approved);
-
+		
+		var checkboxOuterDiv = document.getElementById(checkbox.id);
+		if (checkbox.approved) {
+			checkboxOuterDiv.className = "approved";
+		}
+		else {
+			checkboxOuterDiv.className = "unapproved";
+		}
 			
 	}
 	checkbox.onclick = toggleApproval;

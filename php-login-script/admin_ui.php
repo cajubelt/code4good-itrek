@@ -21,6 +21,8 @@ if(!isset($_SESSION['UserData']['Username'])){
 	<script src="../js/modernizr.js"></script> <!-- Modernizr -->
   	<script src="../js/post_adt.js"></script> <!-- Post ADT -->
 	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
 	
 </head>
 
@@ -32,10 +34,36 @@ if(!isset($_SESSION['UserData']['Username'])){
        method="post" style="margin:1em">
 <P>
 <br>
-<h2>All Timeline Submission</h2>
-
+<h2>Timeline Submissions</h2>
 <br>
+
+<form id="filters" align="left" style="padding:2em;text-size:200%">
+	<div class="filterheading">
+		<h1>Show posts which are:</h1>
+	</div> <br>
+	<div class="filterchoices"> 
+		Approved: <input type="checkbox" name="checkboxApproved" id="checkboxApproved" onclick="toggleVisibility('approved')" checked>
+	</div> 
+	<div class="filterchoices"> 
+		Unapproved: <input type="checkbox" name="checkboxUnapproved" id="checkboxUnapproved" onclick="toggleVisibility('unapproved')" checked>
+	</div>
+
+</form>
+
+
 <section id="cd-timeline" class="cd-container">
+	
+<script>
+	function toggleVisibility(approval) {
+		var cssClass = ".".concat(approval);
+		var disp = $(cssClass).css("display");
+		if (disp == "none") {
+			$(cssClass).attr("style","display:block")
+		} else {
+			$(cssClass).attr("style","display:none")
+		}
+	}
+</script>
 
 <!-- do not remove. dummy timeline post needed for toHTML to place new posts onto timeline properly. -->
 <div class="cd-timeline-block" style="display:none">
