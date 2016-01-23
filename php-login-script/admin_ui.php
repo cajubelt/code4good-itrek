@@ -44,10 +44,10 @@ if(!isset($_SESSION['UserData']['Username'])){
 		<h1>Show posts which are:</h1>
 	</div> <br>
 	<div class="filterchoices"> 
-		Approved: <input type="checkbox" name="checkboxApproved" id="checkboxApproved" onclick="toggleVisibility('approved')" checked>
+		Approved: <input type="checkbox" name="checkboxapproved" id="checkboxapproved" onclick="toggleVisibility('approved')" checked>
 	</div> 
 	<div class="filterchoices"> 
-		Unapproved: <input type="checkbox" name="checkboxUnapproved" id="checkboxUnapproved" onclick="toggleVisibility('unapproved')" checked>
+		Unapproved: <input type="checkbox" name="checkboxunapproved" id="checkboxunapproved" onclick="toggleVisibility('unapproved')" checked>
 	</div>
 
 </form>
@@ -59,11 +59,15 @@ if(!isset($_SESSION['UserData']['Username'])){
 	function toggleVisibility(approval) {
 		var cssClass = ".".concat(approval);
 		var disp = $(cssClass).css("display");
-		if (disp == "none") {
+		var checkboxID = "checkbox".concat(approval);
+		var isChecked = document.getElementById(checkboxID).checked;
+		console.log(isChecked);
+		if (disp == "none" && isChecked) {
 			$(cssClass).attr("style","display:block")
-		} else {
+		} 
+		if (disp == "block" && !isChecked) {
 			$(cssClass).attr("style","display:none")
-		}
+		} 
 	}
 </script>
 

@@ -79,8 +79,8 @@ function toHTML(isAdmin){
 				var editButton = document.createElement("input");
 				editButton.type="submit";
 				editButton.value="Edit Post";
-				editButton.name = "edit_post";
-				editButtonid = "edit_post";
+				editButton.name = "edit-post";
+				editButton.id = "edit-post";
 
 				editButtonForm.appendChild(editButton);
 				

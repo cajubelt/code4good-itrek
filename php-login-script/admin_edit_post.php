@@ -1,9 +1,14 @@
 <?php
 
-if(isset($_POST['edit_post']))
+if(isset($_POST['edit-post']))
 {
-	//TODO: code allowing edits to timeline posts 
+	echo 'console.log("hello");';
+	//$newPostApprovalOuterDiv = $_POST['newPostApprovalOuterDiv']; 
 }
+else{
+	echo 'console.log("not getting value");';
+}
+
 ?>
 
 <!doctype html>
