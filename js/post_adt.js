@@ -60,7 +60,7 @@ function toHTML(isAdmin){
 			
 			if (isAdmin) {
 				var newPostApproval = document.createElement("div");
-				
+
 				var checkboxHeader = document.createElement('h1');
 				checkboxHeader.textContent = "Approve";
 				checkboxHeader.style.display = "inline-block";
@@ -75,6 +75,8 @@ function toHTML(isAdmin){
 				editButtonForm.style.right = "10px";
 				editButtonForm.style.top = "10px";
 				editButtonForm.action = "admin_edit_post.php";
+				editButtonForm.enctype="multipart/form-data";
+				editButtonForm.method="post";
 				
 				var editButton = document.createElement("input");
 				editButton.type="submit";

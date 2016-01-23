@@ -2,15 +2,15 @@
 
 if(isset($_POST['edit-post']))
 {
-	echo 'console.log("hello");';
-	//$newPostApprovalOuterDiv = $_POST['newPostApprovalOuterDiv']; 
-}
-else{
-	echo 'console.log("not getting value");';
+	//code does get here	
+	$newPostApprovalOuterDiv = $_POST['newPostApprovalOuterDiv']; //TODO: this is undefined, coming from post_adt
 }
 
 ?>
 
+<script>
+	var outerDiv = '<?php echo $newPostApprovalOuterDiv; ?>';
+</script>
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
