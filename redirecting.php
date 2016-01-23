@@ -3,6 +3,22 @@
 //change this to location of timeline page
 //note that this will only work on remotely hosted site OR locally hosted, not both at once. 
 //$timeline_address = 'http://cajubelt.scripts.mit.edu/code4good-itrek/';
+$next = false;
+
+if(isset($_POST['Submit'])) {
+	$admin_email = $_POST['email'];
+	$email = 'i-Trek';
+	$subject = 'New i-Trek timeline submission pending approval.';
+	$comment = 'Please log in with admin credentials to approve new post. http://localhost:8888/php-login-script/login.php';
+
+	//send email
+	mail($admin_email, "$subject", $comment, "From:" . $email);
+	$next = true;
+}
+
+if ($next) {
+	header("Location: 2015.php");
+}
 
 if(isset($_POST['submit-button']))
 { //this retrieves info submitted by user and puts it into the database
@@ -39,15 +55,6 @@ echo 'approved : ' . json_encode($approved) . ',';
 
 echo '});
 	</script>';
-
-
-$admin_email = "fierro.samantha@gmail.com";
-$email = 'i-Trek';
-$subject = 'New i-Trek timeline submission pending approval.';
-$comment = 'Please log in with admin credentials to approve new post. http://localhost:8888/php-login-script/login.php';
-
-//send email
-mail($admin_email, "$subject", $comment, "From:" . $email);
 
 }
 
@@ -88,9 +95,12 @@ if(isset($_POST['preview-button']))
 
 <div id="red" style="display:none" align="middle">
 <div style="padding:3em;width:35em;text-align:center" >
+	<form action="" method="post" name="form">
 <h3 align="top" style="color:black">Thank you for submitting a post to i-Trek's timeline. </h3><br>
-<p style="color:black">Click <a style="color:grey" href="2015.php"> here </a> to return to the site. <br> <br>
+<p style="color:black">Click <input name="Submit" type="submit" style="color:grey" value="here"> to return to the site. <br> <br>
 (Please do not hit the refresh button). </p>
+<input type="hidden" name="email" id="hid">
+	</form>
 </div>
 </div>
 
@@ -107,8 +117,18 @@ if(isset($_POST['preview-button']))
 	</div> <!--fundraising -->
 </div> <!-- cd-timeline-block -->
 </section>
+<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
+<script>
 
-<script type="text/javascript">
+	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
+		var newPost = snapshot.val();
+		if (newPost.email != null){ 
+			document.getElementById('hid').value = newPost.email;
+		}
+	}, function (errorObject) { //in case database read fails
+			alert("The read failed: " + errorObject.code);
+	});
 
     var title = '<?php echo $title; ?>';
     var content = '<?php echo $content; ?>';
