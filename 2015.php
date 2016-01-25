@@ -19,8 +19,8 @@
 	<div style="background:#000000">
 	<a href="php-login-script/login.php" class="button" style="font-size:80%;background:#e34c00">Personnel Login</a>
 	</div>
-	<header style="background:#000000;height:300px">
-		<img src="img/logo.png" style="width:720px;height:300px;">
+	<header style="background:#000000;height:18.75em">
+		<img src="img/logo.png" style="width:45em;height:18.75em;">
 	</header>
 		<div class="tab">
 			<div class="subtitle">

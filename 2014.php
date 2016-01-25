@@ -16,10 +16,8 @@
 	<div style="background:#000000">
 	<a href="php-login-script/index.php" class="button" style="font-size:80%;background:#e34c00">Personnel Login</a>
 	</div>
-	<header style="background:#000000;height:300px">
-
-		<img src="img/logo.png" style="width:720px;height:300px;">
-	
+	<header style="background:#000000;height:18.75em">
+		<img src="img/logo.png" style="width:45em;height:18.75em;">
 	</header>
 		<div class="tab">
 			<div class="subtitle">
@@ -36,7 +34,7 @@
 		</div>
 	
 	<section id="2014intro" class="cd-container">
-		<h1 style="font-size:40px;padding:1em" align="middle">
+		<h1 style="font-size:2.5em;padding:1em" align="middle">
 			2014 Pilot Trek
 		</h1>
 		<p id="TrekkersLabel">
@@ -70,7 +68,7 @@
 		</p>	
 		<br><br>
 		<div id="video" align="middle" style="padding-top:.5em">
-			<iframe width="560" height="315"
+			<iframe style="width:35em;height:19em;"
 				src="https://www.youtube.com/embed/7OgQbroOJGw" frameborder="0" allowfullscreen>
 			</iframe>
 		</div> <!-- video -->	
@@ -366,7 +364,7 @@
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
-					<h2 style="padding-bottom:15px;">Scuba Certification and Career Development</h2>
+					<h2>Scuba Certification and Career Development</h2>
 					<p>
 						In order to adequately define the scale and test its effectiveness, 
 						the<a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekkers</a> 
