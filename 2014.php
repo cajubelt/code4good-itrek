@@ -14,7 +14,7 @@
 </head>
 <body>
 	<div style="background:#000000">
-	<a href="php-login-script/index.php" class="button" style="font-size:80%;background:#e34c00">Personnel Login</a>
+	<a href="php-login-script/login.php" class="button" style="font-size:80%;background:#e34c00">Personnel Login</a>
 	</div>
 	<header style="background:#000000;height:18.75em">
 		<img src="img/logo.png" style="width:45em;height:18.75em;">
