@@ -80,12 +80,17 @@ function toHTML(isAdmin){
 				
 				var editButton = document.createElement("input");
 				editButton.type="submit";
-				editButton.value="Edit Post";
+				editButton.value= 'Edit Post';
 				editButton.name = "edit-post";
 				editButton.id = "edit-post";
 
+				var editButton2 = document.createElement("input");
+				editButton2.type="hidden";
+				editButton2.value= this.database_id;
+				editButton2.name = "hid";
+
 				editButtonForm.appendChild(editButton);
-				
+				editButtonForm.appendChild(editButton2);
 				
 				newPostApproval.appendChild(editButtonForm);			
 				

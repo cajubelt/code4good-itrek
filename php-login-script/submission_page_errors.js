@@ -57,14 +57,9 @@ function disableSubmitButton() {
 
 }
 
-function previewButton() {
-	window.location = "preview.php"
-}
-
 //ensures that the date and category are not changed between save and submit
 document.getElementById("date").addEventListener("click", disableSubmitButton);
 document.getElementById("category").addEventListener("click", disableSubmitButton);
-document.getElementById("preview-button").addEventListener("click",previewButton);
 document.getElementById("save-button").style.visibility = "visible";
 document.getElementById("submission-message").style.visibility = "hidden";
 
