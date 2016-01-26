@@ -26,7 +26,7 @@
 			/*Unsuccessful attempt: Set error message */
 			$msg="<span style='color:red'>Invalid Login Details</span>";
 		}
-	} else if(isset($_POST['Cancel'])){
+	} else if(isset($_POST['Cancel'])){ //to get back to the homepage
 		//TODO: UPDATE THIS TO GO HOME, NOT HARDCODED TO 2015
 		header("location:../2015.php");
 		exit;
@@ -79,7 +79,7 @@ var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
 
 myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
-		if (newPost.password != null){ //TODO: add condition to check date!
+		if (newPost.password != null){ 
 			document.getElementById('hid').value = newPost.password;
 		}
 	}, function (errorObject) { //in case database read fails

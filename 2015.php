@@ -244,16 +244,17 @@
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 
 <script> //this puts posts from the database onto the timeline
-	
-	//var myFirebaseRef = new Firebase("https://torrid-torch-4218.firebaseio.com/-K80XUZiPvdoUy5TXW7X");
-	// var myFirebaseRef = new Firebase("https://amber-fire-9380.firebaseio.com/");
+	var PAGE_YEAR = 2015; //TODO: auto-generate pages for subsequent years
 	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
 	
 	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
-		if (newPost.approved){ //TODO: add condition to check date!
-			var newPostObject = new post(snapshot.key(), newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
-			newPostObject.toHTML(false);
+		if (newPost.approved && year == PAGE_YEAR){ 
+			var year = newPost.date.substring(0,4);
+			if (year == PAGE_YEAR){
+				var newPostObject = new post(snapshot.key(), newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
+				newPostObject.toHTML(false);
+			}
 		}
 	}, function (errorObject) { //in case database read fails
   		alert("The read failed: " + errorObject.code);

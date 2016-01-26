@@ -90,6 +90,10 @@ if(isset($_POST['edit-post']))
 				document.getElementById('category').selectedIndex = 2;
 			}
 			document.getElementById('date').value = newPost.date;
+			//var video = document.getElementById('64code').value;
+			//if (video != null){
+				//newPost.base64image = video;
+			//}
 			document.getElementById('64code').value = newPost.base64image;
 			document.getElementById('video').value = newPost.videolink;
 		}
