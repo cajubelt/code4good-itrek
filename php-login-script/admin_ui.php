@@ -87,7 +87,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
 	//var unapprovedPostIDs = [];
 
-	
+
 	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
 		var ID = snapshot.key();
@@ -95,9 +95,10 @@ if(!isset($_SESSION['UserData']['Username'])){
 		var timelinePostRef = myFirebaseRef.child(ID);
 		console.log(newPost.approved);
 		
-		var newPostObject = new post(ID, newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
-		newPostObject.toHTML(true);		
-		
+		if (newPost.email == null){ //avoid displaying emails
+			var newPostObject = new post(ID, newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
+			newPostObject.toHTML(true);		
+		}
 		//TODO: add "no new unapproved posts" message
 		
 		}, function (errorObject) { //in case database read fails

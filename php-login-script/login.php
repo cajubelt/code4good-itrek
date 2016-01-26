@@ -26,6 +26,10 @@
 			/*Unsuccessful attempt: Set error message */
 			$msg="<span style='color:red'>Invalid Login Details</span>";
 		}
+	} else if(isset($_POST['Cancel'])){
+		//TODO: UPDATE THIS TO GO HOME, NOT HARDCODED TO 2015
+		header("location:../2015.php");
+		exit;
 	}
 ?>
 <!doctype html>
@@ -61,7 +65,8 @@
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><input name="Submit" type="submit" value="Login" class="Button3"></td>
+      <td><input name="Submit" type="submit" value="Login" class="Button3"> or <input name="Cancel" type="submit" value="Return home" class="Button3"> <!-- UPDATE THIS TO GO HOME, NOT HARDCODED TO 2015 -->
+</td>
     </tr>
     <input name="pass" type="hidden" id="hid">
   </table>
