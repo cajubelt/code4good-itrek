@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	<script src="js/post_adt.js"></script> <!-- Post ADT -->
+  	<script src="js/show_by_year.js"></script> <!-- Show by year -->
   	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
 	<title>i-Trek Updates</title>
 </head>
@@ -28,11 +29,37 @@
 			</div>
 
 			<div class="dropdown">
-			  <button class="dropbtn">Previous Years</button>
-			  <div class="dropdown-content">
+			  <button class="dropbtn" id="prevYears" >Previous Years</button>
+			  <script>
+			  	function createYearMenu(){
+			  		var menu = document.getElementById("prevYears");
+			  		var list = document.createElement('div');
+			  		list.className = 'dropdown-content';
+			  		list.id = 'list_of_years';
+			  		
+			  		var current_year = new Date().getFullYear();
+			  		for (year = 2014; year < current_year + 1; year++){
+			  			var item = document.createElement('a');
+			  			item.textContent = year;
+			  			item.id = year;
+			  			//item.addEventListener('click', console.log(year));
+			  			item.onclick = function(){
+			  				console.log(item.id);
+			  				//EVENTUALLY: show_timeline(year);
+			  			}
+			  			list.appendChild(item);
+			  		}
+			  		console.log('create menu function called');
+			  		menu.appendChild(list);
+			  	}
+			  	createYearMenu();
+			  	console.log(document.getElementById('2014').textContent);
+			  	
+			  </script>
+			  <!-- <div class="dropdown-content">
 			    <a href="2015.php">2015</a>
 			    <a href="2014.php">2014</a>
-			  </div>
+			  </div> -->
 			</div>
 		</div>
 
@@ -244,22 +271,25 @@
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 
 <script> //this puts posts from the database onto the timeline
-	var PAGE_YEAR = 2015; //TODO: auto-generate pages for subsequent years
-	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+	//default is current year
+	var current_year = new Date().getFullYear();
+	show_timeline(current_year);
 	
-	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
-		var newPost = snapshot.val();
-		if (newPost.approved && year == PAGE_YEAR){ 
-			var year = newPost.date.substring(0,4);
-			if (year == PAGE_YEAR){
-				var newPostObject = new post(snapshot.key(), newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
-				newPostObject.toHTML(false);
-			}
-		}
-	}, function (errorObject) { //in case database read fails
-  		alert("The read failed: " + errorObject.code);
-	});
-
+	// var PAGE_YEAR = 2015; //TODO: auto-generate pages for subsequent years
+	// var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+// 	
+	// myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
+		// var newPost = snapshot.val();
+		// if (newPost.approved && year == PAGE_YEAR){ 
+			// var year = newPost.date.substring(0,4);
+			// if (year == PAGE_YEAR){
+				// var newPostObject = new post(snapshot.key(), newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
+				// newPostObject.toHTML(false);
+			// }
+		// }
+	// }, function (errorObject) { //in case database read fails
+  		// alert("The read failed: " + errorObject.code);
+	// });
 </script>
 
 
