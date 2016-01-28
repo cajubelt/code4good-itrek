@@ -1,9 +1,5 @@
 <?php
 
-//change this to location of timeline page
-//note that this will only work on remotely hosted site OR locally hosted, not both at once. 
-//$timeline_address = 'http://cajubelt.scripts.mit.edu/code4good-itrek/';
-
 if(isset($_POST['submit-button']))
 { //this retrieves info submitted by user and puts it into the database
 	
@@ -39,15 +35,14 @@ if ($_POST['64code'] != "") {
 <br>
 
 <div id="red" style="display:none" align="middle">
-<div style="padding:3em;width:35em;text-align:center" >
-	<form action="php-login-script/admin_ui.php" method="post" name="form">
-<h3 align="top" style="color:black">Thank you for submitting a post to i-Trek's timeline. </h3><br>
-<p style="color:black">Click <input name="Submit" type="submit" style="color:grey" value="here"> to return to admin page. <br> <br>
-(Please do not hit the refresh button). </p>
-	</form>
+	<div style="padding:3em;width:35em;text-align:center" >
+		<form action="php-login-script/admin_ui.php" method="post" name="form">
+			<h3 align="top" style="color:black">Thank you for submitting a post to i-Trek's timeline. </h3><br>
+			<p style="color:black">Click <input name="Submit" type="submit" style="color:grey" value="here"> to return to admin page. <br> <br>
+			(Please do not hit the refresh button). </p>
+		</form>
+	</div>
 </div>
-</div>
-
 
 <button id="back" style="margin:3em;display:none" onClick="history.go(-1)">Back to submission form</button>
 <section style="display:none" id="cd-timeline" class="cd-container">
@@ -77,7 +72,6 @@ if ($_POST['64code'] != "") {
     console.log(id);
 	document.getElementById("red").style.display = 'block';
 	myFirebaseRef.child(id).set({approved: 'false', base64image: '<?php echo $imdata; ?>', videolink: '<?php echo $video_link; ?>', content: '<?php echo $content ?>', date: <?php echo json_encode($date); ?>, category: '<?php echo $category ?>', title: '<?php echo $title ?>'});
-
 </script>
 
 </html>
