@@ -158,6 +158,9 @@ function toHTML(isAdmin){
 			newPostBlock.appendChild(newPostApprovalOuterDiv);
 			
 			var timeline = document.getElementById("cd-timeline");
+			if (!timeline.firstChild){ //case where timeline is empty
+				timeline.appendChild(newPostBlock);
+			}
 			var timelineBlocks = document.getElementsByClassName("cd-timeline-block");
 			var timelineDateSpans = document.getElementsByClassName("cd-date");
 			for (var i=0; i< Math.max(timelineDateSpans.length - 1,1); i++) { //why -1 here? Otherwise NaN
@@ -174,7 +177,6 @@ function toHTML(isAdmin){
 				}
 			}
 		}
-
 	}
 	
 //method to produce a checkbox to toggle post approval

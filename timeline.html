@@ -37,42 +37,26 @@
 			  		list.className = 'dropdown-content';
 			  		list.id = 'list_of_years';
 			  		
+			  		//var years_array = [];
 			  		var current_year = new Date().getFullYear();
-			  		var years_array = [];
 			  		for (year = 2014; year < current_year + 1; year++){
-			  			var item = document.createElement('a');
-			  			item.textContent = year;
-			  			item.id = year;
-			  			//item.addEventListener('click', console.log(year));
-			  			// item.onclick = function(){
-			  				// console.log(item.id);
-			  				// //EVENTUALLY: show_timeline(year);
-			  			// }
-			  			years_array.push(year);
-			  			list.appendChild(item);
+			  			function createItem(year){
+				  			var item = document.createElement('a');
+				  			item.textContent = year;
+				  			item.id = year;
+				  			item.onclick = function(){
+				  				//console.log( (function() {return year})() );
+				  				show_timeline( (function() {return year})() );
+				  			}
+				  			list.appendChild(item);
+			  			}
+			  			createItem(year);  			
 			  		}
-			  		console.log('create menu function called');
 			  		menu.appendChild(list);
-			  		
-			  		return years_array;
 			  	}
-			  	var years = createYearMenu();
-			  	// document.getElementById('2014').onclick = function(){
-			  		// console.log(this.id);
-			  	// } // THIS SUCCESSFULLY ADDS EVENT LISTENER TO 2014 ITEM ON LIST
-			  	console.log(years);
-			  	for (i=0; i < years.length; i++){
-			  		var y = years[i];
-			  		document.getElementById(y).onclick = function(){
-			  			console.log(y);
-			  		} //THIS DOESNT WORK. Seems to fuck up due to variable mutability bug. 
-			  	}
+			  	createYearMenu();
 			  	
 			  </script>
-			  <!-- <div class="dropdown-content">
-			    <a href="2015.php">2015</a>
-			    <a href="2014.php">2014</a>
-			  </div> -->
 			</div>
 		</div>
 	</div>
@@ -110,6 +94,12 @@
 			}
 		</script>
 		
+		<script> //this puts posts from the database onto the timeline
+			//default is current year
+			var current_year = new Date().getFullYear();
+			show_timeline(current_year);
+		</script>
+		
 		<div class="cd-timeline-block">
 			<div class="fundraising">
 				<div class="cd-timeline-img cd-dollar">
@@ -130,7 +120,7 @@
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
-					<h2>Set Initial Trekker Budget & Create Funding Plan</h2>
+					<h2>Set Initial Trekker Budget &amp; Create Funding Plan</h2>
 					<span class="cd-date">December, 2015</span>
 				</div> <!-- cd-timeline-content -->
 			</div> <!--actions -->
@@ -221,7 +211,7 @@
 				</div> <!-- cd-timeline-img -->
 	
 				<div class="cd-timeline-content">
-					<h2>Review & Provide Feedback on Trekker Submissions</h2>
+					<h2>Review &amp; Provide Feedback on Trekker Submissions</h2>
 					<span class="cd-date">November, 2015</span>
 				</div> <!-- cd-timeline-content -->
 			</div> <!-- planning --> 
@@ -283,29 +273,6 @@
           
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
-
-<script> //this puts posts from the database onto the timeline
-	//default is current year
-	var current_year = new Date().getFullYear();
-	show_timeline(current_year);
-	
-	// var PAGE_YEAR = 2015; //TODO: auto-generate pages for subsequent years
-	// var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
-// 	
-	// myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
-		// var newPost = snapshot.val();
-		// if (newPost.approved && year == PAGE_YEAR){ 
-			// var year = newPost.date.substring(0,4);
-			// if (year == PAGE_YEAR){
-				// var newPostObject = new post(snapshot.key(), newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
-				// newPostObject.toHTML(false);
-			// }
-		// }
-	// }, function (errorObject) { //in case database read fails
-  		// alert("The read failed: " + errorObject.code);
-	// });
-
-</script>
 
 
 </body>
