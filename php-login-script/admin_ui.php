@@ -35,10 +35,12 @@ if(isset($_POST['delete-post'])) {
 	
 </head>
 	<button style="margin:1em" onClick="window.location.href='../timeline.html';">Back to timeline</button>
- 	<a style="margin-left:3em;margin-top:1em" href="logout.php">Click here</a> to Logout.
+	<a style="margin-left:3em;margin-top:1em" href="logout.php">Click here</a> to Logout.
+	<button style="float: right;margin:1em" onClick="window.location.href='admin_write_post.php';">New Post</button>
 	<button style="float: right;margin:1em" onClick="window.location.href='change_password.php';">Change Trekker Password</button>
 	<button style="float: right;margin:1em" onClick="window.location.href='change_admin_email.php';">Change Admin Email</button>
 	<form action="http://localhost:8888/redirecting.php" 
+
        enctype="multipart/form-data"
        method="post" style="margin:1em">
 		<p> <br>
