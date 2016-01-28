@@ -3,9 +3,7 @@
 if(!isset($_SESSION['UserData']['Username'])){
 	header("location:login.php");
 	exit;
-} 
-
-$_SESSION['UserData']['Username']='admin1';
+}
 
 $delete = false;
 if(isset($_POST['delete-post'])) {
