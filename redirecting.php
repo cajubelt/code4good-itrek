@@ -17,7 +17,7 @@ if(isset($_POST['Submit'])) {
 }
 
 if ($next) {
-	header("Location: 2015.php");
+	header("Location: timeline.html");
 }
 
 if(isset($_POST['submit-button']))

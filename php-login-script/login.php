@@ -28,7 +28,7 @@
 		}
 	} else if(isset($_POST['Cancel'])){ //to get back to the homepage
 		//TODO: UPDATE THIS TO GO HOME, NOT HARDCODED TO 2015
-		header("location:../2015.php");
+		header("location:../timeline.html");
 		exit;
 	}
 ?>
