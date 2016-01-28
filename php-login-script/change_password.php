@@ -1,13 +1,20 @@
 <?php session_start(); /* Starts the session */
+
+if(!isset($_SESSION['UserData']['Username'])){
+	header("location:login.php");
+	exit;
+}
+	$change = false;
 	$note = 'none';
 	if(isset($_POST['Submit'])){
+		$change = true;
 		$pass = $_POST['pass'];
 		$note = 'block';
 	}
 ?>
 <!doctype html>
 <html>
-<div align="center" style="width:30em;height:7em;background:#e3e3e3;padding:3em;margin-left:27%">
+<div align="center" style="width:30em;height:7em;background:#f2f2f2;padding:3em;margin-left:27%">
 Please enter new Trekker password below, then press submit. <br>
 <form action="" method="post" name="form">
 	<br>
@@ -23,5 +30,6 @@ Please enter new Trekker password below, then press submit. <br>
 <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
 <script>
 var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
-myFirebaseRef.child('admin_pass_change').set({ password: '<?php echo $pass ?>'});
+if ('<?php echo $change ?>') {
+	myFirebaseRef.child('admin_pass_change').set({ password: '<?php echo $pass ?>'}); }
 </script>

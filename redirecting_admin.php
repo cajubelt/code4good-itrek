@@ -40,9 +40,9 @@ if ($_POST['64code'] != "") {
 
 <div id="red" style="display:none" align="middle">
 <div style="padding:3em;width:35em;text-align:center" >
-	<form action="2015.php" method="post" name="form">
+	<form action="php-login-script/admin_ui.php" method="post" name="form">
 <h3 align="top" style="color:black">Thank you for submitting a post to i-Trek's timeline. </h3><br>
-<p style="color:black">Click <input name="Submit" type="submit" style="color:grey" value="here"> to return to the site. <br> <br>
+<p style="color:black">Click <input name="Submit" type="submit" style="color:grey" value="here"> to return to admin page. <br> <br>
 (Please do not hit the refresh button). </p>
 	</form>
 </div>

@@ -23,10 +23,10 @@
 	<header style="background:#000000;height:18.75em">
 		<img src="img/logo.png" style="width:45em;height:18.75em;">
 	</header>
-		<div class="tab">
-			<div class="subtitle">
-				<h2>Follow our 2015 Trekkers throughout their research project experience.</h2>
-			</div>
+	<div class="tab">
+		<div class="subtitle">
+			<h2>Follow our 2015-2016 Trekkers throughout their research project experience.</h2>
+		</div>
 
 			<div class="dropdown">
 			  <button class="dropbtn" id="prevYears" >Previous Years</button>
@@ -62,22 +62,23 @@
 			  </div> -->
 			</div>
 		</div>
+	</div>
 
-		<form id="filters" align="left" style="padding:2em;text-size:200%">
-			<div class="filterheading">
-				<h1>Filter by category</h1>
-			</div> <br>
-			<div class="filterchoices"> 
-				Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleVisibility('fundraising')" checked>
-			</div> 
-			<div class="filterchoices"> 
-				Trek Planning: <input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="toggleVisibility('planning')" checked>
-			</div>
-			<div class="filterchoices">
-				Trekker Actions: <input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="toggleVisibility('actions')" checked>
-			</div>
-			
-		</form>
+	<form id="filters" align="left" style="padding:2em;text-size:200%">
+		<div class="filterheading">
+			<h1>Filter by category</h1>
+		</div> <br>
+		<div class="filterchoices" style="display:inline-block;padding-right:2em"> 
+			Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleVisibility('fundraising')" checked>
+		</div> 
+		<div class="filterchoices" style="display:inline-block;padding-right:2em"> 
+			Trek Planning: <input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="toggleVisibility('planning')" checked>
+		</div>
+		<div class="filterchoices" style="display:inline-block;padding-right:2em">
+			Trekker Actions: <input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="toggleVisibility('actions')" checked>
+		</div>
+		
+	</form>
 	
 <section id="cd-timeline" class="cd-container">
 		
@@ -271,6 +272,7 @@
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 
 <script> //this puts posts from the database onto the timeline
+<<<<<<< HEAD
 	//default is current year
 	var current_year = new Date().getFullYear();
 	show_timeline(current_year);
@@ -290,6 +292,24 @@
 	// }, function (errorObject) { //in case database read fails
   		// alert("The read failed: " + errorObject.code);
 	// });
+=======
+	//var PAGE_YEAR = 2015; //TODO: auto-generate pages for subsequent years
+	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+	
+	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
+		var newPost = snapshot.val();
+		if (newPost.approved){ 
+			// var year = newPost.date.substring(0,4);
+			// if (year == PAGE_YEAR){
+				var newPostObject = new post(snapshot.key(), newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
+				newPostObject.toHTML(false);
+			// }
+		}
+	}, function (errorObject) { //in case database read fails
+  		alert("The read failed: " + errorObject.code);
+	});
+
+>>>>>>> b3d071eafd3b81329f687ade74b36a85063aae5e
 </script>
 
 

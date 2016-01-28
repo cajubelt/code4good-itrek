@@ -5,6 +5,7 @@ function toHTML(isAdmin){
 			//Information inputted by the user
 			var newPostTitle = document.createElement("h2");
 			newPostTitle.textContent = this.title;
+			newPostTitle.style.marginBottom = '10px';
 			
 			var newPostContent = document.createElement("p");
 			newPostContent.textContent = this.content;
@@ -14,6 +15,7 @@ function toHTML(isAdmin){
 			if (this.base64image != "") {
 				newPostImage.src = "data:image/png;base64," + this.base64image;
 				newPostImage.className = "content-image";
+				// newPostImage.style.height = "20em";
 				isImage = true;
 			}
 			
@@ -72,7 +74,7 @@ function toHTML(isAdmin){
 				
 				var editButtonForm = document.createElement("form");	
 				editButtonForm.style.position = "absolute";	
-				editButtonForm.style.right = "10px";
+				editButtonForm.style.right = "90px";
 				editButtonForm.style.top = "10px";
 				editButtonForm.action = "admin_edit_post.php";
 				editButtonForm.enctype="multipart/form-data";
@@ -91,7 +93,32 @@ function toHTML(isAdmin){
 
 				editButtonForm.appendChild(editButton);
 				editButtonForm.appendChild(editButton2);
+
+				//
+
+				var deleteButtonForm = document.createElement("form");	
+				deleteButtonForm.style.position = "absolute";	
+				deleteButtonForm.style.right = "10px";
+				deleteButtonForm.style.top = "10px";
+				deleteButtonForm.action = "";
+				deleteButtonForm.enctype="multipart/form-data";
+				deleteButtonForm.method="post";
 				
+				var deleteButton = document.createElement("input");
+				deleteButton.type="submit";
+				deleteButton.value= 'Delete Post';
+				deleteButton.name = "delete-post";
+				deleteButton.id = "delete-post";
+
+				var deleteButton2 = document.createElement("input");
+				deleteButton2.type="hidden";
+				deleteButton2.value= this.database_id;
+				deleteButton2.name = "hid";
+
+				deleteButtonForm.appendChild(deleteButton);
+				deleteButtonForm.appendChild(deleteButton2);
+				
+				newPostApproval.appendChild(deleteButtonForm);
 				newPostApproval.appendChild(editButtonForm);			
 				
 				newCDTimelineContentBlock.appendChild(newPostApproval);							

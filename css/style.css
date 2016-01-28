@@ -1,5 +1,5 @@
 .content-image {
-  padding:1.5625em;width:31.25em;height:21.875em
+  padding:1em;
 }
 
 a.button {
@@ -7,7 +7,7 @@ a.button {
     color:#FFFFFF;border:none;padding:.5em
 }
 
-/* Dropdown Button */
+/*Dropdown Button */
 .dropbtn {
     background-color: #e34c00;
     color: white;

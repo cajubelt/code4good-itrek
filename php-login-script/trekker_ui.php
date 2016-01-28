@@ -45,7 +45,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 <br>
 <br>
 <label for="image">Image</label>
-<input type="file" name="files"><br> or video (copy and paste youtube link) <br> <textarea id="video" name="video" cols="40" rows="1" ></textarea> <br> <br>
+<input type="file" name="files"><br> or video (copy and paste youtube <b>embed src</b> link) <br> <textarea id="video" name="video" cols="40" rows="1" ></textarea> <br> <br>
  
 <div style="display: inline-block">      
 <input id="submit-button" type="submit" name="submit-button" value="Submit" disabled="disabled">
