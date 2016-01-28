@@ -38,22 +38,35 @@
 			  		list.id = 'list_of_years';
 			  		
 			  		var current_year = new Date().getFullYear();
+			  		var years_array = [];
 			  		for (year = 2014; year < current_year + 1; year++){
 			  			var item = document.createElement('a');
 			  			item.textContent = year;
 			  			item.id = year;
 			  			//item.addEventListener('click', console.log(year));
-			  			item.onclick = function(){
-			  				console.log(item.id);
-			  				//EVENTUALLY: show_timeline(year);
-			  			}
+			  			// item.onclick = function(){
+			  				// console.log(item.id);
+			  				// //EVENTUALLY: show_timeline(year);
+			  			// }
+			  			years_array.push(year);
 			  			list.appendChild(item);
 			  		}
 			  		console.log('create menu function called');
 			  		menu.appendChild(list);
+			  		
+			  		return years_array;
 			  	}
-			  	createYearMenu();
-			  	console.log(document.getElementById('2014').textContent);
+			  	var years = createYearMenu();
+			  	// document.getElementById('2014').onclick = function(){
+			  		// console.log(this.id);
+			  	// } // THIS SUCCESSFULLY ADDS EVENT LISTENER TO 2014 ITEM ON LIST
+			  	console.log(years);
+			  	for (i=0; i < years.length; i++){
+			  		var y = years[i];
+			  		document.getElementById(y).onclick = function(){
+			  			console.log(y);
+			  		} //THIS DOESNT WORK. Seems to fuck up due to variable mutability bug. 
+			  	}
 			  	
 			  </script>
 			  <!-- <div class="dropdown-content">
@@ -272,7 +285,6 @@
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 
 <script> //this puts posts from the database onto the timeline
-<<<<<<< HEAD
 	//default is current year
 	var current_year = new Date().getFullYear();
 	show_timeline(current_year);
@@ -292,24 +304,7 @@
 	// }, function (errorObject) { //in case database read fails
   		// alert("The read failed: " + errorObject.code);
 	// });
-=======
-	//var PAGE_YEAR = 2015; //TODO: auto-generate pages for subsequent years
-	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
-	
-	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
-		var newPost = snapshot.val();
-		if (newPost.approved){ 
-			// var year = newPost.date.substring(0,4);
-			// if (year == PAGE_YEAR){
-				var newPostObject = new post(snapshot.key(), newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
-				newPostObject.toHTML(false);
-			// }
-		}
-	}, function (errorObject) { //in case database read fails
-  		alert("The read failed: " + errorObject.code);
-	});
 
->>>>>>> b3d071eafd3b81329f687ade74b36a85063aae5e
 </script>
 
 
