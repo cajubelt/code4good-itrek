@@ -31,31 +31,7 @@
 			<div class="dropdown">
 			  <button class="dropbtn" id="prevYears">Past Treks</button>
 			  <script>
-			  	function createYearMenu(){
-			  		var menu = document.getElementById("prevYears");
-			  		var list = document.createElement('div');
-			  		list.className = 'dropdown-content';
-			  		list.id = 'list_of_years';
-			  		
-			  		//var years_array = [];
-			  		var current_year = new Date().getFullYear();
-			  		for (year = 2014; year < current_year + 1; year++){
-			  			function createItem(year){
-				  			var item = document.createElement('a');
-				  			item.textContent = year;
-				  			item.id = year;
-				  			item.onclick = function(){
-				  				//console.log( (function() {return year})() );
-				  				show_timeline( (function() {return year})() );
-				  			}
-				  			list.appendChild(item);
-			  			}
-			  			createItem(year);  			
-			  		}
-			  		menu.appendChild(list);
-			  	}
 			  	createYearMenu();
-			  	
 			  </script>
 			</div>
 		</div>
@@ -97,7 +73,8 @@
 		<script> //this puts posts from the database onto the timeline
 			//default is current year
 			var current_year = new Date().getFullYear();
-			show_timeline(current_year);
+			var current_range = [current_year-1, current_year];
+			show_timeline(current_range);
 		</script>
 		
 		<div class="cd-timeline-block">

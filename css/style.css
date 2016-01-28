@@ -27,6 +27,8 @@ a.button {
 .dropdown-content {
     display: none;
     position: absolute;
+    right: 0em;
+    top: 3.1em;
     background-color: #f9f9f9;
     min-width: 10em;
     box-shadow: 0em .5em 1em 0em rgba(0,0,0,0.2);
