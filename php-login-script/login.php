@@ -4,8 +4,8 @@
 	if(isset($_POST['Submit'])){
 		$pass = $_POST['pass'];
 		/* Define username and associated password array */
-		$admin_logins = array('admin1' => 'admin1');
-		$trekker_logins = array('trekker1' => $pass);
+		$admin_logins = array('admin' => 'stem123');
+		$trekker_logins = array('trekker' => $pass);
 		
 		/* Check and assign submitted Username and Password to new variable */
 		$Username = isset($_POST['Username']) ? $_POST['Username'] : '';
@@ -28,7 +28,7 @@
 		}
 	} else if(isset($_POST['Cancel'])){ //to get back to the homepage
 		//TODO: UPDATE THIS TO GO HOME, NOT HARDCODED TO 2015
-		header("location:../2015.php");
+		header("location:../timeline.html");
 		exit;
 	}
 ?>
