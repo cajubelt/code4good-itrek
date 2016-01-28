@@ -4,22 +4,19 @@
 	<link rel="shortcut icon" href="http://www.i-trek.org/wp-content/themes/magma/theme-images/favicon.ico" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
-
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	<script src="js/post_adt.js"></script> <!-- Post ADT -->
   	<script src="js/show_by_year.js"></script> <!-- Show by year -->
   	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
-
 	<title>i-Trek Updates</title>
 </head>
 
 <body>
 	<div style="background:#000000">
-	<a href="php-login-script/login.php" class="button" style="font-size:80%;background:#e34c00">Personnel Login</a>
+		<a href="php-login-script/login.php" class="button" style="font-size:80%;background:#e34c00">Personnel Login</a>
 	</div>
 	<header style="background:#000000;height:18.75em">
 		<img src="img/logo.png" style="width:45em;height:18.75em;">
@@ -28,7 +25,6 @@
 		<div class="subtitle">
 			<h2>Follow our Trekkers throughout their research project experience.</h2>
 		</div>
-
 			<div class="dropdown">
 			  <button class="dropbtn" id="prevYears">Past Treks</button>
 			  <script>
@@ -54,204 +50,19 @@
 		
 	</form>
 	
-<section id="cd-timeline" class="cd-container">
-		
-		<!-- toggleVisibility takes in the name of a class as a string. When called, 
-			toggles the disp attribute of all elements with that class. 
-			Requires that input exactly matches the name of a class. -->
-		<script>;
-			function toggleVisibility(category) {
-				var cssClass = ".".concat(category);
-				var disp = $(cssClass).css("display");
-				if (disp == "none") {
-					$(cssClass).attr("style","display:block")
-				} else {
-					$(cssClass).attr("style","display:none")
-				}
-			}
-		</script>
-		
-		<script> //this puts posts from the database onto the timeline
-			//default is current year
-			var current_year = new Date().getFullYear();
-			var current_range = [current_year-1, current_year];
-			show_timeline(current_range);
-		</script>
-		
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-dollar">
-					<img src="img/dollar.png" alt="Fundraising">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Initiate Kickstarter Fundraising Program</h2>
-					<span class="cd-date">December, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!--fundraising -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-gear">
-					<img src="img/gear.png" alt="Planning">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Set Initial Trekker Budget &amp; Create Funding Plan</h2>
-					<span class="cd-date">December, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!--actions -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-dollar">
-					<img src="img/dollar.png" alt="Fundraising">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Begin Trekker Fundraising</h2>
-					<span class="cd-date">December, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-gear">
-					<img src="img/gear.png" alt="Planning">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Trekker Commitment Deadline</h2>
-					<span class="cd-date">December, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!--planning -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-gear">
-					<img src="img/gear.png" alt="Planning">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Research and Document Bloggers for Kickstarter Program</h2>
-					<span class="cd-date">November, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!--fundraising -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-footprint">
-					<img src="img/footprint.png" alt="Action">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Create Video for Kickstarter Program</h2>
-					<span class="cd-date">November, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!--fundraising -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-footprint">
-					<img src="img/footprint.png" alt="Action">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Submit Trekker Literature Review</h2>
-					<span class="cd-date">November, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions -->
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-footprint">
-					<img src="img/footprint.png" alt="Action">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Submit Trekker Abstract</h2>
-					<span class="cd-date">November, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions --> 
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-footprint">
-					<img src="img/footprint.png" alt="Action">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Review &amp; Provide Feedback on Trekker Submissions</h2>
-					<span class="cd-date">November, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->
-		
-		<div class="cd-timeline-block">
-			<div class="fundraising">
-				<div class="cd-timeline-img cd-dollar">
-					<img src="img/dollar.png" alt="Fundraising">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Discuss and Draft Schedule for Kickstarter Program</h2>
-					<span class="cd-date">October, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- fundraising --> 
-		</div> <!-- cd-timeline-block -->
-				
-		<div class="cd-timeline-block">
-			<div class="planning">
-				<div class="cd-timeline-img cd-gear">
-					<img src="img/gear.png" alt="Planning">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Trekker Team Assignments</h2>
-					<span class="cd-date">October, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- actions --> 
-		</div> <!-- cd-timeline-block -->
-
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-footprint">
-					<img src="img/footprint.png" alt="Action">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Initial Trekker Conference Call</h2>
-					<span class="cd-date">September, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->
-
-		<div class="cd-timeline-block">
-			<div class="actions">
-				<div class="cd-timeline-img cd-footprint">
-					<img src="img/footprint.png" alt="Action">
-				</div> <!-- cd-timeline-img -->
-	
-				<div class="cd-timeline-content">
-					<h2>Trekker Orientation (Boston)</h2>
-					<span class="cd-date">August, 2015</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- planning --> 
-		</div> <!-- cd-timeline-block -->
-																												
-	</section> <!-- cd-timeline -->
+<section style="display:none" id="cd-timeline" class="cd-container">
+<!-- do not remove. dummy timeline post needed for toHTML to place new posts onto timeline properly. -->
+	<div class="cd-timeline-block" style="display:none">
+		<div class="fundraising">
+			<div class="cd-timeline-content" style="display:none">
+				<span class="cd-date" style="display:none">January 1, 0000</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!--fundraising -->
+	</div> <!-- cd-timeline-block -->
+</section>
           
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
-
 
 </body>
 </html>

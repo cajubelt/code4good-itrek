@@ -37,34 +37,25 @@ if(isset($_POST['delete-post'])) {
 	
 </head>
 	<button style="margin:1em" onClick="window.location.href='../timeline.html';">Back to timeline</button>
- <a style="margin-left:3em;margin-top:1em" href="logout.php">Click here</a> to Logout.
-<button style="float: right;margin:1em" onClick="window.location.href='change_password.php';">Change Trekker Password</button>
-<button style="float: right;margin:1em" onClick="window.location.href='change_admin_email.php';">Change Admin Email</button>
-<!-- put link to what page it goes to after submit pressed here (action=...)--> 
-<!-- <FORM action= "http://cajubelt.scripts.mit.edu/code4good-itrek/redirecting.php" -->
-<!--USE THIS TO HOST LOCALLY -->
-<FORM action="http://localhost:8888/redirecting.php" 
+ 	<a style="margin-left:3em;margin-top:1em" href="logout.php">Click here</a> to Logout.
+	<button style="float: right;margin:1em" onClick="window.location.href='change_password.php';">Change Trekker Password</button>
+	<button style="float: right;margin:1em" onClick="window.location.href='change_admin_email.php';">Change Admin Email</button>
+	<form action="http://localhost:8888/redirecting.php" 
        enctype="multipart/form-data"
        method="post" style="margin:1em">
-<P>
-<br>
-<h2>Timeline Submissions</h2>
-<br>
-
-
-<form id="filters" align="left" style="padding:2em;text-size:200%">
-	<div class="filterheading">
-		<h1>Show posts which are:</h1>
-	</div> <br>
-	<div class="filterchoices" style="display;inline-block;padding-right:2em";> 
-		Approved: <input type="checkbox" name="checkboxapproved" id="checkboxapproved" onclick="toggleVisibility('approved')" checked>
-	</div> 
-	<div class="filterchoices"> 
-		Unapproved: <input type="checkbox" name="checkboxunapproved" id="checkboxunapproved" onclick="toggleVisibility('unapproved')" checked>
-	</div>
-
-</form>
-
+		<p> <br>
+		<h2>Timeline Submissions</h2> <br>
+		<form id="filters" align="left" style="padding:2em;text-size:200%">
+		<div class="filterheading">
+			<h1>Show posts which are:</h1>
+		</div> <br>
+		<div class="filterchoices" style="display;inline-block;padding-right:2em";> 
+			Approved: <input type="checkbox" name="checkboxapproved" id="checkboxapproved" onclick="toggleVisibility('approved')" checked>
+		</div> 
+		<div class="filterchoices"> 
+			Unapproved: <input type="checkbox" name="checkboxunapproved" id="checkboxunapproved" onclick="toggleVisibility('unapproved')" checked>
+		</div>
+	</form>
 
 <section id="cd-timeline" class="cd-container">
 	
@@ -92,8 +83,6 @@ if(isset($_POST['delete-post'])) {
 		</div> <!-- cd-timeline-content -->
 	</div> <!--fundraising -->
 </div> <!-- cd-timeline-block -->
-
-
 </section>
 
 <script>
@@ -123,9 +112,8 @@ if(isset($_POST['delete-post'])) {
 
 </script>
 
-<br>
-<a style="margin:2em" href="logout.php">Click here to Logout.</a>
-</FORM>
+<br> <a style="margin:2em" href="logout.php">Click here to Logout.</a>
+</form>
 </html>
 
 
