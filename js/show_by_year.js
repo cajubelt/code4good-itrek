@@ -8,8 +8,8 @@ function show_timeline(YEAR_RANGE){
 	}
 	
 	/*add posts from YEAR_RANGE to the timeline */
-	var startDate = new Date('08-01-' + YEAR_RANGE[0]);
-	var endDate = new Date('08-01-' + YEAR_RANGE[1]);
+	var startDate = new Date('01-01-' + YEAR_RANGE[0]);
+	var endDate = new Date('12-31-' + YEAR_RANGE[1]);
 	
 	var myFirebaseRef = new Firebase("https://scorching-inferno-2234.firebaseio.com/");
 	
@@ -34,9 +34,7 @@ function createYearMenu(){
 	var menu = document.getElementById("prevYears");
 	var list = document.createElement('div');
 	list.className = 'dropdown-content';
-	list.id = 'list_of_years';
 	
-	//var years_array = [];
 	var current_year = new Date().getFullYear();
 	for (year = 2014; year < current_year + 1; year++){
 		function createItem(year){

@@ -27,6 +27,7 @@ $content = $_POST['submit-content'];
 $date = $_POST['date'];
 $category = $_POST['category'];
 $video_link = $_POST['video'];
+$trekYear = $_POST['trek-year']; //NEW
 $imdata = base64_encode(file_get_contents($_FILES['files']['tmp_name']));
 $approved = false;
 $preview = false;
@@ -48,6 +49,7 @@ echo 'category : ' . json_encode($category) . ',';
 echo 'date : ' . json_encode($date) . ',';
 echo 'videolink : ' . json_encode($video_link) . ',';
 echo 'approved : ' . json_encode($approved) . ',';
+echo 'trekYear : ' . js.encode($trekYear) . ','; //NEW
 
 echo '});
 	</script>';
