@@ -4,7 +4,7 @@
 	if(isset($_POST['Submit'])){
 		$pass = $_POST['pass'];
 		/* Define username and associated password array */
-		$admin_logins = array('Alex' => '123456','admin1' => 'admin1','admin2' => 'admin2');
+		$admin_logins = array('admin1' => 'admin1');
 		$trekker_logins = array('trekker1' => $pass);
 		
 		/* Check and assign submitted Username and Password to new variable */

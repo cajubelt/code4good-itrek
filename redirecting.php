@@ -1,4 +1,4 @@
-<?php
+<?php session_start(); /* Starts the session */
 
 //change this to location of timeline page
 //note that this will only work on remotely hosted site OR locally hosted, not both at once. 
@@ -30,11 +30,9 @@ $date = $_POST['date'];
 $category = $_POST['category'];
 $video_link = $_POST['video'];
 $imdata = base64_encode(file_get_contents($_FILES['files']['tmp_name']));
-if ($_POST['64code'] != "") {
-	$imdata = $_POST['64code'];
-}
-$approved = False;
-$preview = False;
+
+$approved = false;
+$preview = false;
 
 //send info to database using javascript
 echo '
@@ -53,8 +51,6 @@ echo 'category : ' . json_encode($category) . ',';
 echo 'date : ' . json_encode($date) . ',';
 echo 'videolink : ' . json_encode($video_link) . ',';
 echo 'approved : ' . json_encode($approved) . ',';
-
-
 
 echo '});
 	</script>';
@@ -86,8 +82,8 @@ if(isset($_POST['preview-button']))
 
 	<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="../css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="../css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="../js/modernizr.js"></script> <!-- Modernizr -->
   	<script src="../js/post_adt.js"></script> <!-- Post ADT -->
 	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
@@ -140,15 +136,16 @@ if(isset($_POST['preview-button']))
     var video_link = '<?php echo $video_link; ?>';
     var imdata = '<?php echo $imdata; ?>';
     var preview = '<?php echo $preview; ?>';
-    console.log(preview);
+
     if (preview) {
-    	console.log("here");
+    	console.log(video_link);
     	document.getElementById('cd-timeline').style.display = 'block';
     	document.getElementById('back').style.display = 'block';
 
     	var newPostObject = new post("dummy_id", title,content,date,category,imdata,video_link,'true');
 
 		newPostObject.toHTML(false);
+
     } else {
     	document.getElementById("red").style.display = 'block';
     }

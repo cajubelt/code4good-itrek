@@ -27,54 +27,27 @@
 			<div class="dropdown">
 			  <button class="dropbtn">Previous Years</button>
 			  <div class="dropdown-content">
-			    <a href="2015.php">2015</a>
+			    <a href="2015.php">2015 - 2016</a>
 			    <a href="2014.php">2014</a>
 			  </div>
 			</div>
 		</div>
-	
-	<section id="2014intro" class="cd-container">
-		<h1 style="font-size:2.5em;padding:1em" align="middle">
-			2014 Pilot Trek
-		</h1>
-		<p id="TrekkersLabel">
-			Trekkers:
-		</p>
-		<p>
-			Ato Howard — Quinsigamond Community College <br>
-			Christine Richardson — Morgan State University <br>
-			Gage Light — Savannah State University <br>
-			Ni’Matul-ain Muhammed — Morgan State University
-		</p>
-		<br>
-		<p>
-			The 2014 <a href="http://www.i-trek.org/become-a-trekker/" class="orange">Trekkers</a> chose to pursue a research project that attempted to define a 
-			coral reef health scale, entitled “The i-Trek Global Coral Health Survey”, that 
-			can be used by anyone to evaluate and log the health of coral reefs. While other 
-			scales require highly qualified users and equipment, only easily obtainable materials 
-			would be needed to evaluate health with this scale. To determine the health of coral 
-			using the Global Health Survey, a user would only need to collect water samples to be 
-			tested with pH meters and salinity meters and observe the coral and its surroundings. 
-			The total costs for materials is less that $20.
-		</p>
-		<br>
-		<p>
-			The data collection portion of the i-Trek pilot program took place during the 
-			first two weeks of June 2014. This portion of the program was meant to facilitate 
-			the bulk of the research project proposed by the undergraduate student participants, 
-			or Trekkers, and engage them in career development, community service and networking 
-			opportunities. To see what a Trek is about, check out the video below and read the 
-			day to day depiction of the Trek.
-		</p>	
-		<br><br>
-		<div id="video" align="middle" style="padding-top:.5em">
-			<iframe style="width:35em;height:19em;"
-				src="https://www.youtube.com/embed/7OgQbroOJGw" frameborder="0" allowfullscreen>
-			</iframe>
-		</div> <!-- video -->	
-	</section> <!--2014intro -->
-	
 
+		<form id="filters" align="left" style="padding:2em;text-size:200%">
+			<div class="filterheading">
+				<h1>Filter by category</h1>
+			</div> <br>
+			<div class="filterchoices" style="display:inline-block;padding-right:2em"> 
+				Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleVisibility('fundraising')" checked>
+			</div> 
+			<div class="filterchoices" style="display:inline-block;padding-right:2em"> 
+				Trek Planning: <input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="toggleVisibility('planning')" checked>
+			</div>
+			<div class="filterchoices" style="display:inline-block;padding-right:2em">
+				Trekker Actions: <input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="toggleVisibility('actions')" checked>
+			</div>
+			
+		</form>
 	
 	<section id="cd-timeline" class="cd-container">
 		
@@ -92,23 +65,6 @@
 				}
 			}
 		</script>
-		
-		
-		<form id="filters" align="left" style="padding:2em;text-size:200%">
-			<div class="filterheading">
-				<h1>Filter by category</h1>
-			</div> <br>
-			<div class="filterchoices"> 
-				Fundraising: <input type="checkbox" name="checkboxFundraising" id="checkboxFundraising" onclick="toggleVisibility('fundraising')" checked>
-			</div> 
-			<div class="filterchoices"> 
-				Trek Planning: <input type="checkbox" name="checkboxPlanning" id="checkboxPlanning" onclick="toggleVisibility('planning')" checked>
-			</div>
-			<div class="filterchoices">
-				Trekker Actions: <input type="checkbox" name="checkboxActions" id="checkboxActions" onclick="toggleVisibility('actions')" checked>
-			</div>
-			
-		</form>
 		
 		
 		<div class="cd-timeline-block">

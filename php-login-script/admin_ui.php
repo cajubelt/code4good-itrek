@@ -3,6 +3,17 @@
 if(!isset($_SESSION['UserData']['Username'])){
 	header("location:login.php");
 	exit;
+} 
+
+$_SESSION['UserData']['Username']='admin1';
+
+$delete = false;
+if(isset($_POST['delete-post'])) {
+	$deleteID = $_POST['hid'];
+	echo '<script language="javascript">';
+	echo 'alert("Post deleted.")';
+	echo '</script>';
+	$delete = true;
 }
 
 ?>
@@ -43,7 +54,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 	<div class="filterheading">
 		<h1>Show posts which are:</h1>
 	</div> <br>
-	<div class="filterchoices"> 
+	<div class="filterchoices" style="display;inline-block;padding-right:2em";> 
 		Approved: <input type="checkbox" name="checkboxapproved" id="checkboxapproved" onclick="toggleVisibility('approved')" checked>
 	</div> 
 	<div class="filterchoices"> 
@@ -61,7 +72,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 		var disp = $(cssClass).css("display");
 		var checkboxID = "checkbox".concat(approval);
 		var isChecked = document.getElementById(checkboxID).checked;
-		console.log(isChecked);
+
 		if (disp == "none" && isChecked) {
 			$(cssClass).attr("style","display:block")
 		} 
@@ -86,16 +97,19 @@ if(!isset($_SESSION['UserData']['Username'])){
 <script>
 	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
 	//var unapprovedPostIDs = [];
+	var deleteID = '<?php echo $deleteID ?>';
 
+	if ('<?php echo $delete ?>') {
+		myFirebaseRef.child(deleteID).remove();
+	}
 
 	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
 		var ID = snapshot.key();
-		console.log(ID);
+
 		var timelinePostRef = myFirebaseRef.child(ID);
-		console.log(newPost.approved);
-		
-		if (newPost.email == null){ //avoid displaying emails
+
+		if (newPost.email == null && newPost.password == null){ //avoid displaying emails
 			var newPostObject = new post(ID, newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
 			newPostObject.toHTML(true);		
 		}
@@ -108,7 +122,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 </script>
 
 <br>
-<a href="logout.php">Click here</a> to Logout.
+<a style="margin:2em" href="logout.php">Click here to Logout.</a>
 </FORM>
 </html>
 
