@@ -8,6 +8,7 @@ $id = $_POST['id'];
 $approved = $_POST['app'];
 $title = $_POST['submit-title'];
 $content = $_POST['submit-content'];
+$newContent = str_replace( array("\r\n", "\n","\r"), ' ', $content);
 $date = $_POST['date'];
 $category = $_POST['category'];
 $video_link = $_POST['video'];
@@ -62,7 +63,7 @@ if ($_POST['64code'] != "") {
 	var myFirebaseRef = new Firebase("https://scorching-inferno-2234.firebaseio.com/");
 
     var title = '<?php echo $title; ?>';
-    var content = '<?php echo $content; ?>';
+    var content = '<?php echo $newContent; ?>';
     var date = <?php echo json_encode($date); ?>;
     var category = '<?php echo $category; ?>';
     var video_link = '<?php echo $video_link; ?>';

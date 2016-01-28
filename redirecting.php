@@ -24,6 +24,7 @@ if(isset($_POST['submit-button']))
 //get info sent from login page
 $title = $_POST['submit-title'];
 $content = $_POST['submit-content'];
+$newContent = str_replace( array("\r\n", "\n","\r"), ' ', $content);
 $date = $_POST['date'];
 $category = $_POST['category'];
 $video_link = $_POST['video'];
@@ -42,7 +43,7 @@ echo 'var base64image = ' . json_encode($imdata) . ';';
 echo 'myFirebaseRef.push({';
 	
 echo 'title : ' . json_encode($title) . ',';
-echo 'content : ' . json_encode($content) . ',';
+echo 'content : ' . json_encode($newContent) . ',';
 echo 'base64image : ' . json_encode($imdata) . ',';
 echo 'category : ' . json_encode($category) . ',';
 echo 'date : ' . json_encode($date) . ',';
@@ -58,6 +59,7 @@ if(isset($_POST['preview-button']))
 {
 	$title = $_POST['submit-title'];
 	$content = $_POST['submit-content'];
+	$newContent = str_replace( array("\r\n", "\n","\r"), ' ', $content);
 	$date = $_POST['date'];
 	$category = $_POST['category'];
 	$video_link = $_POST['video'];
@@ -118,7 +120,7 @@ if(isset($_POST['preview-button']))
 	});
 
     var title = '<?php echo $title; ?>';
-    var content = '<?php echo $content; ?>';
+    var content = '<?php echo $newContent; ?>';
     var date = <?php echo json_encode($date); ?>;
     var category = '<?php echo $category; ?>';
     var video_link = '<?php echo $video_link; ?>';
