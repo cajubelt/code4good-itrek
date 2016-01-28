@@ -79,7 +79,7 @@ if(isset($_POST['edit-post']))
 <script> //this puts posts from the database onto the timeline
 
 	var postid = '<?php echo $postid ?>';
-	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+	var myFirebaseRef = new Firebase("https://scorching-inferno-2234.firebaseio.com/");
 	document.getElementById('id').value = postid;
 	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();

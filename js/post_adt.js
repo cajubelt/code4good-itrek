@@ -191,7 +191,7 @@ function createCheckbox() {
 	
 	function toggleApproval() {
 		console.log("running toggleApproval")
-		var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+		var myFirebaseRef = new Firebase("https://scorching-inferno-2234.firebaseio.com/");
 		var ID = checkbox.id;
 		console.log(ID);
 		var timelinePostRef = myFirebaseRef.child(ID);	

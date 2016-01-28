@@ -64,7 +64,7 @@ if ($_POST['64code'] != "") {
 <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
 <script>
 	console.log('<?php echo $category ?>');
-	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+	var myFirebaseRef = new Firebase("https://scorching-inferno-2234.firebaseio.com/");
 
     var title = '<?php echo $title; ?>';
     var content = '<?php echo $content; ?>';

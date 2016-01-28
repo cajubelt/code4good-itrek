@@ -29,7 +29,7 @@ Please enter new Trekker password below, then press submit. <br>
 </html>
 <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
 <script>
-var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+var myFirebaseRef = new Firebase("https://scorching-inferno-2234.firebaseio.com/");
 if ('<?php echo $change ?>') {
 	myFirebaseRef.child('admin_pass_change').set({ password: '<?php echo $pass ?>'}); }
 </script>

@@ -11,7 +11,7 @@ function show_timeline(YEAR_RANGE){
 	var startDate = new Date('08-01-' + YEAR_RANGE[0]);
 	var endDate = new Date('08-01-' + YEAR_RANGE[1]);
 	
-	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+	var myFirebaseRef = new Firebase("https://scorching-inferno-2234.firebaseio.com/");
 	
 	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();

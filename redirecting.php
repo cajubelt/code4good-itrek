@@ -38,7 +38,7 @@ $preview = false;
 echo '
 	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
 	<script>
-	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");';
+	var myFirebaseRef = new Firebase("https://scorching-inferno-2234.firebaseio.com/");';
 
 echo 'var base64image = ' . json_encode($imdata) . ';';	
 	
@@ -119,7 +119,7 @@ if(isset($_POST['preview-button']))
 <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
 <script>
 
-	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+	var myFirebaseRef = new Firebase("https://scorching-inferno-2234.firebaseio.com/");
 	myFirebaseRef.orderByChild("date").on("child_added", function(snapshot, prevChildKey) {
 		var newPost = snapshot.val();
 		if (newPost.email != null){ 

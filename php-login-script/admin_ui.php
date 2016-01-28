@@ -97,7 +97,7 @@ if(isset($_POST['delete-post'])) {
 </section>
 
 <script>
-	var myFirebaseRef = new Firebase("https://brilliant-fire-4870.firebaseio.com/");
+	var myFirebaseRef = new Firebase("https://scorching-inferno-2234.firebaseio.com/");
 	//var unapprovedPostIDs = [];
 	var deleteID = '<?php echo $deleteID ?>';
 
