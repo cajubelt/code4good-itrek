@@ -3,9 +3,7 @@
 if(!isset($_SESSION['UserData']['Username'])){
 	header("location:login.php");
 	exit;
-} 
-
-$_SESSION['UserData']['Username']='admin1';
+}
 
 $delete = false;
 if(isset($_POST['delete-post'])) {
@@ -38,7 +36,6 @@ if(isset($_POST['delete-post'])) {
 </head>
 	<button style="margin:1em" onClick="window.location.href='../timeline.html';">Back to timeline</button>
 	<a style="margin-left:3em;margin-top:1em" href="logout.php">Click here</a> to Logout.
-	<button style="float: right;margin:1em" onClick="window.location.href='admin_write_post.php';">New Post</button>
 	<button style="float: right;margin:1em" onClick="window.location.href='change_password.php';">Change Trekker Password</button>
 	<button style="float: right;margin:1em" onClick="window.location.href='change_admin_email.php';">Change Admin Email</button>
 	<form action="http://localhost:8888/redirecting.php" 
@@ -46,7 +43,11 @@ if(isset($_POST['delete-post'])) {
        enctype="multipart/form-data"
        method="post" style="margin:1em">
 		<p> <br>
-		<h2>Timeline Submissions</h2> <br>
+		<h1 style="font-size:30px">Timeline Submissions</h1>
+		<br>
+		<button style="float: left" onClick="window.location.href='admin_write_post.php';">New Post</button>
+		<br>
+		<br>
 		<form id="filters" align="left" style="padding:2em;text-size:200%">
 		<div class="filterheading">
 			<h1>Show posts which are:</h1>

@@ -14,7 +14,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 <head>
 	<link href="./css/style.css" rel="stylesheet">
 </head>
-	<button style="margin:1em" onClick="window.location.href='../timeline.html';">Back to timeline</button>
+	<button style="margin:1em" onClick="window.location.href='../php-login-script/admin_ui.php';">Back to Admin Page</button>
 <FORM action="http://localhost:8888/redirecting_admin.php" 
        enctype="multipart/form-data"
        method="post" style="padding-left:36%">
