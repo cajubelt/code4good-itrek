@@ -14,7 +14,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 <head>
 	<link href="./css/style.css" rel="stylesheet">
 </head>
-	
+	<button style="margin:1em" onClick="window.location.href='../timeline.html';">Back to timeline</button>
 <FORM action="http://localhost:8888/redirecting.php" 
        enctype="multipart/form-data"
        method="post" style="padding-left:36%">
