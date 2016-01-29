@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Code modified with permission of author from https://codyhouse.co/gem/vertical-timeline/ . Original author: Sebasitano Guerriero. -->
 <html lang="en" class="no-js">
 <head>
 	<link rel="shortcut icon" href="http://www.i-trek.org/wp-content/themes/magma/theme-images/favicon.ico" />
@@ -68,10 +69,17 @@
 	
 	<script> 
 		/*this puts current trek-year's posts from the database onto the timeline when the page opens */
-		var current_year = new Date().getFullYear();
-		var current_range = [(current_year-1), current_year];
+		var current_date = new Date();
+		var current_month = current_date.substring(5,7);
+		var current_year = current_date.getFullYear();
+		var current_range = [];
+		if (current_month <= 8){ //before august --> trekYear is [lastyear, thisyear]
+			current_range.push(current_year-1).push(current_year);
+		} else {
+			current_range.push(current_year).push(current_year+1);
+		}
 		show_timeline(current_range);
-		//TODO add displayOnly
+		displayOnly(current_range.join('-'));
 	</script>
 
 </body>

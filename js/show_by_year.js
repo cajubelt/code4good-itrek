@@ -35,14 +35,14 @@ function createYearMenu(){
 	list.className = 'dropdown-content';
 	
 	var current_year = new Date().getFullYear();
-	for (year = 2014; year < current_year + 1; year++){
+	for (year = 2013; year < current_year + 1; year++){
 		function createItem(year){
   			var item = document.createElement('a');
-  			var trekYear = year-1 + '-' + year;
+  			var trekYear = year + '-' + (year+1);
   			item.textContent = trekYear;
   			item.onclick = function(){
   				show_timeline( (function() {
-  					var range = [year-1,year];
+  					var range = [year,year+1];
   					return range;
   					})() 
   				);

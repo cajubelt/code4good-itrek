@@ -1,3 +1,5 @@
+/* Code copied with permission of author from https://codyhouse.co/gem/vertical-timeline/ . Original author: Sebasitano Guerriero.*/
+
 jQuery(document).ready(function($){
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8;
