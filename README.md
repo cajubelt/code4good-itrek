@@ -1,15 +1,17 @@
 INTRODUCTION <br />
-This is a timeline which allows students to login and post to a timeline, which can be
-deleted, edited, or displayed by administrators. Administrators can login and, in addition
-to editing posts, can change the student password. For information on how to change the
-student username, admin username, and admin password, see "CHANGING USERNAMES AND PASSWORDS"
-below. Each time a student submits a new post, administrators receive an email notification,
-and the email address this notification is sent to can be changed by administrators as well.
+This is a timeline displaying multimedia posts in reverse chronological order, organized by
+trek year and category. Timeline posts can be submitted by students, and deleted, edited, or 
+approved by administrators. Administrators can login and view all posts that have been submitted,
+approve or edit posts submitted by students, write a new post, or change the student password. 
+For information on how to change the student username, admin username, and admin password, see 
+"CHANGING USERNAMES AND PASSWORDS" below. Each time a student submits a new post, administrators 
+receive an email notification. The administrator email address can be changed by administrators as well.
 
 LANGUAGES USED <br />
 -HTML <br />
 -PHP <br />
 -JavaScript
+-jQuery
 
 FIREBASE INFORMATION <br />
 When students submit a timeline post, the data is sent to an online Firebase database. 
