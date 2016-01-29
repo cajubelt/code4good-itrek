@@ -190,14 +190,11 @@ function createCheckbox() {
 	checkbox.checked = this.approved;
 	
 	function toggleApproval() {
-		console.log("running toggleApproval")
 		var myFirebaseRef = new Firebase("https://scorching-inferno-2234.firebaseio.com/");
 		var ID = checkbox.id;
-		console.log(ID);
 		var timelinePostRef = myFirebaseRef.child(ID);	
 		checkbox.approved = !checkbox.approved
 		timelinePostRef.update({approved:checkbox.approved});
-		console.log(checkbox.approved);
 		
 		var checkboxOuterDiv = document.getElementById(checkbox.id);
 		if (checkbox.approved) {
@@ -216,7 +213,7 @@ function createCheckbox() {
 	
 //object representing a post on the timeline
 function post(database_id, title, content, date, category, base64image, videolink, approved){
-	this.database_id = database_id; //TODO: make this the only parameter
+	this.database_id = database_id; 
 	this.title = title;
 	this.content = content;
 	this.date = date;

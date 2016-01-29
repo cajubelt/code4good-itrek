@@ -11,6 +11,8 @@
   	<script src="js/post_adt.js"></script> <!-- Post ADT -->
   	<script src="js/show_by_year.js"></script> <!-- Show by year -->
   	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
 	<title>i-Trek Updates</title>
 </head>
 
@@ -50,19 +52,26 @@
 		
 	</form>
 	
-<section style="display:none" id="cd-timeline" class="cd-container">
-<!-- do not remove. dummy timeline post needed for toHTML to place new posts onto timeline properly. -->
-	<div class="cd-timeline-block" style="display:none">
-		<div class="fundraising">
-			<div class="cd-timeline-content" style="display:none">
-				<span class="cd-date" style="display:none">January 1, 0000</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!--fundraising -->
-	</div> <!-- cd-timeline-block -->
-</section>
-          
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
+	<section id="cd-timeline" class="cd-container">
+		<script>;
+	 		function toggleVisibility(category) {
+	 			var cssClass = ".".concat(category);
+	 			var disp = $(cssClass).css("display");
+	 			if (disp == "none") {
+	 				$(cssClass).attr("style","display:block")
+	 			} else {
+				$(cssClass).attr("style","display:none")
+	 			}
+			}
+	 	</script>
+	</section>
+	
+	<script> 
+		/*this puts current trek-year's posts from the database onto the timeline when the page opens */
+		var current_year = new Date().getFullYear();
+		var current_range = [(current_year-1), current_year];
+		show_timeline(current_range);
+	</script>
 
 </body>
 </html>

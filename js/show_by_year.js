@@ -19,7 +19,6 @@ function show_timeline(YEAR_RANGE){
 			//add element if post is between Aug 1, (startYear) and Aug 1, (endYear)
 			var postDate = new Date(newPost.date);
 			var inTimeRange = startDate <= postDate && postDate < endDate;
-			
 			if (inTimeRange){
 				var newPostObject = new post(snapshot.key(), newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
 				newPostObject.toHTML(false);
