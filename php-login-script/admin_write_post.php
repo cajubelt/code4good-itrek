@@ -7,12 +7,14 @@ if(!isset($_SESSION['UserData']['Username'])){
 
 ?>
 <!doctype html>
+
 <html>
 <head>
 	<link href="./css/style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="http://www.i-trek.org/wp-content/themes/magma/theme-images/favicon.ico" />
 </head>
 	<button style="margin:1em" onClick="window.location.href='../php-login-script/admin_ui.php';">Back to Admin Page</button>
-<FORM action="http://localhost:8888/redirecting_admin.php" 
+<FORM action="http://localhost:8888/redirecting_admin.php" target="_blank"
        enctype="multipart/form-data"
        method="post" style="padding-left:36%">
 <P>

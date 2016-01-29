@@ -38,6 +38,7 @@
 		<meta charset="utf-8">
 		<title>PHP Login Script Without Using Database</title>
 		<link href="./css/style.css" rel="stylesheet">
+		<link rel="shortcut icon" href="http://www.i-trek.org/wp-content/themes/magma/theme-images/favicon.ico" />
 	</head>
 	<body>
 		<div id="Frame0">

@@ -94,8 +94,6 @@ if(isset($_POST['preview-button']))
 </div>
 </div>
 
-
-<button id="back" style="margin:3em;display:none" onClick="history.go(-1)">Back to submission form</button>
 <section style="display:none" id="cd-timeline" class="cd-container">
 
 <!-- do not remove. dummy timeline post needed for toHTML to place new posts onto timeline properly. -->
@@ -129,7 +127,6 @@ if(isset($_POST['preview-button']))
 
     if (preview) {
     	document.getElementById('cd-timeline').style.display = 'block';
-    	document.getElementById('back').style.display = 'block';
     	var newPostObject = new post("dummy_id", title,content,date,category,imdata,video_link,'true',trekYear);
 		newPostObject.toHTML(false);
     } else {

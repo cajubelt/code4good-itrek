@@ -11,6 +11,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 <html>
 <head>
 	<link href="./css/style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="http://www.i-trek.org/wp-content/themes/magma/theme-images/favicon.ico" />
 </head>
 	<button style="margin:1em" onClick="window.location.href='../timeline.html';">Back to timeline</button>
 	<form action="http://localhost:8888/redirecting.php" 

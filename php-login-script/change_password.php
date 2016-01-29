@@ -14,6 +14,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 ?>
 <!doctype html>
 <html>
+<head>	<link rel="shortcut icon" href="http://www.i-trek.org/wp-content/themes/magma/theme-images/favicon.ico" /> </head>
 <div align="center" style="width:30em;height:7em;background:#f2f2f2;padding:3em;margin-left:27%">
 Please enter new Trekker password below, then press submit. <br>
 <form action="" method="post" name="form">
