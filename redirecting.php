@@ -1,7 +1,4 @@
 <?php session_start(); /* Starts the session */
-//change this to location of timeline page
-//note that this will only work on remotely hosted site OR locally hosted, not both at once. 
-//$timeline_address = 'http://cajubelt.scripts.mit.edu/code4good-itrek/';
 $next = false;
 if(isset($_POST['Submit'])) {
 	$admin_email = $_POST['email'];
