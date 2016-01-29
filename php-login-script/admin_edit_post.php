@@ -47,6 +47,20 @@ if(isset($_POST['edit-post']))
 </select>
 <span id="category-error" style="color:red">*</span>
 <br> <br>
+<label for="trek-year">Trek Year</label>
+<select id='trek-year' name='trek-year'>
+	<script>
+		var trek_list = document.getElementById('trek-year');
+		var current_year = new Date().getFullYear();
+		for (year = current_year+1; year > 2014; year--){
+			var option = document.createElement('option');
+			option.textContent = option.value = (year-1) + ' - ' + year;
+			option.value = (year-1) + ' - ' + year;
+			trek_list.appendChild(option);
+		}
+	</script>
+</select>
+<span id="category-error" style="color:red">*</span> <br> <br>
 <label for="date">Date</label>
 <input id="date" type="date" name="date">
 <span id="date-error" style="color:red">*</span>

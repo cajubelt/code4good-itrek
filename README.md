@@ -27,6 +27,8 @@ to be locally hosted, but which should be replaced by the permanent address of e
  the permanent address of code4good-itrek/redirecting.php
 -In code4good-itrek/php-login-script/admin_ui.php, on line 43, action= should link to
  the permanent address of code4good-itrek/redirecting.php
+-In code4good-itrek/php-login-script/admin_write_post.php, on line 18, action= should link to
+ the permanent address of code4good-itrek/redirecting.php
 -In code4good-itrek/php-login-script/trekker_ui.php, on line 16, action= should link to
  the permanent address of code4good-itrek/redirecting.php
 -In code4good-itrek/redirecting.php, on line 10, the link in the comment line (which provides
