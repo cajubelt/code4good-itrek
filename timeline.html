@@ -70,13 +70,13 @@
 	<script> 
 		/*this puts current trek-year's posts from the database onto the timeline when the page opens */
 		var current_date = new Date();
-		var current_month = current_date.substring(5,7);
+		var current_month = current_date.getMonth();
 		var current_year = current_date.getFullYear();
 		var current_range = [];
 		if (current_month <= 8){ //before august --> trekYear is [lastyear, thisyear]
-			current_range.push(current_year-1).push(current_year);
+			current_range = [current_year-1, current_year];
 		} else {
-			current_range.push(current_year).push(current_year+1);
+			current_range = [current_year, current_year+1];
 		}
 		show_timeline(current_range);
 		displayOnly(current_range.join('-'));

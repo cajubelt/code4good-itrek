@@ -72,7 +72,6 @@ function displayOnly(trekYear){
 		if (trekYear == trek){
 			$(cssClass).attr("style","display:block");
 		} else {
-			console.log(cssClass);
 			$(cssClass).attr("style","display:none");
 		}
 	}
