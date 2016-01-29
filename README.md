@@ -24,11 +24,11 @@ Before incorporating this project into the iTrek website, there are some interna
 need to be changed. These are links between pages of the projects which are temporarily set
 to be locally hosted, but which should be replaced by the permanent address of each page.<br />
 -In code4good-itrek/php-login-script/admin_edit_post.php, on line 30, action= should link to
- the permanent address of code4good-itrek/redirecting.php <br />
--In code4good-itrek/php-login-script/admin_ui.php, on line 43, action= should link to
- the permanent address of code4good-itrek/redirecting.php <br />
--In code4good-itrek/php-login-script/admin_write_post.php, on line 18, action= should link to
- the permanent address of code4good-itrek/redirecting.php <br />
+ the permanent address of code4good-itrek/redirecting_admin.php <br />
+-In code4good-itrek/php-login-script/admin_ui.php, on line 41, action= should link to
+ the permanent address of code4good-itrek/admin_write_post.php <br />
+-In code4good-itrek/php-login-script/admin_write_post.php, on line 15, action= should link to
+ the permanent address of code4good-itrek/redirecting_admin.php <br />
 -In code4good-itrek/php-login-script/trekker_ui.php, on line 16, action= should link to
  the permanent address of code4good-itrek/redirecting.php <br />
 -In code4good-itrek/redirecting.php, on line 10, the link in the comment line (which provides
