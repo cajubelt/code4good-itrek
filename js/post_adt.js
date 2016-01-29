@@ -94,8 +94,6 @@ function toHTML(isAdmin){
 				editButtonForm.appendChild(editButton);
 				editButtonForm.appendChild(editButton2);
 
-				//
-
 				var deleteButtonForm = document.createElement("form");	
 				deleteButtonForm.style.position = "absolute";	
 				deleteButtonForm.style.right = "10px";
@@ -142,8 +140,13 @@ function toHTML(isAdmin){
 			newPostCategory.appendChild(newCDTimelineContentBlock);
 			newPostCategory.appendChild(iconDiv);
 			
+			var newPostTrekYear = document.createElement("div");
+			newPostTrekYear.className = this.trekYear;
+			newPostTrekYear.appendChild(newPostCategory); //NEW
+			
 			var newPostApprovalOuterDiv = document.createElement("div");
-			newPostApprovalOuterDiv.appendChild(newPostCategory);
+			// newPostApprovalOuterDiv.appendChild(newPostCategory); CHANGED
+			newPostApprovalOuterDiv.appendChild(newPostTrekYear); //NEW
 			if (isAdmin) {
 				newPostApprovalOuterDiv.id = checkbox.id;
 				if (checkbox.approved) {
@@ -156,7 +159,7 @@ function toHTML(isAdmin){
 			var newPostBlock = document.createElement("div");
 			newPostBlock.className = "cd-timeline-block";
 			newPostBlock.appendChild(newPostApprovalOuterDiv);
-			
+			console.log(newPostBlock);
 			var timeline = document.getElementById("cd-timeline");
 			if (!timeline.firstChild){ //case where timeline is empty
 				timeline.appendChild(newPostBlock);
@@ -212,7 +215,7 @@ function createCheckbox() {
 
 	
 //object representing a post on the timeline
-function post(database_id, title, content, date, category, base64image, videolink, approved){
+function post(database_id, title, content, date, category, base64image, videolink, approved, trekYear){//NEW
 	this.database_id = database_id; 
 	this.title = title;
 	this.content = content;
@@ -221,6 +224,7 @@ function post(database_id, title, content, date, category, base64image, videolin
 	this.base64image = base64image;
 	this.videolink = videolink;
 	this.approved = approved;
+	this.trekYear = trekYear;
 	this.toHTML = toHTML;
 	this.createCheckbox = createCheckbox;
 }

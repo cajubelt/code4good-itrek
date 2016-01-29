@@ -20,7 +20,7 @@ function show_timeline(YEAR_RANGE){
 			var postDate = new Date(newPost.date);
 			var inTimeRange = startDate <= postDate && postDate < endDate;
 			if (inTimeRange){
-				var newPostObject = new post(snapshot.key(), newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved);
+				var newPostObject = new post(snapshot.key(), newPost.title, newPost.content, newPost.date, newPost.category, newPost.base64image, newPost.videolink, newPost.approved, newPost.trekYear);
 				newPostObject.toHTML(false);
 			}
 		}
@@ -38,17 +38,42 @@ function createYearMenu(){
 	for (year = 2014; year < current_year + 1; year++){
 		function createItem(year){
   			var item = document.createElement('a');
-  			item.textContent = year-1 + ' - ' + year;
+  			var trekYear = year-1 + '-' + year;
+  			item.textContent = trekYear;
   			item.onclick = function(){
   				show_timeline( (function() {
   					var range = [year-1,year];
   					return range;
   					})() 
   				);
+  				displayOnly(trekYear);
   			}
   			list.appendChild(item);
 		}
 		createItem(year);  			
 	}
 	menu.appendChild(list);
+}
+
+function displayOnly(trekYear){
+	//get all trek years
+	var current_year = new Date().getFullYear();
+	var first_year = 2013;
+	var all_years = [];
+	for (var year = first_year; year <= current_year; year++){
+		all_years.push(year.toString() + "-" + (year+1).toString());
+	}
+	
+	//display only the current trek year
+	for (i = 0; i < all_years.length;i++){
+		var trek = all_years[i];
+		var cssClass = ".".concat(trek);
+		var disp = $(cssClass).css("display");
+		if (trekYear == trek){
+			$(cssClass).attr("style","display:block");
+		} else {
+			console.log(cssClass);
+			$(cssClass).attr("style","display:none");
+		}
+	}
 }

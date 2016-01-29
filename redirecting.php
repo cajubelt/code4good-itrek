@@ -50,7 +50,7 @@ echo 'category : ' . json_encode($category) . ',';
 echo 'date : ' . json_encode($date) . ',';
 echo 'videolink : ' . json_encode($video_link) . ',';
 echo 'approved : ' . json_encode($approved) . ',';
-echo 'trekYear : ' . js.encode($trekYear) . ','; //NEW
+echo 'trekYear : ' . json.encode($trekYear) . ','; //NEW
 
 echo '});
 	</script>';
@@ -65,6 +65,7 @@ if(isset($_POST['preview-button']))
 	$date = $_POST['date'];
 	$category = $_POST['category'];
 	$video_link = $_POST['video'];
+	$trekYear = $_POST['trek-year']; //NEW
 	$imdata = base64_encode(file_get_contents($_FILES['files']['tmp_name']));
 	$approved = false;
 	$preview = true;
@@ -128,13 +129,14 @@ if(isset($_POST['preview-button']))
     var video_link = '<?php echo $video_link; ?>';
     var imdata = '<?php echo $imdata; ?>';
     var preview = '<?php echo $preview; ?>';
+    var trekYear = '<?php echo $trekYear; ?>'; //NEW
 
     if (preview) {
     	console.log(video_link);
     	document.getElementById('cd-timeline').style.display = 'block';
     	document.getElementById('back').style.display = 'block';
 
-    	var newPostObject = new post("dummy_id", title,content,date,category,imdata,video_link,'true');
+    	var newPostObject = new post("dummy_id", title,content,date,category,imdata,video_link,'true', trekYear); //NEW
 
 		newPostObject.toHTML(false);
 

@@ -35,10 +35,10 @@ if(!isset($_SESSION['UserData']['Username'])){
 			<script>
 				var trek_list = document.getElementById('trek-year');
 				var current_year = new Date().getFullYear();
-				for (year = current_year+1; year > 2014; year--){
+				for (year = current_year+1; year > 2013; year--){
 					var option = document.createElement('option');
-					option.textContent = option.value = (year-1) + ' - ' + year;
-					option.value = (year-1) + ' - ' + year;
+					option.textContent = option.value = (year-1) + '-' + year;
+					option.value = (year-1) + '-' + year;
 					trek_list.appendChild(option);
 				}
 			</script>
