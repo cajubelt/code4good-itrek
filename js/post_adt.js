@@ -159,7 +159,7 @@ function toHTML(isAdmin){
 			var newPostBlock = document.createElement("div");
 			newPostBlock.className = "cd-timeline-block";
 			newPostBlock.appendChild(newPostApprovalOuterDiv);
-			console.log(newPostBlock);
+
 			var timeline = document.getElementById("cd-timeline");
 			if (!timeline.firstChild){ //case where timeline is empty
 				timeline.appendChild(newPostBlock);

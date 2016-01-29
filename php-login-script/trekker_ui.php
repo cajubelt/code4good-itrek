@@ -29,8 +29,10 @@ if(!isset($_SESSION['UserData']['Username'])){
 		  <option value="actions">Trekker Actions</option>
 		</select>
 		<span id="category-error" style="color:red">*</span> <br> <br>
-
-		<label for="trek-year">Trek Year</label>
+		<label for="date">Date</label>
+		<input id="date" type="date" name="date" onkeydown="disableSubmitButton()">
+		<span id="date-error" style="color:red">*</span> <br> <br>
+				<label for="trek-year">Trek Year</label>
 		<select id='trek-year' name='trek-year'>
 			<script>
 				var trek_list = document.getElementById('trek-year');
@@ -44,9 +46,6 @@ if(!isset($_SESSION['UserData']['Username'])){
 			</script>
 		</select>
 		<span id="category-error" style="color:red">*</span> <br> <br>
-		<label for="date">Date</label>
-		<input id="date" type="date" name="date" onkeydown="disableSubmitButton()">
-		<span id="date-error" style="color:red">*</span> <br> <br>
 		<label for="submit-content">Content </label><br>
 		<textarea id="submit-content" name="submit-content" cols="40" rows="5" onkeydown="disableSubmitButton()"></textarea>
 		<span id="content-error" style="color:red">*</span> <br> <br>

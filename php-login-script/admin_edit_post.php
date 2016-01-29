@@ -27,7 +27,7 @@ if(isset($_POST['edit-post']))
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- firebase -->
 </head>
-<FORM action="http://localhost:8888/redirecting_admin.php" 
+<form action="http://localhost:8888/redirecting_admin.php" 
        enctype="multipart/form-data"
        method="post" style="padding-left:36%">
 <P>
@@ -52,10 +52,10 @@ if(isset($_POST['edit-post']))
 	<script>
 		var trek_list = document.getElementById('trek-year');
 		var current_year = new Date().getFullYear();
-		for (year = current_year+1; year > 2014; year--){
+		for (year = current_year+1; year > 2013; year--){
 			var option = document.createElement('option');
-			option.textContent = option.value = (year-1) + ' - ' + year;
-			option.value = (year-1) + ' - ' + year;
+			option.textContent = option.value = (year-1) + '-' + year;
+			option.value = (year-1) + '-' + year;
 			trek_list.appendChild(option);
 		}
 	</script>
@@ -86,7 +86,7 @@ if(isset($_POST['edit-post']))
 <br>
 <a href="logout.php">Click here</a> to Logout. <br>
 	<br> <br> <p>(Please do not hit the refresh button)</p>
-</FORM>
+</form>
 
 </html>
 
@@ -109,12 +109,13 @@ if(isset($_POST['edit-post']))
 				document.getElementById('category').selectedIndex = 2;
 			}
 			document.getElementById('date').value = newPost.date;
-			//var video = document.getElementById('64code').value;
-			//if (video != null){
-				//newPost.base64image = video;
-			//}
 			document.getElementById('64code').value = newPost.base64image;
 			document.getElementById('video').value = newPost.videolink;
+			var myD = new Date();
+			var myY = myD.getFullYear();
+			var trekYear = newPost.trekYear;
+			var indexFromEnd = trekYear.substring(0,4) - 2013 + 1;
+			document.getElementById('trek-year').selectedIndex = myY - 2012 - indexFromEnd;
 		}
 	}, function (errorObject) { //in case database read fails
   		alert("The read failed: " + errorObject.code);
