@@ -17,9 +17,6 @@ FIREBASE INFORMATION <br />
 When students submit a timeline post, the data is sent to an online Firebase database. 
 The link to the firebase is https://scorching-inferno-2234.firebaseio.com/ and the project
 can be shared with other accounts. 
-The credentials for the Google account used for logging in to this firebase account --
-Username: itrekfirebase@gmail.com
-Password: code4good
 
 LINKS TO BE CHANGED <br />
 Before incorporating this project into the iTrek website, there are some internal links that
